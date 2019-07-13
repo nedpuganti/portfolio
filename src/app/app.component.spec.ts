@@ -6,7 +6,7 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [AppComponent],
+      declarations: [AppComponent]
     }).compileComponents();
   }));
 
@@ -16,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'SoldnPay'`, () => {
+  it(`should have as title 'MyPortfolio'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('SoldnPay');
+    expect(app.title).toEqual('MyPortfolio');
   });
 
   it('should render title in a h1 tag', () => {
@@ -27,7 +27,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain(
-      'Welcome to SoldnPay!',
+      'Welcome to MyPortfolio!'
     );
   });
 });
