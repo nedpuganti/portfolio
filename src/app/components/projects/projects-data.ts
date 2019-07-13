@@ -243,7 +243,7 @@ export let projects = [
   },
   {
     id: 25,
-    image: 'assets/img/projects/ass_portal.png',
+    image: 'assets/img/projects/asa_portal.png',
     title: 'ASA',
     category: 'Portal',
     client: 'aboveo',
