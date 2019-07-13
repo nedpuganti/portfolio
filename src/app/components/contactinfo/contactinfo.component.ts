@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contactinfo.component.scss']
 })
 export class ContactinfoComponent implements OnInit {
+  contactInfo: any = {
+    phoneNumber: '4702224996',
+    email: 'contact@narenedpuganti.com',
+    address: 'N/A',
+    website: 'www.narenedpuganti.com'
+  };
 
-  constructor() { }
+  instagramLink = 'https://www.instagram.com/naren7229/';
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }

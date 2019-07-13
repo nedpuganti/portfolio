@@ -10,11 +10,7 @@
     <!-- Summary Starts -->
     <div class="summary col-md-10 col-sm-9 col-12">
       <!-- Single Paragraph Starts -->
-      <p>
-        I am a Full Stack Web Developer from Atlanta, USA. I am very passionate
-        and dedicated to my work. I have 5 years more work experience. And enjoy
-        working in a team or individual.
-      </p>
+      <p [innerHtml]="personalInfo.summary"></p>
       <!-- Single Paragraph Ends -->
     </div>
     <!-- Summary Ends -->
@@ -27,7 +23,7 @@
             <i class="fas fa-angle-double-right"></i><span>First Name</span>
           </span>
           <span class="dash">-</span>
-          <span class="value">Naren</span>
+          <span class="value">{{ personalInfo.firstName }}</span>
         </li>
         <!-- Single Content On Profile Ends -->
         <!-- Single Content On Profile Starts -->
@@ -36,7 +32,7 @@
             <i class="fas fa-angle-double-right"></i><span>Last Name</span>
           </span>
           <span class="dash">-</span>
-          <span class="value">Edpuganti</span>
+          <span class="value">{{ personalInfo.lastName }}</span>
         </li>
         <!-- Single Content On Profile Ends -->
         <!-- Single Content On Profile Starts -->
@@ -45,7 +41,7 @@
             <i class="fas fa-angle-double-right"></i><span>Date of Birth</span>
           </span>
           <span class="dash">-</span>
-          <span class="value">June 1991</span>
+          <span class="value">{{ personalInfo.dob }}</span>
         </li>
         <!-- Single Content On Profile Ends -->
         <!-- Single Content On Profile Starts -->
@@ -54,7 +50,7 @@
             <i class="fas fa-angle-double-right"></i><span>Nationality</span>
           </span>
           <span class="dash">-</span>
-          <span class="value">Indian</span>
+          <span class="value">{{ personalInfo.nationality }}</span>
         </li>
         <!-- Single Content On Profile Ends -->
       </ul>
@@ -70,7 +66,7 @@
           </span>
           <span class="dash">-</span>
           <span class="value"
-            >+1 {{ '4702224996' | mask: '(000) 000-0000' }}</span
+            >+1 {{ personalInfo.phoneNumber | mask: '(000) 000-0000' }}</span
           >
         </li>
         <!-- Single Content On Profile Ends -->
@@ -80,7 +76,7 @@
             <i class="fas fa-angle-double-right"></i><span>Email</span>
           </span>
           <span class="dash">-</span>
-          <span class="value">contact@narenedpuganti.com</span>
+          <span class="value">{{ personalInfo.email }}</span>
         </li>
         <!-- Single Content On Profile Ends -->
         <!-- Single Content On Profile Starts -->
@@ -89,7 +85,7 @@
             <i class="fas fa-angle-double-right"></i><span>Address</span>
           </span>
           <span class="dash">-</span>
-          <span class="value">N/A</span>
+          <span class="value">{{ personalInfo.address }}</span>
         </li>
         <!-- Single Content On Profile Ends -->
         <!-- Single Content On Profile Starts -->
@@ -98,7 +94,7 @@
             <i class="fas fa-angle-double-right"></i><span>Languages</span>
           </span>
           <span class="dash">-</span>
-          <span class="value">Telugu, English</span>
+          <span class="value">{{ personalInfo.languages }}</span>
         </li>
         <!-- Single Content On Profile Ends -->
       </ul>
@@ -133,7 +129,7 @@
         <!-- Single Social Media Ends -->
         <!-- Single Social Media Starts -->
         <li>
-          <a href="https://github.com/narenedpuganti" target="_blank">
+          <a [href]="githubLink" target="_blank">
             <span class="front">
               <i class="fab fa-github"></i>
             </span>
@@ -162,7 +158,7 @@
     <div class="button-wrapper col-12">
       <!-- Single Button Starts -->
       <div class="single-button">
-        <a href="#">
+        <a [href]="cvLink" target="_blank">
           <span class="front">
             <i class="fas fa-file-pdf"></i
             ><span class="value">Download <span>CV</span></span>

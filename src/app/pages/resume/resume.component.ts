@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent implements OnInit {
+  resumeLink = 'https://zety.com/mycv/naren-edpuganti';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

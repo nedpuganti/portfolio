@@ -5,84 +5,25 @@
   <!-- Experience Heading Ends -->
   <div class="row no-gutters">
     <!-- Single Experience Starts -->
-    <div class="single-experience col-sm-6 col-12">
+    <div
+      class="single-experience col-sm-6 col-12"
+      *ngFor="let experience of experiences"
+    >
       <ul>
         <li class="experience-when-where">
-          <span class="when">2017 - Present </span>
-          <span class="where">Aboveo</span>
+          <span class="when">{{ experience.when }} </span>
+          <span class="where">{{ experience.where }}</span>
         </li>
         <li>
           <ul>
             <li class="experience-name">
               <i class="fas fa-angle-double-right"></i
-              ><span>Full-Stack Frontend Developer</span>
+              ><span>{{ experience.name }}</span>
             </li>
-            <li class="experience-body">
-              HTML5, CSS3, jQuery, JavaScript, Angular, Ionic, Cordova, React
-              Native, Bootstrap, Agile, REST Services...
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- Single Experience Ends -->
-    <!-- Single Experience Starts -->
-    <div class="single-experience col-sm-6 col-12">
-      <ul>
-        <li class="experience-when-where">
-          <span class="when">2016 </span>
-          <span class="where">FREELANCE</span>
-        </li>
-        <li>
-          <ul>
-            <li class="experience-name">
-              <i class="fas fa-angle-double-right"></i><span>Developer</span>
-            </li>
-            <li class="experience-body">
-              ASA Charity : Used .net c# and sql and completed the website
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- Single Experience Ends -->
-    <!-- Single Experience Starts -->
-    <div class="single-experience col-sm-6 col-12">
-      <ul>
-        <li class="experience-when-where">
-          <span class="when">2014 </span>
-          <span class="where"> FREELANCE</span>
-        </li>
-        <li>
-          <ul>
-            <li class="experience-name">
-              <i class="fas fa-angle-double-right"></i><span>UI Developer</span>
-            </li>
-            <li class="experience-body">
-              Premier Cosmetic Surgery: developed interface using HTML, CSS,
-              JQuery
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- Single Experience Ends -->
-    <!-- Single Experience Starts -->
-    <div class="single-experience col-sm-6 col-12">
-      <ul>
-        <li class="experience-when-where">
-          <span class="when">2012 - 2013</span>
-          <span class="where"> PROJECT</span>
-        </li>
-        <li>
-          <ul>
-            <li class="experience-name">
-              <i class="fas fa-angle-double-right"></i><span>Developer</span>
-            </li>
-            <li class="experience-body">
-              Used .net c# and sql as technologies and written a web portal for
-              final year project at university
-            </li>
+            <li
+              class="experience-body"
+              [innerHtml]="experience.description"
+            ></li>
           </ul>
         </li>
       </ul>

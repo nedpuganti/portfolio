@@ -13,7 +13,7 @@
           <span class="icon-of-value">
             <i class="fas fa-map-marker-alt"></i>
           </span>
-          <span class="value">N/A</span>
+          <span class="value">{{ contactInfo.address }}</span>
         </li>
         <!-- Single Contact Info Ends -->
         <!-- Single Contact Info Starts -->
@@ -23,7 +23,7 @@
             <i class="fas fa-mobile-alt"></i>
           </span>
           <span class="value"
-            >+1 {{ '4702224996' | mask: '(000) 000-0000' }}</span
+            >+1 {{ contactInfo.phoneNumber | mask: '(000) 000-0000' }}</span
           >
         </li>
         <!-- Single Contact Info Ends -->
@@ -33,7 +33,7 @@
           <span class="icon-of-value">
             <i class="fas fa-envelope"></i>
           </span>
-          <span class="value">contact@narenedpuganti.com</span>
+          <span class="value">{{ contactInfo.email }}</span>
         </li>
         <!-- Single Contact Info Ends -->
         <!-- Single Contact Info Starts -->
@@ -42,7 +42,7 @@
           <span class="icon-of-value">
             <i class="fas fa-globe"></i>
           </span>
-          <span class="value">www.narenedpuganti.com</span>
+          <span class="value">{{ contactInfo.website }}</span>
         </li>
         <!-- Single Contact Info Ends -->
         <!-- Single Contact Info Starts -->
@@ -75,7 +75,7 @@
             <!-- Single Social Media Ends -->
             <!-- Single Social Media Starts -->
             <li>
-              <a href="https://www.instagram.com/naren7229/" target="_blank">
+              <a [href]="instagramLink" target="_blank">
                 <span class="front">
                   <i class="fab fa-instagram"></i>
                 </span>
