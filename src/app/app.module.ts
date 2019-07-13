@@ -20,7 +20,6 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import { RegisterService } from './services/register.service';
 import { TokenInterceptor } from './token.interceptor';
-import { ScandataUtils } from './utils/scandata.utils';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,7 @@ import { ScandataUtils } from './utils/scandata.utils';
     AboutComponent,
     ResumeComponent,
     PortfolioComponent,
-    ContactComponent,
+    ContactComponent
   ],
   imports: [
     FormsModule,
@@ -42,27 +41,26 @@ import { ScandataUtils } from './utils/scandata.utils';
     HttpClientModule,
     RouterModule.forRoot(AppRoutes, {
       useHash: true,
-      scrollPositionRestoration: 'enabled',
+      scrollPositionRestoration: 'enabled'
     }),
     ToastrModule.forRoot({
       timeOut: 3000,
       progressBar: true,
       positionClass: 'toast-bottom-full-width',
-      countDuplicates: true,
+      countDuplicates: true
     }),
     NgxMaskModule.forRoot(),
     SweetAlert2Module.forRoot(),
-    SharedComponentModule,
+    SharedComponentModule
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
-      multi: true,
+      multi: true
     },
-    RegisterService,
-    ScandataUtils,
+    RegisterService
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

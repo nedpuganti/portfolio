@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxMaskModule } from 'ngx-mask';
 import { ContactformComponent } from './contactform/contactform.component';
@@ -20,6 +21,7 @@ import { SkillsComponent } from './skills/skills.component';
     ReactiveFormsModule,
     NgbModule,
     NgxMaskModule,
+    RouterModule
   ],
   declarations: [
     PersonalinfoComponent,
@@ -30,7 +32,7 @@ import { SkillsComponent } from './skills/skills.component';
     FunfactsComponent,
     ProjectsComponent,
     ContactinfoComponent,
-    ContactformComponent,
+    ContactformComponent
   ],
   exports: [
     PersonalinfoComponent,
@@ -41,7 +43,7 @@ import { SkillsComponent } from './skills/skills.component';
     FunfactsComponent,
     ProjectsComponent,
     ContactinfoComponent,
-    ContactformComponent,
-  ],
+    ContactformComponent
+  ]
 })
 export class SharedComponentModule {}
