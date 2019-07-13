@@ -15,7 +15,8 @@ export class ProjectsComponent implements OnInit {
     this.modalService.open(longContent, {
       size: 'lg',
       scrollable: true,
-      centered: true
+      centered: true,
+      backdropClass: 'dark-backdrop'
     });
   }
 }

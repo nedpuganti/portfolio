@@ -71,3 +71,8 @@ input[type='number']::-webkit-outer-spin-button {
   background-color: #474f7e;
   border-right: 1px solid white;
 }
+
+.dark-backdrop {
+  background-color: #0b0b0b;
+  opacity: 0.8 !important;
+}
