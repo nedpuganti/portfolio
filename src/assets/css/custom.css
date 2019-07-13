@@ -792,7 +792,7 @@ html.mfp-helper {
   -moz-border-radius: 50%;
   border-radius: 50%;
   display: none;
-  background-image: url('../img/myphoto.jpg');
+  background-image: url('../img/profile.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -4122,7 +4122,7 @@ html.mfp-helper {
 
 @media (max-width: 450px) {
   .main-content#about .inner-content .content #personal-info .profile-picture {
-    height: 400px;
+    height: 250px;
   }
 }
 

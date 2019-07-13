@@ -1,0 +1,301 @@
+export let projects = [
+  {
+    id: 1,
+    image: 'assets/img/projects/mone_mobile.png',
+    title: 'Mercury|One',
+    category: 'Mobile',
+    category_type: 2,
+    client: null,
+    date: null,
+    description: 'Html, Css/Sass, Bootstrap, Javascript / jQuery / Typescript',
+    link: 'https://apps.apple.com/us/app/mercury-one/id1015811834'
+  },
+  {
+    id: 2,
+    image: 'assets/img/projects/trunow_mobile.png',
+    title: 'Trunow',
+    category: 'Mobile',
+    category_type: 2,
+    client: null,
+    date: null,
+    description: 'Ionic Framework, Reactnative, Java, My SQL',
+    link:
+      'https://apps.apple.com/us/app/trunow-earn-rewards-on-purchases/id1256870067'
+  },
+  {
+    id: 3,
+    image: 'assets/img/projects/trunow_re_mobile.png',
+    title: 'Trunow Retailer',
+    category: 'Mobile',
+    category_type: 2,
+    client: null,
+    date: null,
+    description: 'Ionic Framework, Java, My SQL',
+    link: 'https://apps.apple.com/us/app/retailernow/id1404731043'
+  },
+  {
+    id: 4,
+    image: null,
+    title: 'Trunow Locations',
+    category: 'Mobile',
+    category_type: 2,
+    client: null,
+    date: null,
+    description: 'Ionic Framework, Java, My SQL',
+    link: 'https://apps.apple.com/us/app/locationsnow/id1257581248'
+  },
+  {
+    id: 5,
+    image: null,
+    title: 'Mercury|One Inventory',
+    category: 'Mobile',
+    category_type: 2,
+    client: null,
+    date: null,
+    description: 'Ionic Framework, Java, My SQL',
+    link:
+      'https://play.google.com/store/apps/details?id=com.aboveo.mercuryoneinv&hl=en_US'
+  },
+  {
+    id: 6,
+    image: null,
+    title: 'Flipcasa Driver',
+    category: 'Mobile',
+    category_type: 2,
+    client: null,
+    date: null,
+    description: 'Ionic Framework, Node Js, Postgresql',
+    link: null
+  },
+  {
+    id: 7,
+    image: 'assets/img/projects/trunow_website.png',
+    title: 'Trunow',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'https://trunow.com'
+  },
+  {
+    id: 8,
+    image: 'assets/img/projects/trunow_re_website.png',
+    title: 'Trunow Retailer',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'https://retailer.trunow.com/'
+  },
+  {
+    id: 8,
+    image: 'assets/img/projects/asa_wesite.png',
+    title: 'ASA',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'http://asa.help/'
+  },
+  {
+    id: 9,
+    image: 'assets/img/projects/endo_website.png',
+    title: 'Endo Health Atlanta',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'ASP .Net',
+    link: 'http://www.endohealthatlanta.com/'
+  },
+  {
+    id: 26,
+    image: 'assets/img/projects/inc_website.png',
+    title: 'Incustart',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'ASP .Net',
+    link: 'http://incustart.com/'
+  },
+  {
+    id: 10,
+    image: 'assets/img/projects/sri_website.png',
+    title: 'Sree Lakshmi Agencies',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'ASP .Net',
+    link: null
+  },
+  {
+    id: 11,
+    image: 'assets/img/projects/abroad_website.png',
+    title: 'AbroadOne',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'ASP .Net',
+    link: null
+  },
+  {
+    id: 12,
+    image: 'assets/img/projects/pre_website.png',
+    title: 'Premier Cosmetic Surg',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'ASP .Net',
+    link: null
+  },
+  {
+    id: 13,
+    image: 'assets/img/projects/sold_website.png',
+    title: 'Soldnpay',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'http://soldnpay.aboveo.com'
+  },
+  {
+    id: 14,
+    image: 'assets/img/projects/flip_website.png',
+    title: 'Flipcasa',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'https://flip.casa'
+  },
+  {
+    id: 15,
+    image: 'assets/img/projects/solar_website.png',
+    title: 'Inodaya Solar',
+    category: 'Website',
+    category_type: 3,
+    client: null,
+    date: null,
+    description: 'ASP .Net ',
+    link: null
+  },
+  {
+    id: 16,
+    image: null,
+    title: 'Trunow',
+    category: 'Portal',
+    category_type: 4,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: null
+  },
+  {
+    id: 17,
+    image: 'assets/img/projects/tunow_re_portal.png',
+    title: 'Trunow Retailer',
+    category: 'Portal',
+    category_type: 4,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: null
+  },
+  {
+    id: 18,
+    image: 'assets/img/projects/saasoa_portal.png',
+    title: 'SAASOA',
+    category: 'Portal',
+    category_type: 4,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'https://adminsaasoa.aboveo.com/'
+  },
+  {
+    id: 19,
+    image: 'assets/img/projects/sold_portal.png',
+    title: 'SoldnPay',
+    category: 'Portal',
+    category_type: 4,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'http://scandatadev.aboveo.com'
+  },
+  {
+    id: 20,
+    image: 'assets/img/projects/flip_portal.png',
+    title: 'Flipcasa',
+    category: 'Portal',
+    category_type: 4,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'null'
+  },
+  {
+    id: 21,
+    image: null,
+    title: 'Scan Book',
+    category: 'Portal',
+    category_type: 4,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: null
+  },
+  {
+    id: 22,
+    image: 'assets/img/projects/market_portal.png',
+    title: 'Market Data',
+    category: 'Portal',
+    category_type: 4,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'http://marketdatagrocery.aboveo.com'
+  },
+  {
+    id: 23,
+    image: 'assets/img/projects/crm_portal.png',
+    title: 'Aboveo CRM',
+    category: 'Portal',
+    category_type: 4,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'http://crm.aboveo.com/'
+  },
+  {
+    id: 24,
+    image: 'assets/img/projects/ass_portal.png',
+    title: 'ASA',
+    category: 'Portal',
+    category_type: 4,
+    client: null,
+    date: null,
+    description: 'Angular 8',
+    link: 'http://id1.asa.help'
+  },
+  {
+    id: 25,
+    image: 'assets/img/projects/spin_portal.png',
+    title: 'SPIAN',
+    category: 'Portal',
+    category_type: 4,
+    client: null,
+    date: null,
+    description: 'ASP .Net',
+    link: 'https://spian.azurewebsites.net/'
+  }
+];
