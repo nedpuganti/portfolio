@@ -6,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { NgxMaskModule } from 'ngx-mask';
 import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
@@ -50,7 +49,6 @@ import { TokenInterceptor } from './token.interceptor';
       countDuplicates: true
     }),
     NgxMaskModule.forRoot(),
-    SweetAlert2Module.forRoot(),
     SharedComponentModule
   ],
   providers: [
