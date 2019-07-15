@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EducationComponent implements OnInit {
   educations: any[] = [
     {
-      when: '2015 - 2016',
+      when: '2014 - 2015',
       where: 'USA',
       name: 'Master of Computer Science',
       subName: '(Masters)',

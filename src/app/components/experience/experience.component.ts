@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ExperienceComponent implements OnInit {
   experiences: any[] = [
     {
-      when: '2017 - Present',
+      when: '2016 - Present',
       where: 'Aboveo',
       name: 'Full-Stack Frontend Developer',
       description:
