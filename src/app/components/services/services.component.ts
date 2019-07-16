@@ -25,7 +25,7 @@ export class ServicesComponent implements OnInit {
       types: ['Apache Cordova', 'Ionic Framework', 'React Native']
     },
     {
-      name: 'Mobile Development',
+      name: 'Backend Development',
       types: ['Nodejs', 'Nodejs + Nestjs', 'ASP .Net c#']
     },
     {

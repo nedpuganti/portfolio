@@ -12,7 +12,7 @@ export class PersonalinfoComponent implements OnInit {
     firstName: 'Naren',
     lastName: 'Edpuganti',
     dob: 'June 1991',
-    nationality: 'Indian',
+    nationality: 'India',
     phoneNumber: '4702224996',
     email: 'contact@narenedpuganti.com',
     address: 'N/A',
