@@ -9,7 +9,7 @@ import * as projectsData from './projects-data';
 export class ProjectsComponent implements OnInit {
   currentTab: string;
   currentProjects$ = [];
-  currentProject = {};
+  currentProject: any = {};
 
   constructor(private modalService: NgbModal) {}
 
