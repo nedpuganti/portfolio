@@ -51,16 +51,16 @@ export let projects = [
     link:
       'https://play.google.com/store/apps/details?id=com.aboveo.mercuryoneinv&hl=en_US'
   },
-  {
-    id: 6,
-    image: 'assets/img/projects/flip_mobile_driver.png',
-    title: 'Flip.Casa Driver',
-    category: 'Mobile',
-    client: 'Flip.Casa',
-    date: null,
-    description: 'Ionic Framework, Angular, Node Js, PostgreSql',
-    link: 'https://play.google.com/store/apps/details?id=com.flipcasa.driver'
-  },
+  // {
+  //   id: 6,
+  //   image: 'assets/img/projects/flip_mobile_driver.png',
+  //   title: 'Flip.Casa Driver',
+  //   category: 'Mobile',
+  //   client: 'Flip.Casa',
+  //   date: null,
+  //   description: 'Ionic Framework, Angular, Node Js, PostgreSql',
+  //   link: 'https://play.google.com/store/apps/details?id=com.flipcasa.driver'
+  // },
   {
     id: 7,
     image: 'assets/img/projects/sold_website.png',
@@ -121,16 +121,16 @@ export let projects = [
     description: 'Angular 8',
     link: 'http://asa.help/'
   },
-  {
-    id: 13,
-    image: 'assets/img/projects/flip_website.png',
-    title: 'Flip.Casa',
-    category: 'Website',
-    client: 'Flip.Casa',
-    date: null,
-    description: 'Angular 8',
-    link: 'https://flip.casa'
-  },
+  // {
+  //   id: 13,
+  //   image: 'assets/img/projects/flip_website.png',
+  //   title: 'Flip.Casa',
+  //   category: 'Website',
+  //   client: 'Flip.Casa',
+  //   date: null,
+  //   description: 'Angular 8',
+  //   link: 'https://flip.casa'
+  // },
   {
     id: 14,
     image: 'assets/img/projects/sri_website.png',
@@ -251,16 +251,16 @@ export let projects = [
     description: 'Angular 8',
     link: 'http://id1admin.asa.help'
   },
-  {
-    id: 26,
-    image: 'assets/img/projects/flip_portal.png',
-    title: 'Flip.Casa Admin',
-    category: 'Portal',
-    client: 'Flip.Casa',
-    date: null,
-    description: 'Angular 8',
-    link: 'null'
-  },
+  // {
+  //   id: 26,
+  //   image: 'assets/img/projects/flip_portal.png',
+  //   title: 'Flip.Casa Admin',
+  //   category: 'Portal',
+  //   client: 'Flip.Casa',
+  //   date: null,
+  //   description: 'Angular 8',
+  //   link: 'null'
+  // },
   {
     id: 27,
     image: 'assets/img/projects/spin_portal.png',
