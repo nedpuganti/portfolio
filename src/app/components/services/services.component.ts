@@ -22,7 +22,7 @@ export class ServicesComponent implements OnInit {
     },
     {
       name: 'Mobile Development',
-      types: ['Apache Cordova', 'Ionic Framework', 'React Native']
+      types: ['Apache Cordova', 'Ionic Framework', 'React Native', 'Flutter']
     },
     {
       name: 'Backend Development',
