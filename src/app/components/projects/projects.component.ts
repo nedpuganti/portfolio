@@ -20,7 +20,7 @@ export class ProjectsComponent implements OnInit {
 
   openProjectDetails(modelContent, projectData) {
     this.currentProject = {};
-    this.currentProject = Object.assign({}, ...projectData);
+    this.currentProject = { ...projectData };
 
     this.modalService.open(modelContent, {
       size: 'lg',

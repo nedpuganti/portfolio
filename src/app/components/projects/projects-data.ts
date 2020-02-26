@@ -121,16 +121,16 @@ export let projects = [
     description: 'Angular 8',
     link: 'http://asa.help/'
   },
-  // {
-  //   id: 13,
-  //   image: 'assets/img/projects/flip_website.png',
-  //   title: 'Flip.Casa',
-  //   category: 'Website',
-  //   client: 'Flip.Casa',
-  //   date: null,
-  //   description: 'Angular 8',
-  //   link: 'https://flip.casa'
-  // },
+  {
+    id: 13,
+    image: 'assets/img/projects/mone_setup.png',
+    title: 'Mercuryone Setup',
+    category: 'Mobile',
+    client: 'ABOVEO',
+    date: null,
+    description: 'Flutter',
+    link: 'https://monefinancial.aboveo.com/'
+  },
   {
     id: 14,
     image: 'assets/img/projects/sri_website.png',
@@ -248,19 +248,19 @@ export let projects = [
     category: 'Portal',
     client: 'aboveo',
     date: null,
-    description: 'Angular 8',
+    description: 'Angular 8, Node js, Mongodb',
     link: 'http://id1admin.asa.help'
   },
-  // {
-  //   id: 26,
-  //   image: 'assets/img/projects/flip_portal.png',
-  //   title: 'Flip.Casa Admin',
-  //   category: 'Portal',
-  //   client: 'Flip.Casa',
-  //   date: null,
-  //   description: 'Angular 8',
-  //   link: 'null'
-  // },
+  {
+    id: 26,
+    image: 'assets/img/projects/undisclosed_portal.png',
+    title: 'Admin',
+    category: 'Portal',
+    client: 'undisclosed',
+    date: null,
+    description: 'Angular 9, Node js',
+    link: 'null'
+  },
   {
     id: 27,
     image: 'assets/img/projects/spin_portal.png',
@@ -270,5 +270,35 @@ export let projects = [
     date: null,
     description: 'ASP .Net',
     link: 'https://spian.azurewebsites.net/'
+  },
+  {
+    id: 28,
+    image: 'assets/img/projects/mone_finanical.png',
+    title: 'FINANCIAL',
+    category: 'Portal',
+    client: 'ABOVEO',
+    date: null,
+    description: 'Angular 8, NestJS, Postgres',
+    link: 'https://monefinancial.aboveo.com/'
+  },
+  {
+    id: 29,
+    image: 'assets/img/projects/altranz.png',
+    title: 'Altranz',
+    category: 'Portal',
+    client: 'altranz',
+    date: null,
+    description: 'Angular 9, Node js, Postgres',
+    link: ''
   }
+  // {
+  //   id: 30,
+  //   image: 'assets/img/projects/asa_admin.png',
+  //   title: 'asa admin',
+  //   category: 'Portal',
+  //   client: 'asa',
+  //   date: null,
+  //   description: 'Angular 8, Node js, mongo',
+  //   link: 'http://id1admin.asa.help/'
+  // }
 ];

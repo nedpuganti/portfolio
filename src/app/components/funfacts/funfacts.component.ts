@@ -9,7 +9,7 @@ export class FunfactsComponent implements OnInit {
   funFacts: any[] = [
     {
       name: 'Years Experience',
-      value: 5
+      value: 6
     },
     {
       name: 'Done Projects',

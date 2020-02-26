@@ -4,13 +4,13 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "esNext",
+    "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "downlevelIteration": true,
-    "target": "es5",
+    "target": "es6",
     "typeRoots": ["node_modules/@types", "src/typings.d.ts"],
     "lib": ["es2018", "dom"],
     "baseUrl": "./src",
@@ -20,6 +20,15 @@
       "@services/*": ["app/services/*"],
       "@shared/*": ["app/shared/*"],
       "@utils/*": ["app/utils/*"]
-    }
+    },
+    // "noImplicitAny": true,
+    // "noImplicitReturns": true,
+    // "noImplicitThis": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "strictNullChecks": true,
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }
