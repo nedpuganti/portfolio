@@ -42,7 +42,7 @@ export class ServicesComponent implements OnInit {
     },
     {
       name: 'Other Tools',
-      types: ['Swagger', 'PostMan', 'Visual Studio Code', 'Jira']
+      types: ['ELK Stack', 'Grafana', 'Swagger', 'PostMan', 'VS Code', 'Jira']
     }
   ];
 
