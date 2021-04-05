@@ -7,7 +7,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'Html, Css/Sass, Bootstrap, Javascript / jQuery / Typescript',
-    link: 'https://apps.apple.com/us/app/mercury-one/id1015811834'
+    link: 'https://apps.apple.com/us/app/mercury-one/id1015811834',
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export let projects = [
     date: null,
     description: 'Ionic Framework, Angular',
     link:
-      'https://apps.apple.com/us/app/trunow-earn-rewards-on-purchases/id1256870067'
+      'https://apps.apple.com/us/app/trunow-earn-rewards-on-purchases/id1256870067',
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ export let projects = [
     client: 'Trunow',
     date: null,
     description: 'Ionic Framework, Angular',
-    link: 'https://apps.apple.com/us/app/retailernow/id1404731043'
+    link: 'https://apps.apple.com/us/app/retailernow/id1404731043',
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ export let projects = [
     client: 'Trunow',
     date: null,
     description: 'Ionic Framework, Angular',
-    link: 'https://apps.apple.com/us/app/locationsnow/id1257581248'
+    link: 'https://apps.apple.com/us/app/locationsnow/id1257581248',
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export let projects = [
     date: null,
     description: 'Ionic Framework, Angular',
     link:
-      'https://play.google.com/store/apps/details?id=com.aboveo.mercuryoneinv&hl=en_US'
+      'https://play.google.com/store/apps/details?id=com.aboveo.mercuryoneinv&hl=en_US',
   },
   // {
   //   id: 6,
@@ -69,7 +69,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'Angular 8',
-    link: 'http://soldnpay.aboveo.com'
+    link: 'http://soldnpay.aboveo.com',
   },
   {
     id: 8,
@@ -79,7 +79,7 @@ export let projects = [
     client: 'Trunow',
     date: null,
     description: 'Javascript',
-    link: 'https://trunow.com'
+    link: 'https://trunow.com',
   },
   {
     id: 9,
@@ -89,7 +89,7 @@ export let projects = [
     client: 'Trunow',
     date: null,
     description: 'Angular 8',
-    link: 'https://retailer.trunow.com/'
+    link: 'https://retailer.trunow.com/',
   },
   {
     id: 10,
@@ -99,7 +99,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'ASP .Net',
-    link: 'http://www.endohealthatlanta.com/'
+    link: 'http://www.endohealthatlanta.com/',
   },
   {
     id: 11,
@@ -109,7 +109,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'ASP .Net',
-    link: 'http://incustart.com/'
+    link: 'http://incustart.com/',
   },
   {
     id: 12,
@@ -119,7 +119,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'Angular 8',
-    link: 'http://asa.help/'
+    link: 'http://asa.help/',
   },
   {
     id: 13,
@@ -129,7 +129,7 @@ export let projects = [
     client: 'ABOVEO',
     date: null,
     description: 'Flutter',
-    link: 'https://monefinancial.aboveo.com/'
+    link: 'https://monefinancial.aboveo.com/',
   },
   {
     id: 14,
@@ -139,7 +139,7 @@ export let projects = [
     client: 'Sree Lakshmi Agencies',
     date: null,
     description: 'ASP .Net',
-    link: null
+    link: null,
   },
   {
     id: 15,
@@ -149,7 +149,7 @@ export let projects = [
     client: 'Premier Cosmetic Surg',
     date: null,
     description: 'ASP .Net',
-    link: null
+    link: null,
   },
   {
     id: 16,
@@ -159,7 +159,7 @@ export let projects = [
     client: 'Inodaya Solar',
     date: null,
     description: 'ASP .Net',
-    link: null
+    link: null,
   },
   {
     id: 17,
@@ -169,7 +169,7 @@ export let projects = [
     client: 'AbroadOne',
     date: null,
     description: 'Javascript',
-    link: null
+    link: null,
   },
   {
     id: 18,
@@ -179,7 +179,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'Angular 8',
-    link: 'http://scandata.aboveo.com'
+    link: 'http://scandata.aboveo.com',
   },
   {
     id: 19,
@@ -189,7 +189,7 @@ export let projects = [
     client: 'Trunow',
     date: null,
     description: 'Angular 8',
-    link: 'https://secureretailer.trunow.com/'
+    link: 'https://secureretailer.trunow.com/',
   },
   {
     id: 20,
@@ -199,7 +199,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'Angular 8',
-    link: 'https://adminsaasoa.aboveo.com/'
+    link: 'https://adminsaasoa.aboveo.com/',
   },
   {
     id: 21,
@@ -209,7 +209,7 @@ export let projects = [
     client: 'Trunow',
     date: null,
     description: 'Angular 8',
-    link: null
+    link: null,
   },
   {
     id: 22,
@@ -219,7 +219,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'Angular 8',
-    link: null
+    link: null,
   },
   {
     id: 23,
@@ -229,7 +229,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'Angular 8',
-    link: 'http://marketdatagrocery.aboveo.com'
+    link: 'http://marketdatagrocery.aboveo.com',
   },
   {
     id: 24,
@@ -239,7 +239,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'Angular 8',
-    link: 'http://crm.aboveo.com/'
+    link: 'http://crm.aboveo.com/',
   },
   {
     id: 25,
@@ -249,7 +249,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'Angular 8, Node js, Mongodb',
-    link: 'http://id1admin.asa.help'
+    link: 'http://id1admin.asa.help',
   },
   {
     id: 26,
@@ -259,7 +259,7 @@ export let projects = [
     client: 'undisclosed',
     date: null,
     description: 'Angular 9, Node js',
-    link: 'null'
+    link: 'null',
   },
   {
     id: 27,
@@ -269,7 +269,7 @@ export let projects = [
     client: 'SRKIT',
     date: null,
     description: 'ASP .Net',
-    link: 'https://spian.azurewebsites.net/'
+    link: 'https://spian.azurewebsites.net/',
   },
   {
     id: 28,
@@ -279,7 +279,7 @@ export let projects = [
     client: 'ABOVEO',
     date: null,
     description: 'Angular 8, NestJS, Postgres',
-    link: 'https://monefinancial.aboveo.com/'
+    link: 'https://monefinancial.aboveo.com/',
   },
   {
     id: 29,
@@ -289,8 +289,28 @@ export let projects = [
     client: 'altranz',
     date: null,
     description: 'Angular 9, Node js, Postgres',
-    link: ''
-  }
+    link: '',
+  },
+  {
+    id: 30,
+    image: 'assets/img/projects/kiosk.png',
+    title: 'Kiosk',
+    category: 'Website',
+    client: 'ceras',
+    date: null,
+    description: 'Javascript, Css, Html',
+    link: '',
+  },
+  {
+    id: 31,
+    image: 'assets/img/projects/ceras.png',
+    title: 'Ceras',
+    category: 'Website',
+    client: 'ceras',
+    date: null,
+    description: 'Angular, Css, Html, Tailwind',
+    link: '',
+  },
   // {
   //   id: 30,
   //   image: 'assets/img/projects/asa_admin.png',
