@@ -3,22 +3,22 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-funfacts',
   templateUrl: './funfacts.component.html',
-  styleUrls: ['./funfacts.component.scss']
+  styleUrls: ['./funfacts.component.scss'],
 })
 export class FunfactsComponent implements OnInit {
   funFacts: any[] = [
     {
       name: 'Years Experience',
-      value: 6
+      value: 6,
     },
     {
       name: 'Done Projects',
-      value: 30
+      value: 40,
     },
     {
       name: 'Happy Clients',
-      value: 20
-    }
+      value: 20,
+    },
   ];
   constructor() {}
 
