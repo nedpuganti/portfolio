@@ -14,6 +14,7 @@ export class ServicesComponent implements OnInit {
         'Css/Sass',
         'Bootstrap',
         'Javascript / jQuery / Typescript',
+        'Tailwind',
       ],
     },
     {
