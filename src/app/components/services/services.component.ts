@@ -19,7 +19,7 @@ export class ServicesComponent implements OnInit {
     },
     {
       name: 'Frontend Development',
-      types: ['Angular', 'React js'],
+      types: ['Angular + Angular Material + Angular Flex', 'React js'],
     },
     {
       name: 'Mobile Development',
@@ -27,7 +27,12 @@ export class ServicesComponent implements OnInit {
     },
     {
       name: 'Backend Development',
-      types: ['Nodejs', 'Nodejs + Nestjs', 'ASP .Net c#', 'Spring + Kotlin'],
+      types: [
+        'Nodejs',
+        'Nodejs + Nestjs',
+        'ASP .Net c#',
+        'SpringBoot + Kotlin',
+      ],
     },
     {
       name: 'Database',
