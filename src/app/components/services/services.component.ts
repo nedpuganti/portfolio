@@ -49,7 +49,7 @@ export class ServicesComponent implements OnInit {
       types: [
         'Ajax / RestApi / Graphql',
         'Gulp',
-        'Sequelize',
+        'Sequelize / Hibernate / JPA',
         'RabbitMQ / Kafka',
         'Redis (Cache)',
       ],
