@@ -328,7 +328,8 @@ export let projects = [
     category: 'Dashboard',
     client: 'ceras',
     date: null,
-    description: 'Angular, Scss, Html, Angular-flex, Angular-Material',
+    description:
+      'Angular, Scss, Html, Angular-flex, Angular-Material, SpringBoot + Kotlin',
     link: '',
   },
   {

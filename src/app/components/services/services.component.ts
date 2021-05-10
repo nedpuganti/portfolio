@@ -8,18 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class ServicesComponent implements OnInit {
   services: any[] = [
     {
-      name: 'Web Development',
-      types: [
-        'Html',
-        'Css/Sass',
-        'Bootstrap',
-        'Javascript / jQuery / Typescript',
-        'Tailwind',
-      ],
+      name: 'UI/Web Development',
+      types: ['Html', 'Css/Scss', 'Bootstrap', 'Tailwind'],
     },
     {
-      name: 'Frontend Development',
-      types: ['Angular + Angular Material + Angular Flex', 'React js'],
+      name: 'Web/Frontend Development',
+      types: [
+        'Javascript / jQuery / Typescript',
+        'Angular (Material, Flex)',
+        'React js',
+        // 'Python'
+      ],
     },
     {
       name: 'Mobile Development',
@@ -28,15 +27,14 @@ export class ServicesComponent implements OnInit {
     {
       name: 'Backend Development',
       types: [
-        'Nodejs',
-        'Nodejs + Nestjs',
+        'Nodejs (ExpressJs, Nestjs)',
         'ASP .Net c#',
         'SpringBoot + Kotlin',
       ],
     },
     {
       name: 'Database',
-      types: ['Mongo', 'Postgres', 'Sql'],
+      types: ['Mongo', 'Postgres', 'Sql', 'Sql Server'],
     },
     {
       name: 'DevOps',
@@ -44,11 +42,39 @@ export class ServicesComponent implements OnInit {
     },
     {
       name: 'Cloud',
-      types: ['AWS', 'GCP'],
+      types: ['AWS (S3, SNS, SQS, SES)', 'GCP'],
+    },
+    {
+      name: 'Other Skills',
+      types: [
+        'Ajax / RestApi / Graphql',
+        'Gulp',
+        'Sequelize',
+        'RabbitMQ / Kafka',
+        'Redis (Cache)',
+      ],
     },
     {
       name: 'Other Tools',
-      types: ['ELK Stack', 'Grafana', 'Swagger', 'PostMan', 'VS Code', 'Jira'],
+      types: [
+        'ELK Stack (Logs)',
+        'Grafana (Analytics)',
+        'Swagger',
+        'PostMan',
+        'VS Code / IntelliJ',
+        'Jira',
+      ],
+    },
+    {
+      name: 'External',
+      types: [
+        'Twilio',
+        'BridgeDataOut',
+        'E-Signatures',
+        'SmartyStreets / Usps',
+        'GoogleMaps',
+        'Etc..',
+      ],
     },
   ];
 

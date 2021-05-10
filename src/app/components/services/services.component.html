@@ -5,20 +5,16 @@
   <!-- Services Heading Ends -->
   <div class="row no-gutters">
     <!-- Single Service Starts -->
-    <div
-      class="single-service col-sm-6 col-12"
-      *ngFor="let service of services; let i = index"
-    >
+    <div class="single-service col-sm-6 col-12" *ngFor="let service of services; let i = index">
       <ul>
         <li class="service-number">
           <span class="first-word">Service </span>
-          <span class="second-word">0{{ i + 1 }}</span>
+          <span class="second-word">{{ i + 1 }}</span>
         </li>
         <li>
           <ul>
             <li class="service-name">
-              <i class="fas fa-angle-double-right"></i
-              ><span>{{ service.name }}</span>
+              <i class="fas fa-angle-double-right"></i><span>{{ service.name }}</span>
             </li>
             <li class="service-body">
               <p class="mb-0" *ngFor="let type of service.types">{{ type }}</p>
