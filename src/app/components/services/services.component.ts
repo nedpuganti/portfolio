@@ -38,7 +38,7 @@ export class ServicesComponent implements OnInit {
     },
     {
       name: 'DevOps',
-      types: ['Jenkins', 'Docker', 'Kubernetes', 'Git'],
+      types: ['Jenkins', 'Docker', 'Kubernetes', 'Nginx'],
     },
     {
       name: 'Cloud',
@@ -63,6 +63,7 @@ export class ServicesComponent implements OnInit {
         'PostMan',
         'VS Code / IntelliJ',
         'Jira',
+        'Git',
       ],
     },
     {
