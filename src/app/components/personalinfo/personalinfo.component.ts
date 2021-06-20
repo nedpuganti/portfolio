@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-personalinfo',
   templateUrl: './personalinfo.component.html',
-  styleUrls: ['./personalinfo.component.scss']
+  styleUrls: ['./personalinfo.component.scss'],
 })
 export class PersonalinfoComponent implements OnInit {
   personalInfo: any = {
@@ -16,11 +16,11 @@ export class PersonalinfoComponent implements OnInit {
     phoneNumber: '4702224996',
     email: 'contact@narenedpuganti.com',
     address: 'N/A',
-    languages: 'Telugu, English'
+    languages: 'Telugu, English',
   };
 
   cvLink = 'https://zety.com/mycv/naren-edpuganti';
-  githubLink = 'https://github.com/narenedpuganti';
+  githubLink = 'https://github.com/nedpuganti';
 
   constructor() {}
 

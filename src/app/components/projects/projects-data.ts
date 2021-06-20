@@ -17,8 +17,7 @@ export let projects = [
     client: 'Trunow',
     date: null,
     description: 'Ionic Framework, Angular',
-    link:
-      'https://apps.apple.com/us/app/trunow-earn-rewards-on-purchases/id1256870067',
+    link: 'https://apps.apple.com/us/app/trunow-earn-rewards-on-purchases/id1256870067',
   },
   {
     id: 3,
@@ -48,8 +47,7 @@ export let projects = [
     client: 'aboveo',
     date: null,
     description: 'Ionic Framework, Angular',
-    link:
-      'https://play.google.com/store/apps/details?id=com.aboveo.mercuryoneinv&hl=en_US',
+    link: 'https://play.google.com/store/apps/details?id=com.aboveo.mercuryoneinv&hl=en_US',
   },
   // {
   //   id: 6,

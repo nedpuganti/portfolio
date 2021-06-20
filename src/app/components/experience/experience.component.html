@@ -5,10 +5,7 @@
   <!-- Experience Heading Ends -->
   <div class="row no-gutters">
     <!-- Single Experience Starts -->
-    <div
-      class="single-experience col-sm-6 col-12"
-      *ngFor="let experience of experiences"
-    >
+    <div class="single-experience col-sm-6 col-12" *ngFor="let experience of experiences">
       <ul>
         <li class="experience-when-where">
           <span class="when">{{ experience.when }} </span>
@@ -17,13 +14,9 @@
         <li>
           <ul>
             <li class="experience-name">
-              <i class="fas fa-angle-double-right"></i
-              ><span>{{ experience.name }}</span>
+              <i class="fas fa-angle-double-right"></i><span>{{ experience.name }}</span>
             </li>
-            <li
-              class="experience-body"
-              [innerHtml]="experience.description"
-            ></li>
+            <li class="experience-body" [innerHtml]="experience.description"></li>
           </ul>
         </li>
       </ul>

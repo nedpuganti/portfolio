@@ -9,42 +9,26 @@
       <ul>
         <!-- Single Filter Starts -->
         <li>
-          <a
-            href="javascript:void(0);"
-            [ngClass]="currentTab == 'All' ? 'current' : ''"
-            (click)="getProjects()"
-            >All Projects</a
-          >
+          <a href="javascript:void(0);" [ngClass]="currentTab == 'All' ? 'current' : ''" (click)="getProjects()">All
+            Projects</a>
         </li>
         <!-- Single Filter Ends -->
         <!-- Single Filter Starts -->
         <li>
-          <a
-            href="javascript:void(0);"
-            [ngClass]="currentTab == 'Mobile' ? 'current' : ''"
-            (click)="getProjects('Mobile')"
-            >Mobile Apps</a
-          >
+          <a href="javascript:void(0);" [ngClass]="currentTab == 'Mobile' ? 'current' : ''"
+            (click)="getProjects('Mobile')">Mobile Apps</a>
         </li>
         <!-- Single Filter Ends -->
         <!-- Single Filter Starts -->
         <li>
-          <a
-            href="javascript:void(0);"
-            [ngClass]="currentTab == 'Website' ? 'current' : ''"
-            (click)="getProjects('Website')"
-            >Websites</a
-          >
+          <a href="javascript:void(0);" [ngClass]="currentTab == 'Website' ? 'current' : ''"
+            (click)="getProjects('Website')">Websites</a>
         </li>
         <!-- Single Filter Ends -->
         <!-- Single Filter Starts -->
         <li>
-          <a
-            href="javascript:void(0);"
-            [ngClass]="currentTab == 'Portal' ? 'current' : ''"
-            (click)="getProjects('Portal')"
-            >Portals</a
-          >
+          <a href="javascript:void(0);" [ngClass]="currentTab == 'Portal' ? 'current' : ''"
+            (click)="getProjects('Portal')">Portals</a>
         </li>
         <!-- Single Filter Ends -->
       </ul>
@@ -54,34 +38,21 @@
     <div class="portfolio-item col-12">
       <div class="item-wrapper row">
         <!-- Single Item Starts -->
-        <div
-          class="item web-templates col-md-4 col-sm-6 col-12"
-          *ngFor="let item of currentProjects$"
-        >
+        <div class="item web-templates col-md-4 col-sm-6 col-12" *ngFor="let item of currentProjects$">
           <!-- Image Starts -->
           <div class="image">
-            <img
-              *ngIf="item.image != null"
-              src="{{ item.image }}"
-              alt="Data Landing Page"
-              height="226"
-            />
+            <img *ngIf="item.image != null" src="{{ item.image }}" alt="Data Landing Page" height="226" />
           </div>
           <!-- Image Ends -->
           <!-- Overlay Starts -->
           <div class="overlay">
             <!-- View More (Button) Starts -->
-            <a
-              class="view-more"
-              (click)="openProjectDetails(modelContent, item)"
-            >
+            <a class="view-more" (click)="openProjectDetails(modelContent, item)">
               <span class="front">
-                <i class="far fa-eye"></i
-                ><span class="value">View <span>More</span></span>
+                <i class="far fa-eye"></i><span class="value">View <span>More</span></span>
               </span>
               <span class="back">
-                <i class="far fa-eye"></i
-                ><span class="value">View <span>More</span></span>
+                <i class="far fa-eye"></i><span class="value">View <span>More</span></span>
               </span>
             </a>
             <!-- View More (Button) Ends -->
@@ -123,30 +94,17 @@
     </button>
   </div> -->
   <div class="modal-body">
-    <button
-      type="button"
-      class="close"
-      aria-label="Close"
-      (click)="modal.dismiss('Cross click')"
-    >
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
     <!-- Project Popup Starts -->
     <div id="restaurant-logo-collection" class="project-popup p-0">
       <!-- Project Picture On Popup Starts -->
 
-      <img
-        class="project-picture"
-        *ngIf="currentProject.image != null"
-        src="{{ currentProject.image }}"
-        alt="Data Landing Page"
-      />
-      <img
-        class="project-picture"
-        *ngIf="currentProject.image == null"
-        src="assets/img/projects/restaurant-logo-collection.jpg"
-        alt="Data Landing Page"
-      />
+      <img class="project-picture" *ngIf="currentProject.image != null" src="{{ currentProject.image }}"
+        alt="Data Landing Page" />
+      <img class="project-picture" *ngIf="currentProject.image == null"
+        src="assets/img/projects/restaurant-logo-collection.jpg" alt="Data Landing Page" />
       <!-- Project Picture On Popup Ends -->
       <!-- Project Name Starts -->
       <h5 class="project-name">{{ currentProject.title }}</h5>
@@ -188,12 +146,7 @@
       </div>
       <!-- Project Info Ends -->
       <!-- Project source Button Starts -->
-      <a
-        class="project-source"
-        href="{{ currentProject.link }}"
-        target="_blank"
-        *ngIf="currentProject.link != null"
-      >
+      <a class="project-source" href="{{ currentProject.link }}" target="_blank" *ngIf="currentProject.link != null">
         <span class="front">
           <i class="fas fa-long-arrow-alt-right"></i>
           <span class="value">Visit <span>Project</span></span>

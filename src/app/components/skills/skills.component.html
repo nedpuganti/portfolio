@@ -19,8 +19,7 @@
             <li class="single-skill" *ngFor="let skill of softSkills">
               <ul>
                 <li class="skill-name">
-                  <i class="fas fa-angle-double-right"></i
-                  ><span>{{ skill.name }}</span>
+                  <i class="fas fa-angle-double-right"></i><span>{{ skill.name }}</span>
                 </li>
                 <!-- Range Of Percentage 0% - 100% -->
                 <li class="percentage">{{ skill.progress }}%</li>
@@ -29,12 +28,8 @@
                 <!-- </li> -->
 
                 <li>
-                  <ngb-progressbar
-                    [value]="skill.progress"
-                    [striped]="true"
-                    [animated]="true"
-                    [height]="'40px'"
-                  ></ngb-progressbar>
+                  <ngb-progressbar [value]="skill.progress" [striped]="true" [animated]="true" [height]="'40px'">
+                  </ngb-progressbar>
                 </li>
               </ul>
             </li>
@@ -59,8 +54,7 @@
             <li class="single-skill" *ngFor="let skill of hardSkills">
               <ul>
                 <li class="skill-name">
-                  <i class="fas fa-angle-double-right"></i
-                  ><span>{{ skill.name }}</span>
+                  <i class="fas fa-angle-double-right"></i><span>{{ skill.name }}</span>
                 </li>
                 <!-- Range Of Percentage 0% - 100% -->
                 <li class="percentage">{{ skill.progress }}%</li>
@@ -69,12 +63,7 @@
                 <!-- </li> -->
 
                 <li>
-                  <ngb-progressbar
-                    [value]="skill.progress"
-                    [striped]="true"
-                    [animated]="true"
-                    [height]="'40px'"
-                  >
+                  <ngb-progressbar [value]="skill.progress" [striped]="true" [animated]="true" [height]="'40px'">
                   </ngb-progressbar>
                 </li>
               </ul>

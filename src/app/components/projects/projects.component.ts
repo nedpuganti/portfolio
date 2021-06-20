@@ -4,7 +4,7 @@ import * as projectsData from './projects-data';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
   currentTab: string;
@@ -26,7 +26,7 @@ export class ProjectsComponent implements OnInit {
       size: 'lg',
       scrollable: true,
       centered: true,
-      backdropClass: 'dark-backdrop'
+      backdropClass: 'dark-backdrop',
     });
   }
 

@@ -3,45 +3,45 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent implements OnInit {
   softSkills = [
     {
       name: 'Leadership',
-      progress: 70
+      progress: 70,
     },
     {
       name: 'Teamwork',
-      progress: 85
+      progress: 85,
     },
     {
       name: 'Communication',
-      progress: 75
+      progress: 75,
     },
     {
       name: 'Problem Solving',
-      progress: 90
-    }
+      progress: 90,
+    },
   ];
 
   hardSkills = [
     {
       name: 'HTML5 / SASS / CSS / Bootstrap',
-      progress: 85
+      progress: 85,
     },
     {
       name: 'Javascript / Angular / React.js / Nodejs',
-      progress: 90
+      progress: 90,
     },
     {
       name: 'Mongo / SQL / POSTGRES',
-      progress: 70
+      progress: 70,
     },
     {
       name: 'Jenkins / Docker / Kubernetes / Git',
-      progress: 80
-    }
+      progress: 80,
+    },
   ];
 
   constructor() {}
