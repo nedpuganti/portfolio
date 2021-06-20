@@ -19,7 +19,7 @@ export class PersonalinfoComponent implements OnInit {
     languages: 'Telugu, English',
   };
 
-  cvLink = 'https://zety.com/mycv/naren-edpuganti';
+  cvLink = 'https://zety.com/mycv/nedpuganti';
   githubLink = 'https://github.com/nedpuganti';
 
   constructor() {}
