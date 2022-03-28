@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterService } from '@app/services/register.service';
 
 @Component({
   selector: 'app-personalinfo',
@@ -7,22 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalinfoComponent implements OnInit {
   personalInfo: any = {
-    summary:
-      'I am a Full Stack Web Developer from Atlanta, USA. I am very passionate and dedicated to my work.I have 5 years more work experience.And enjoy working in a team or individual.',
+    summary: `I am a Full Stack Web Developer from Atlanta, USA. I am very passionate and dedicated to my work.I have ${this.registerService.getExperienceYearsCount()} years more work experience and enjoy working in a team or individual.`,
     firstName: 'Naren',
     lastName: 'Edpuganti',
     dob: 'June 1991',
     nationality: 'India',
-    phoneNumber: '4702224996',
+    phoneNumber: '4239028634',
     email: 'contact@narenedpuganti.com',
     address: 'N/A',
     languages: 'Telugu, English',
   };
 
-  cvLink = 'https://zety.com/mycv/nedpuganti';
+  cvLink = '#';
   githubLink = 'https://github.com/nedpuganti';
 
-  constructor() {}
+  constructor(private registerService: RegisterService) {}
 
   ngOnInit() {}
 }

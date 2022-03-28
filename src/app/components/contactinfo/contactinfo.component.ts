@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactinfoComponent implements OnInit {
   contactInfo: any = {
-    phoneNumber: '4702224996',
+    phoneNumber: '4239028634',
     email: 'contact@narenedpuganti.com',
     address: 'N/A',
     website: 'www.narenedpuganti.com',

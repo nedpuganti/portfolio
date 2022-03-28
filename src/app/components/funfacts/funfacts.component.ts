@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterService } from '@app/services/register.service';
 
 @Component({
   selector: 'app-funfacts',
@@ -9,7 +10,7 @@ export class FunfactsComponent implements OnInit {
   funFacts: any[] = [
     {
       name: 'Years Experience',
-      value: 6,
+      value: this.registerService.getExperienceYearsCount(),
     },
     {
       name: 'Done Projects',
@@ -20,7 +21,7 @@ export class FunfactsComponent implements OnInit {
       value: 20,
     },
   ];
-  constructor() {}
+  constructor(private registerService: RegisterService) {}
 
   ngOnInit() {}
 }
