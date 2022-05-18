@@ -254,8 +254,8 @@ h6 {
   transition: 0.4s ease-in-out;
 }
 
-.project-popup .project-source > .front,
-.project-popup .project-source > .back {
+.project-popup .project-source>.front,
+.project-popup .project-source>.back {
   width: 100%;
   height: 100%;
   display: block;
@@ -268,7 +268,7 @@ h6 {
   transition: 0.6s ease-in-out;
 }
 
-.project-popup .project-source > .front {
+.project-popup .project-source>.front {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -276,7 +276,7 @@ h6 {
   transform: scale(1);
 }
 
-.project-popup .project-source > .back {
+.project-popup .project-source>.back {
   -webkit-transform: scale(4);
   -moz-transform: scale(4);
   -ms-transform: scale(4);
@@ -285,12 +285,12 @@ h6 {
   opacity: 0;
 }
 
-.project-popup .project-source > .front > i,
-.project-popup .project-source > .back > i {
+.project-popup .project-source>.front>i,
+.project-popup .project-source>.back>i {
   margin-right: 10px;
 }
 
-.project-popup .project-source:hover > .front {
+.project-popup .project-source:hover>.front {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -298,7 +298,7 @@ h6 {
   transform: scale(0);
 }
 
-.project-popup .project-source:hover > .back {
+.project-popup .project-source:hover>.back {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -789,11 +789,7 @@ html.mfp-helper {
   transition: 0.4s ease-in-out;
 }
 
-.main-content#home
-  .inner-content
-  .content
-  .box-wrapper
-  .inner-box-wrapper:after {
+.main-content#home .inner-content .content .box-wrapper .inner-box-wrapper:after {
   content: '';
   display: block;
   width: 90%;
@@ -804,25 +800,14 @@ html.mfp-helper {
   z-index: -1;
 }
 
-.main-content#home
-  .inner-content
-  .content
-  .box-wrapper
-  .inner-box-wrapper
-  .menu-link {
+.main-content#home .inner-content .content .box-wrapper .inner-box-wrapper .menu-link {
   display: block;
   width: 100%;
   height: 100%;
   color: inherit;
 }
 
-.main-content#home
-  .inner-content
-  .content
-  .box-wrapper
-  .inner-box-wrapper
-  .menu-link
-  .valign-center {
+.main-content#home .inner-content .content .box-wrapper .inner-box-wrapper .menu-link .valign-center {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -847,70 +832,28 @@ html.mfp-helper {
   align-items: center;
 }
 
-.main-content#home
-  .inner-content
-  .content
-  .box-wrapper
-  .inner-box-wrapper
-  .menu-link
-  .valign-center
-  h5 {
+.main-content#home .inner-content .content .box-wrapper .inner-box-wrapper .menu-link .valign-center h5 {
   font-weight: 700;
 }
 
-.main-content#home
-  .inner-content
-  .content
-  .box-wrapper
-  .inner-box-wrapper
-  .menu-link
-  .valign-center
-  h5 {
+.main-content#home .inner-content .content .box-wrapper .inner-box-wrapper .menu-link .valign-center h5 {
   margin-bottom: 0;
   text-transform: uppercase;
 }
 
-.main-content#home
-  .inner-content
-  .content
-  .box-wrapper:nth-of-type(1)
-  .inner-box-wrapper
-  .menu-link
-  .valign-center
-  h5 {
+.main-content#home .inner-content .content .box-wrapper:nth-of-type(1) .inner-box-wrapper .menu-link .valign-center h5 {
   margin-top: 16px;
 }
 
-.main-content#home
-  .inner-content
-  .content
-  .box-wrapper:nth-of-type(2)
-  .inner-box-wrapper
-  .menu-link
-  .valign-center
-  h5 {
+.main-content#home .inner-content .content .box-wrapper:nth-of-type(2) .inner-box-wrapper .menu-link .valign-center h5 {
   margin-top: 13px;
 }
 
-.main-content#home
-  .inner-content
-  .content
-  .box-wrapper:nth-of-type(3)
-  .inner-box-wrapper
-  .menu-link
-  .valign-center
-  h5 {
+.main-content#home .inner-content .content .box-wrapper:nth-of-type(3) .inner-box-wrapper .menu-link .valign-center h5 {
   margin-top: 16px;
 }
 
-.main-content#home
-  .inner-content
-  .content
-  .box-wrapper:nth-of-type(4)
-  .inner-box-wrapper
-  .menu-link
-  .valign-center
-  h5 {
+.main-content#home .inner-content .content .box-wrapper:nth-of-type(4) .inner-box-wrapper .menu-link .valign-center h5 {
   margin-top: 13px;
 }
 
@@ -972,28 +915,15 @@ html.mfp-helper {
   margin-bottom: 0;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .summary
-  p:not(:nth-of-type(1)) {
+.main-content#about .inner-content .content #personal-info .summary p:not(:nth-of-type(1)) {
   margin-top: 16px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .profile:nth-child(2n + 3) {
+.main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 3) {
   padding-right: 15px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .profile:nth-child(2n + 4) {
+.main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 4) {
   padding-left: 15px;
 }
 
@@ -1006,24 +936,11 @@ html.mfp-helper {
   display: flex;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .profile
-  ul
-  li:last-child {
+.main-content#about .inner-content .content #personal-info .profile ul li:last-child {
   margin-bottom: 0;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .profile
-  ul
-  li
-  .label {
+.main-content#about .inner-content .content #personal-info .profile ul li .label {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -1036,45 +953,16 @@ html.mfp-helper {
   align-items: baseline;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .profile
-  ul
-  li
-  .label,
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .profile
-  ul
-  li
-  .dash {
+.main-content#about .inner-content .content #personal-info .profile ul li .label,
+.main-content#about .inner-content .content #personal-info .profile ul li .dash {
   margin-right: 5px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .profile
-  ul
-  li
-  .label
-  i {
+.main-content#about .inner-content .content #personal-info .profile ul li .label i {
   margin-right: 13px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .profile
-  ul
-  li
-  .value {
+.main-content#about .inner-content .content #personal-info .profile ul li .value {
   word-wrap: break-word;
   -ms-word-break: break-all;
   word-break: break-all;
@@ -1097,24 +985,11 @@ html.mfp-helper {
   margin-bottom: 12px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .social-media
-  ul
-  li:last-of-type {
+.main-content#about .inner-content .content #personal-info .social-media ul li:last-of-type {
   margin-right: 0;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .social-media
-  ul
-  li
-  a {
+.main-content#about .inner-content .content #personal-info .social-media ul li a {
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -1139,24 +1014,8 @@ html.mfp-helper {
   transition: 0.4s ease-in-out;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .social-media
-  ul
-  li
-  a
-  > .front,
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .social-media
-  ul
-  li
-  a
-  > .back {
+.main-content#about .inner-content .content #personal-info .social-media ul li a>.front,
+.main-content#about .inner-content .content #personal-info .social-media ul li a>.back {
   width: 100%;
   height: 100%;
   display: block;
@@ -1169,15 +1028,7 @@ html.mfp-helper {
   transition: 0.6s ease-in-out;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .social-media
-  ul
-  li
-  a
-  > .front {
+.main-content#about .inner-content .content #personal-info .social-media ul li a>.front {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -1185,15 +1036,7 @@ html.mfp-helper {
   transform: scale(1);
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .social-media
-  ul
-  li
-  a
-  > .back {
+.main-content#about .inner-content .content #personal-info .social-media ul li a>.back {
   -webkit-transform: scale(4);
   -moz-transform: scale(4);
   -ms-transform: scale(4);
@@ -1202,15 +1045,7 @@ html.mfp-helper {
   opacity: 0;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .social-media
-  ul
-  li
-  a:hover
-  > .front {
+.main-content#about .inner-content .content #personal-info .social-media ul li a:hover>.front {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -1218,15 +1053,7 @@ html.mfp-helper {
   transform: scale(0);
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .social-media
-  ul
-  li
-  a:hover
-  > .back {
+.main-content#about .inner-content .content #personal-info .social-media ul li a:hover>.back {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -1239,23 +1066,12 @@ html.mfp-helper {
   line-height: 1;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .button-wrapper
-  .single-button {
+.main-content#about .inner-content .content #personal-info .button-wrapper .single-button {
   margin-bottom: 12px;
   display: inline-block;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .button-wrapper
-  .single-button
-  a {
+.main-content#about .inner-content .content #personal-info .button-wrapper .single-button a {
   display: inline-block;
   text-transform: capitalize;
   border-width: 1px;
@@ -1276,17 +1092,12 @@ html.mfp-helper {
   transition: 0.4s ease-in-out;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .button-wrapper
-  .single-button:last-of-type {
+.main-content#about .inner-content .content #personal-info .button-wrapper .single-button:last-of-type {
   margin-right: 0;
 }
 
-.main-content#about .inner-content .content .button-wrapper a > .front,
-.main-content#about .inner-content .content .button-wrapper a > .back {
+.main-content#about .inner-content .content .button-wrapper a>.front,
+.main-content#about .inner-content .content .button-wrapper a>.back {
   width: 100%;
   height: 100%;
   display: block;
@@ -1299,7 +1110,7 @@ html.mfp-helper {
   transition: 0.6s ease-in-out;
 }
 
-.main-content#about .inner-content .content .button-wrapper a > .front {
+.main-content#about .inner-content .content .button-wrapper a>.front {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -1307,7 +1118,7 @@ html.mfp-helper {
   transform: scale(1);
 }
 
-.main-content#about .inner-content .content .button-wrapper a > .back {
+.main-content#about .inner-content .content .button-wrapper a>.back {
   -webkit-transform: scale(4);
   -moz-transform: scale(4);
   -ms-transform: scale(4);
@@ -1316,28 +1127,12 @@ html.mfp-helper {
   opacity: 0;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .button-wrapper
-  .single-button
-  a
-  > .front
-  > i,
-.main-content#about
-  .inner-content
-  .content
-  #personal-info
-  .button-wrapper
-  .single-button
-  a
-  > .back
-  > i {
+.main-content#about .inner-content .content #personal-info .button-wrapper .single-button a>.front>i,
+.main-content#about .inner-content .content #personal-info .button-wrapper .single-button a>.back>i {
   margin-right: 13px;
 }
 
-.main-content#about .inner-content .content .button-wrapper a:hover > .front {
+.main-content#about .inner-content .content .button-wrapper a:hover>.front {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -1345,7 +1140,7 @@ html.mfp-helper {
   transform: scale(0);
 }
 
-.main-content#about .inner-content .content .button-wrapper a:hover > .back {
+.main-content#about .inner-content .content .button-wrapper a:hover>.back {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -1358,58 +1153,30 @@ html.mfp-helper {
   margin-bottom: 40px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #services
-  .single-service:nth-of-type(odd) {
+.main-content#about .inner-content .content #services .single-service:nth-of-type(odd) {
   padding-right: 15px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #services
-  .single-service:nth-of-type(even) {
+.main-content#about .inner-content .content #services .single-service:nth-of-type(even) {
   padding-left: 15px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #services
-  .single-service
-  ul
-  .service-number {
+.main-content#about .inner-content .content #services .single-service ul .service-number {
   padding: 12px 14px;
   text-align: center;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #services
-  .single-service
-  ul
-  .service-number
-  .first-word {
+.main-content#about .inner-content .content #services .single-service ul .service-number .first-word {
   margin-right: 1px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #services
-  .single-service
-  ul
-  .service-number
-  .second-word {
+.main-content#about .inner-content .content #services .single-service ul .service-number .second-word {
   font-weight: 700;
   text-transform: uppercase;
   margin-left: 1px;
 }
 
-.main-content#about .inner-content .content #services .single-service > ul {
+.main-content#about .inner-content .content #services .single-service>ul {
   border-width: 1px;
   border-style: solid;
   -webkit-border-radius: 5px;
@@ -1422,26 +1189,11 @@ html.mfp-helper {
   padding: 24px 14px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #services
-  .single-service
-  ul
-  ul
-  .service-name {
+.main-content#about .inner-content .content #services .single-service ul ul .service-name {
   margin-bottom: 16px;
 }
 
-.main-content#about
-  .inner-content
-  .content
-  #services
-  .single-service
-  ul
-  ul
-  .service-name
-  i {
+.main-content#about .inner-content .content #services .single-service ul ul .service-name i {
   margin-right: 13px;
 }
 
@@ -1493,127 +1245,42 @@ html.mfp-helper {
   margin-bottom: 40px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper:nth-of-type(odd),
-.main-content#resume
-  .inner-content
-  .content
-  .education
-  .single-education:nth-of-type(odd),
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience:nth-of-type(odd) {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(odd),
+.main-content#resume .inner-content .content .education .single-education:nth-of-type(odd),
+.main-content#resume .inner-content .content .experience .single-experience:nth-of-type(odd) {
   padding-right: 15px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper:nth-of-type(even),
-.main-content#resume
-  .inner-content
-  .content
-  .education
-  .single-education:nth-of-type(even),
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience:nth-of-type(even) {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(even),
+.main-content#resume .inner-content .content .education .single-education:nth-of-type(even),
+.main-content#resume .inner-content .content .experience .single-experience:nth-of-type(even) {
   padding-left: 15px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  .skills-heading,
-.main-content#resume
-  .inner-content
-  .content
-  .education
-  .single-education
-  .education-when-where,
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience
-  .experience-when-where {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper .skills-heading,
+.main-content#resume .inner-content .content .education .single-education .education-when-where,
+.main-content#resume .inner-content .content .experience .single-experience .experience-when-where {
   padding: 12px 14px;
   text-align: center;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  .skills-heading
-  .first-word,
-.main-content#resume
-  .inner-content
-  .content
-  .education
-  .single-education
-  .education-when-where
-  .when,
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience
-  .experience-when-where
-  .when {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper .skills-heading .first-word,
+.main-content#resume .inner-content .content .education .single-education .education-when-where .when,
+.main-content#resume .inner-content .content .experience .single-experience .experience-when-where .when {
   margin-right: 1px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  .skills-heading
-  .second-word,
-.main-content#resume
-  .inner-content
-  .content
-  .education
-  .single-education
-  .education-when-where
-  .where,
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience
-  .experience-when-where
-  .where {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper .skills-heading .second-word,
+.main-content#resume .inner-content .content .education .single-education .education-when-where .where,
+.main-content#resume .inner-content .content .experience .single-experience .experience-when-where .where {
   font-weight: 700;
   margin-left: 1px;
   text-transform: uppercase;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  > ul,
-.main-content#resume .inner-content .content .education .single-education > ul,
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience
-  > ul {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper>ul,
+.main-content#resume .inner-content .content .education .single-education>ul,
+.main-content#resume .inner-content .content .experience .single-experience>ul {
   border-width: 1px;
   border-style: solid;
   -webkit-border-radius: 5px;
@@ -1622,82 +1289,28 @@ html.mfp-helper {
   height: 100%;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  ul
-  ul
-  .single-skill,
+.main-content#resume .inner-content .content .skills .single-skills-wrapper ul ul .single-skill,
 .main-content#resume .inner-content .content .education .single-education ul ul,
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience
-  ul
-  ul {
+.main-content#resume .inner-content .content .experience .single-experience ul ul {
   padding: 23px 14px 0;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  ul
-  ul
-  .single-skill:last-of-type {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper ul ul .single-skill:last-of-type {
   padding-bottom: 30px;
 }
 
 .main-content#resume .inner-content .content .education .single-education ul ul,
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience
-  ul
-  ul {
+.main-content#resume .inner-content .content .experience .single-experience ul ul {
   padding-bottom: 23px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  ul
-  .single-skill
-  ul {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul {
   position: relative;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  ul
-  .single-skill
-  .skill-name,
-.main-content#resume
-  .inner-content
-  .content
-  .education
-  .single-education
-  ul
-  ul
-  .education-name,
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience
-  ul
-  ul
-  .experience-name {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill .skill-name,
+.main-content#resume .inner-content .content .education .single-education ul ul .education-name,
+.main-content#resume .inner-content .content .experience .single-experience ul ul .experience-name {
   word-wrap: break-word;
   -ms-word-break: break-all;
   word-break: break-all;
@@ -1705,97 +1318,30 @@ html.mfp-helper {
   overflow: hidden;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  ul
-  .single-skill
-  .skill-name {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill .skill-name {
   padding-right: 40px;
   margin-bottom: 7px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .education
-  .single-education
-  ul
-  ul
-  .education-name,
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience
-  ul
-  ul
-  .experience-name {
+.main-content#resume .inner-content .content .education .single-education ul ul .education-name,
+.main-content#resume .inner-content .content .experience .single-experience ul ul .experience-name {
   margin-bottom: 16px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  ul
-  .single-skill
-  .skill-name
-  i,
-.main-content#resume
-  .inner-content
-  .content
-  .education
-  .single-education
-  ul
-  ul
-  .education-name
-  i,
-.main-content#resume
-  .inner-content
-  .content
-  .experience
-  .single-experience
-  ul
-  ul
-  .experience-name
-  i,
-.main-content#resume
-  .inner-content
-  .content
-  .fun-facts
-  .single-fun-fact
-  .fun-fact-body
-  i {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill .skill-name i,
+.main-content#resume .inner-content .content .education .single-education ul ul .education-name i,
+.main-content#resume .inner-content .content .experience .single-experience ul ul .experience-name i,
+.main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-body i {
   margin-right: 13px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  ul
-  .single-skill
-  ul
-  .percentage {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .percentage {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  ul
-  .single-skill
-  ul
-  .progress-wrapper {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .progress-wrapper {
   height: 30px;
   width: 100%;
   -webkit-border-radius: 5px;
@@ -1807,16 +1353,7 @@ html.mfp-helper {
   overflow: hidden;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .skills
-  .single-skills-wrapper
-  ul
-  .single-skill
-  ul
-  .progress-wrapper
-  .progress {
+.main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .progress-wrapper .progress {
   background-position: 0 0;
   background-size: 40px 40px;
   display: block;
@@ -1870,64 +1407,32 @@ html.mfp-helper {
   margin-bottom: 33px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .fun-facts
-  .single-fun-fact:nth-child(3n + 1) {
+.main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 1) {
   padding-right: 15px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .fun-facts
-  .single-fun-fact:nth-child(even) {
+.main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(even) {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .fun-facts
-  .single-fun-fact:nth-child(3n + 3) {
+.main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 3) {
   padding-left: 15px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .fun-facts
-  .single-fun-fact
-  .fun-fact-icon {
+.main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-icon {
   margin-bottom: 11px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .fun-facts
-  .single-fun-fact
-  .fun-fact-value {
+.main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
   margin-bottom: 6px;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .fun-facts
-  .single-fun-fact
-  .fun-fact-value {
+.main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
   font-size: 2.369em;
 }
 
-.main-content#resume
-  .inner-content
-  .content
-  .fun-facts
-  .single-fun-fact
-  .fun-fact-body {
+.main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-body {
   word-wrap: break-word;
   -ms-word-break: break-all;
   word-break: break-all;
@@ -1965,8 +1470,8 @@ html.mfp-helper {
   margin-right: 0;
 }
 
-.main-content#resume .inner-content .content .button-wrapper a > .front,
-.main-content#resume .inner-content .content .button-wrapper a > .back {
+.main-content#resume .inner-content .content .button-wrapper a>.front,
+.main-content#resume .inner-content .content .button-wrapper a>.back {
   width: 100%;
   height: 100%;
   display: block;
@@ -1979,7 +1484,7 @@ html.mfp-helper {
   transition: 0.6s ease-in-out;
 }
 
-.main-content#resume .inner-content .content .button-wrapper a > .front {
+.main-content#resume .inner-content .content .button-wrapper a>.front {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -1987,7 +1492,7 @@ html.mfp-helper {
   transform: scale(1);
 }
 
-.main-content#resume .inner-content .content .button-wrapper a > .back {
+.main-content#resume .inner-content .content .button-wrapper a>.back {
   -webkit-transform: scale(4);
   -moz-transform: scale(4);
   -ms-transform: scale(4);
@@ -1996,12 +1501,12 @@ html.mfp-helper {
   opacity: 0;
 }
 
-.main-content#resume .inner-content .content .button-wrapper a > .front > i,
-.main-content#resume .inner-content .content .button-wrapper a > .back > i {
+.main-content#resume .inner-content .content .button-wrapper a>.front>i,
+.main-content#resume .inner-content .content .button-wrapper a>.back>i {
   margin-right: 13px;
 }
 
-.main-content#resume .inner-content .content .button-wrapper a:hover > .front {
+.main-content#resume .inner-content .content .button-wrapper a:hover>.front {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -2009,7 +1514,7 @@ html.mfp-helper {
   transform: scale(0);
 }
 
-.main-content#resume .inner-content .content .button-wrapper a:hover > .back {
+.main-content#resume .inner-content .content .button-wrapper a:hover>.back {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -2022,7 +1527,7 @@ html.mfp-helper {
 /* [ 3.1.5. Main Content - Portfolio ]                             */
 /*=================================================================*/
 
-.main-content#portfolio .inner-content .content #projects > .row {
+.main-content#portfolio .inner-content .content #projects>.row {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -2044,47 +1549,21 @@ html.mfp-helper {
   border-radius: 5px;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-filter
-  ul
-  li {
+.main-content#portfolio .inner-content .content #projects .portfolio-filter ul li {
   display: inline-block;
   margin-bottom: 34px;
   margin-right: 24px;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-filter
-  ul
-  li:last-child {
+.main-content#portfolio .inner-content .content #projects .portfolio-filter ul li:last-child {
   margin-right: 0;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-filter
-  ul
-  li
-  a {
+.main-content#portfolio .inner-content .content #projects .portfolio-filter ul li a {
   display: block;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-filter
-  ul
-  li
-  a.current {
+.main-content#portfolio .inner-content .content #projects .portfolio-filter ul li a.current {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -2097,23 +1576,12 @@ html.mfp-helper {
   margin-top: 6px;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper {
   margin-left: -15px;
   margin-right: -15px;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item {
   padding: 0;
   -webkit-flex: 0 0 -webkit-calc(50% - 30px);
   -webkit-flex: 0 0 calc(50% - 30px);
@@ -2129,15 +1597,7 @@ html.mfp-helper {
   overflow: hidden;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item:hover
-  .image
-  img {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item:hover .image img {
   -webkit-transform: scale(1.15);
   -moz-transform: scale(1.15);
   -ms-transform: scale(1.15);
@@ -2145,36 +1605,13 @@ html.mfp-helper {
   transform: scale(1.15);
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item:hover
-  .overlay {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item:hover .overlay {
   opacity: 1;
   visibility: visible;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item:hover
-  .overlay
-  .view-more,
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item:hover
-  .overlay
-  .image-info {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item:hover .overlay .view-more,
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item:hover .overlay .image-info {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -2182,14 +1619,7 @@ html.mfp-helper {
   transform: translateX(0);
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .image {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .image {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -2199,15 +1629,7 @@ html.mfp-helper {
   border-radius: 5px;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .image
-  img {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .image img {
   width: 100%;
   max-width: 100%;
   -webkit-transition: 0.4s ease-in-out;
@@ -2216,14 +1638,7 @@ html.mfp-helper {
   transition: 0.4s ease-in-out;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay {
   position: absolute;
   overflow: hidden;
   width: 100%;
@@ -2243,15 +1658,7 @@ html.mfp-helper {
   transition: 0.4s ease-in-out;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .view-more {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .view-more {
   text-transform: capitalize;
   border-width: 1px;
   border-style: solid;
@@ -2278,26 +1685,8 @@ html.mfp-helper {
   transition: 0.4s ease-in-out;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .view-more
-  > .front,
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .view-more
-  > .back {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .view-more>.front,
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .view-more>.back {
   width: 100%;
   height: 100%;
   display: block;
@@ -2310,16 +1699,7 @@ html.mfp-helper {
   transition: 0.6s ease-in-out;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .view-more
-  > .front {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .view-more>.front {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -2327,16 +1707,7 @@ html.mfp-helper {
   transform: scale(1);
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .view-more
-  > .back {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .view-more>.back {
   -webkit-transform: scale(4);
   -moz-transform: scale(4);
   -ms-transform: scale(4);
@@ -2345,41 +1716,12 @@ html.mfp-helper {
   opacity: 0;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .view-more
-  > .front
-  > i,
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .view-more
-  > .back
-  > i {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .view-more>.front>i,
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .view-more>.back>i {
   margin-right: 7px;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .view-more:hover
-  > .front {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .view-more:hover>.front {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -2387,16 +1729,7 @@ html.mfp-helper {
   transform: scale(0);
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .view-more:hover
-  > .back {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .view-more:hover>.back {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -2405,15 +1738,7 @@ html.mfp-helper {
   opacity: 1;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .image-info {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .image-info {
   position: absolute;
   left: 15px;
   bottom: 10px;
@@ -2429,47 +1754,18 @@ html.mfp-helper {
   transition: 0.4s ease-in-out;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .image-info
-  .project-name {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .image-info .project-name {
   display: block;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.5;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .image-info
-  .project-tags {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .image-info .project-tags {
   display: block;
 }
 
-.main-content#portfolio
-  .inner-content
-  .content
-  #projects
-  .portfolio-item
-  .item-wrapper
-  .item
-  .overlay
-  .image-info
-  .project-tags
-  .tag-icon
-  i {
+.main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item .overlay .image-info .project-tags .tag-icon i {
   margin-right: 5px;
 }
 
@@ -2477,20 +1773,20 @@ html.mfp-helper {
 /* [ 3.1.6. Main Content - Contact ]                               */
 /*=================================================================*/
 
-.main-content#contact .inner-content .content #contact-info > .row,
-.main-content#contact .inner-content .content #contact-form > .row {
+.main-content#contact .inner-content .content #contact-info>.row,
+.main-content#contact .inner-content .content #contact-form>.row {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin-top: 28px;
 }
 
-.main-content#contact .inner-content .content #contact-info > .row {
+.main-content#contact .inner-content .content #contact-info>.row {
   margin-bottom: 58px;
   padding: 34px 30px 27px;
 }
 
-.main-content#contact .inner-content .content #contact-form > .row {
+.main-content#contact .inner-content .content #contact-form>.row {
   margin-bottom: 60px;
   padding: 33px 30px 40px;
 }
@@ -2509,78 +1805,33 @@ html.mfp-helper {
   border-radius: 5px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li {
   margin-bottom: 28px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li:nth-of-type(odd) {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(odd) {
   padding-right: 15px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li:nth-of-type(even) {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(even) {
   padding-left: 15px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li:last-of-type {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:last-of-type {
   margin-bottom: 0;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .contact-info-name {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .contact-info-name {
   display: block;
   text-transform: capitalize;
   margin-bottom: 2px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .icon-of-value {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .icon-of-value {
   margin-right: 11px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .value {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .value {
   word-wrap: break-word;
   -ms-word-break: break-all;
   word-break: break-all;
@@ -2588,42 +1839,18 @@ html.mfp-helper {
   overflow: hidden;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .social-media {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .social-media {
   line-height: 1;
   margin-top: 8px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .social-media
-  li {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .social-media li {
   display: inline-block;
   margin-right: 11px;
   margin-bottom: 12px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .social-media
-  li
-  a {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .social-media li a {
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -2648,28 +1875,8 @@ html.mfp-helper {
   transition: 0.4s ease-in-out;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .social-media
-  li
-  a
-  > .front,
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .social-media
-  li
-  a
-  > .back {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .social-media li a>.front,
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .social-media li a>.back {
   width: 100%;
   height: 100%;
   display: block;
@@ -2682,17 +1889,7 @@ html.mfp-helper {
   transition: 0.6s ease-in-out;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .social-media
-  li
-  a
-  > .front {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .social-media li a>.front {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -2700,17 +1897,7 @@ html.mfp-helper {
   transform: scale(1);
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .social-media
-  li
-  a
-  > .back {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .social-media li a>.back {
   -webkit-transform: scale(4);
   -moz-transform: scale(4);
   -ms-transform: scale(4);
@@ -2719,17 +1906,7 @@ html.mfp-helper {
   opacity: 0;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .social-media
-  li
-  a:hover
-  > .front {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .social-media li a:hover>.front {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -2737,17 +1914,7 @@ html.mfp-helper {
   transform: scale(0);
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-info
-  .list-contact-info
-  > ul
-  > li
-  .social-media
-  li
-  a:hover
-  > .back {
+.main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li .social-media li a:hover>.back {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -2770,94 +1937,43 @@ html.mfp-helper {
   margin-bottom: 0;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .note
-  p:not(:nth-of-type(1)) {
+.main-content#contact .inner-content .content #contact-form .note p:not(:nth-of-type(1)) {
   margin-top: 16px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group {
   margin-bottom: 10px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group:last-child {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group:last-child {
   margin-bottom: 0;
   line-height: 1;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  .inner-form-group {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group .inner-form-group {
   width: 50%;
   float: left;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  .inner-form-group:first-child {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group .inner-form-group:first-child {
   padding-right: 5px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  .inner-form-group:last-child {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group .inner-form-group:last-child {
   padding-left: 5px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  .form-control {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group .form-control {
   font-size: 1em;
   padding: 7px 14px 8px;
   border: 0;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  input.form-control {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group input.form-control {
   height: 40px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  textarea.form-control {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group textarea.form-control {
   height: 150px;
   -webkit-transition: 0.4s ease-in-out;
   -moz-transition: 0.4s ease-in-out;
@@ -2865,25 +1981,13 @@ html.mfp-helper {
   transition: 0.4s ease-in-out;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  .form-control:focus {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group .form-control:focus {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  button[type='submit'] {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit'] {
   display: inline-block;
   text-transform: capitalize;
   position: relative;
@@ -2905,22 +2009,8 @@ html.mfp-helper {
   transition: 0.4s ease-in-out;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  button[type='submit']
-  > .front,
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  button[type='submit']
-  > .back {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit']>.front,
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit']>.back {
   width: 100%;
   height: 100%;
   display: block;
@@ -2933,35 +2023,12 @@ html.mfp-helper {
   transition: 0.6s ease-in-out;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  button[type='submit']
-  > .front
-  > i,
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  button[type='submit']
-  > .back
-  > i {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit']>.front>i,
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit']>.back>i {
   margin-right: 10px;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  button[type='submit']
-  > .front {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit']>.front {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -2969,14 +2036,7 @@ html.mfp-helper {
   transform: scale(1);
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  button[type='submit']
-  > .back {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit']>.back {
   -webkit-transform: scale(4);
   -moz-transform: scale(4);
   -ms-transform: scale(4);
@@ -2985,14 +2045,7 @@ html.mfp-helper {
   opacity: 0;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  button[type='submit']:hover
-  > .front {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit']:hover>.front {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -3000,14 +2053,7 @@ html.mfp-helper {
   transform: scale(0);
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  button[type='submit']:hover
-  > .back {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit']:hover>.back {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -3016,13 +2062,7 @@ html.mfp-helper {
   opacity: 1;
 }
 
-.main-content#contact
-  .inner-content
-  .content
-  #contact-form
-  .form-wrapper
-  .form-group
-  button[type='submit']:focus {
+.main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit']:focus {
   outline: 0;
 }
 
@@ -3090,20 +2130,12 @@ html.mfp-helper {
   }
 
   .main-content#home .inner-content .content {
-    height: -webkit-calc(
-      100% - ((60px * 3) + 15px + (2.827em + 1.414em) - 6px)
-    );
+    height: -webkit-calc(100% - ((60px * 3) + 15px + (2.827em + 1.414em) - 6px));
     height: -moz-calc(100% - ((60px * 3) + 15px + (2.827em + 1.414em) - 6px));
     height: calc(100% - ((60px * 3) + 15px + (2.827em + 1.414em) - 6px));
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .social-media
-    ul
-    li {
+  .main-content#about .inner-content .content #personal-info .social-media ul li {
     margin-bottom: 13px;
   }
 
@@ -3111,87 +2143,34 @@ html.mfp-helper {
     padding: 23px 14px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service
-    ul
-    ul
-    .service-name {
+  .main-content#about .inner-content .content #services .single-service ul ul .service-name {
     margin-bottom: 15px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    ul
-    .single-skill,
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul ul .single-skill,
+  .main-content#resume .inner-content .content .education .single-education ul ul,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul {
     padding: 22px 14px 0;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul {
+  .main-content#resume .inner-content .content .education .single-education ul ul,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul {
     padding-bottom: 23px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-icon {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-icon {
     margin-bottom: 8px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-value {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
     margin-bottom: 2px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-value {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
     font-size: 2.827em;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     padding: 33px 30px 27px;
   }
 }
@@ -3255,9 +2234,7 @@ html.mfp-helper {
   }
 
   .main-content#home .inner-content .content {
-    height: -webkit-calc(
-      100% - ((80px * 3) + 15px + (2.827em + 1.414em) - 6px)
-    );
+    height: -webkit-calc(100% - ((80px * 3) + 15px + (2.827em + 1.414em) - 6px));
     height: -moz-calc(100% - ((80px * 3) + 15px + (2.827em + 1.414em) - 6px));
     height: calc(100% - ((80px * 3) + 15px + (2.827em + 1.414em) - 6px));
   }
@@ -3311,28 +2288,15 @@ html.mfp-helper {
     margin-bottom: 35px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .summary
-    p:not(:nth-of-type(1)) {
+  .main-content#about .inner-content .content #personal-info .summary p:not(:nth-of-type(1)) {
     margin-top: 25px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 3) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 3) {
     padding-right: 20px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 4) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 4) {
     padding-left: 20px;
   }
 
@@ -3349,19 +2313,11 @@ html.mfp-helper {
     margin-bottom: 50px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service:nth-of-type(odd) {
+  .main-content#about .inner-content .content #services .single-service:nth-of-type(odd) {
     padding-right: 20px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service:nth-of-type(even) {
+  .main-content#about .inner-content .content #services .single-service:nth-of-type(even) {
     padding-left: 20px;
   }
 
@@ -3369,14 +2325,7 @@ html.mfp-helper {
     padding: 32px 14px 33px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service
-    ul
-    ul
-    .service-name {
+  .main-content#about .inner-content .content #services .single-service ul ul .service-name {
     margin-bottom: 24px;
   }
 
@@ -3413,117 +2362,38 @@ html.mfp-helper {
     margin-bottom: 50px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience:nth-of-type(odd) {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(odd),
+  .main-content#resume .inner-content .content .education .single-education:nth-of-type(odd),
+  .main-content#resume .inner-content .content .experience .single-experience:nth-of-type(odd) {
     padding-right: 20px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience:nth-of-type(even) {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(even),
+  .main-content#resume .inner-content .content .education .single-education:nth-of-type(even),
+  .main-content#resume .inner-content .content .experience .single-experience:nth-of-type(even) {
     padding-left: 20px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    ul
-    .single-skill,
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul ul .single-skill,
+  .main-content#resume .inner-content .content .education .single-education ul ul,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul {
     padding: 32px 14px 0;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    ul
-    .single-skill:last-of-type {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul ul .single-skill:last-of-type {
     padding-bottom: 40px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul {
+  .main-content#resume .inner-content .content .education .single-education ul ul,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul {
     padding-bottom: 32px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    .single-skill
-    ul
-    .progress-wrapper {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .progress-wrapper {
     height: 40px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    .single-skill
-    ul
-    .progress-wrapper
-    .progress {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .progress-wrapper .progress {
     background-size: 50px 50px;
   }
 
@@ -3557,22 +2427,8 @@ html.mfp-helper {
     }
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul
-    .education-name,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul
-    .experience-name {
+  .main-content#resume .inner-content .content .education .single-education ul ul .education-name,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul .experience-name {
     margin-bottom: 24px;
   }
 
@@ -3580,46 +2436,24 @@ html.mfp-helper {
     margin-bottom: 43px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(3n + 1) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 1) {
     padding-right: 20px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(even) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(even) {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(3n + 3) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 3) {
     padding-left: 20px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-icon {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-icon {
     margin-bottom: 15px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-value {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
     margin-bottom: 11px;
   }
 
@@ -3627,7 +2461,7 @@ html.mfp-helper {
     margin-bottom: 79px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     margin-top: 38px;
     padding: 50px 40px 10px;
     margin-bottom: 80px;
@@ -3638,34 +2472,17 @@ html.mfp-helper {
     width: 40px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-filter
-    ul
-    li {
+  .main-content#portfolio .inner-content .content #projects .portfolio-filter ul li {
     margin-bottom: 44px;
     margin-right: 34px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-item
-    .item-wrapper {
+  .main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper {
     margin-left: -20px;
     margin-right: -20px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-item
-    .item-wrapper
-    .item {
+  .main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item {
     -webkit-flex: 0 0 -webkit-calc(50% - 40px);
     -webkit-flex: 0 0 calc(50% - 40px);
     -ms-flex: 0 0 calc(50% - 40px);
@@ -3678,17 +2495,17 @@ html.mfp-helper {
     margin: 0 20px 40px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row,
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-info>.row,
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-top: 38px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     margin-bottom: 78px;
     padding: 43px 40px 37px;
   }
 
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-bottom: 80px;
     padding: 42px 40px 50px;
   }
@@ -3699,33 +2516,15 @@ html.mfp-helper {
     width: 40px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li {
     margin-bottom: 38px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li:nth-of-type(odd) {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(odd) {
     padding-right: 20px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li:nth-of-type(even) {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(even) {
     padding-left: 20px;
   }
 
@@ -3738,42 +2537,19 @@ html.mfp-helper {
     margin-bottom: 43px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .note
-    p:not(:nth-of-type(1)) {
+  .main-content#contact .inner-content .content #contact-form .note p:not(:nth-of-type(1)) {
     margin-top: 20px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    input.form-control {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group input.form-control {
     height: 50px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    textarea.form-control {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group textarea.form-control {
     height: 158px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    button[type='submit'] {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit'] {
     width: 170px;
     margin-top: 40px;
   }
@@ -3826,12 +2602,7 @@ html.mfp-helper {
     height: calc(100% - ((80px * 3) + 15px + (3.375em + 1.5em) - 6px));
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-value {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
     font-size: 3.375em;
   }
 
@@ -3974,28 +2745,15 @@ html.mfp-helper {
     margin-bottom: 21px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .summary
-    p:not(:nth-of-type(1)) {
+  .main-content#about .inner-content .content #personal-info .summary p:not(:nth-of-type(1)) {
     margin-top: 11px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 3) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 3) {
     padding-right: 12.5px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 4) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 4) {
     padding-left: 12.5px;
   }
 
@@ -4012,19 +2770,11 @@ html.mfp-helper {
     margin-bottom: 35px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service:nth-of-type(odd) {
+  .main-content#about .inner-content .content #services .single-service:nth-of-type(odd) {
     padding-right: 12.5px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service:nth-of-type(even) {
+  .main-content#about .inner-content .content #services .single-service:nth-of-type(even) {
     padding-left: 12.5px;
   }
 
@@ -4032,14 +2782,7 @@ html.mfp-helper {
     padding: 18px 14px 19px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service
-    ul
-    ul
-    .service-name {
+  .main-content#about .inner-content .content #services .single-service ul ul .service-name {
     margin-bottom: 11px;
   }
 
@@ -4076,117 +2819,38 @@ html.mfp-helper {
     margin-bottom: 35px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience:nth-of-type(odd) {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(odd),
+  .main-content#resume .inner-content .content .education .single-education:nth-of-type(odd),
+  .main-content#resume .inner-content .content .experience .single-experience:nth-of-type(odd) {
     padding-right: 12.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience:nth-of-type(even) {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(even),
+  .main-content#resume .inner-content .content .education .single-education:nth-of-type(even),
+  .main-content#resume .inner-content .content .experience .single-experience:nth-of-type(even) {
     padding-left: 12.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    ul
-    .single-skill,
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul ul .single-skill,
+  .main-content#resume .inner-content .content .education .single-education ul ul,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul {
     padding: 18px 14px 0;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    ul
-    .single-skill:last-of-type {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul ul .single-skill:last-of-type {
     padding-bottom: 25px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul {
+  .main-content#resume .inner-content .content .education .single-education ul ul,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul {
     padding-bottom: 19px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    .single-skill
-    ul
-    .progress-wrapper {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .progress-wrapper {
     height: 25px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    .single-skill
-    ul
-    .progress-wrapper
-    .progress {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .progress-wrapper .progress {
     background-size: 35px 35px;
   }
 
@@ -4220,22 +2884,8 @@ html.mfp-helper {
     }
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul
-    .education-name,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul
-    .experience-name {
+  .main-content#resume .inner-content .content .education .single-education ul ul .education-name,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul .experience-name {
     margin-bottom: 11px;
   }
 
@@ -4243,55 +2893,28 @@ html.mfp-helper {
     margin-bottom: 28px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(3n + 1) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 1) {
     padding-right: 12.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(even) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(even) {
     padding-left: 12.5px;
     padding-right: 12.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(3n + 3) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 3) {
     padding-left: 12.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-icon {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-icon {
     margin-bottom: 8.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-value {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
     margin-bottom: 5.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-value {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
     font-size: 1.953em;
   }
 
@@ -4299,7 +2922,7 @@ html.mfp-helper {
     margin-bottom: 49px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     margin-top: 23px;
     padding: 35px 25px 10px;
     margin-bottom: 50px;
@@ -4310,34 +2933,17 @@ html.mfp-helper {
     width: 25px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-filter
-    ul
-    li {
+  .main-content#portfolio .inner-content .content #projects .portfolio-filter ul li {
     margin-bottom: 29px;
     margin-right: 20px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-item
-    .item-wrapper {
+  .main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper {
     margin-left: -12.5px;
     margin-right: -12.5px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-item
-    .item-wrapper
-    .item {
+  .main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item {
     -webkit-flex: 0 0 -webkit-calc(50% - 25px);
     -webkit-flex: 0 0 calc(50% - 25px);
     -ms-flex: 0 0 calc(50% - 25px);
@@ -4350,17 +2956,17 @@ html.mfp-helper {
     margin: 0 12.5px 25px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row,
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-info>.row,
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-top: 23px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     margin-bottom: 48px;
     padding: 27px 25px 21px;
   }
 
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-bottom: 50px;
     padding: 27px 25px 35px;
   }
@@ -4371,33 +2977,15 @@ html.mfp-helper {
     width: 25px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li {
     margin-bottom: 22px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li:nth-of-type(odd) {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(odd) {
     padding-right: 12.5px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li:nth-of-type(even) {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(even) {
     padding-left: 12.5px;
   }
 
@@ -4405,22 +2993,11 @@ html.mfp-helper {
     margin-bottom: 29px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .note
-    p:not(:nth-of-type(1)) {
+  .main-content#contact .inner-content .content #contact-form .note p:not(:nth-of-type(1)) {
     margin-top: 10.5px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    button[type='submit'] {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit'] {
     margin-top: 25px;
   }
 }
@@ -4451,48 +3028,18 @@ html.mfp-helper {
   }
 
   .main-content#home .inner-content .content {
-    height: -webkit-calc(
-      100% - ((40px * 3) + 15px + (2.369em + 1.333em) - 3px)
-    );
+    height: -webkit-calc(100% - ((40px * 3) + 15px + (2.369em + 1.333em) - 3px));
     height: -moz-calc(100% - ((40px * 3) + 15px + (2.369em + 1.333em) - 3px));
     height: calc(100% - ((40px * 3) + 15px + (2.369em + 1.333em) - 3px));
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(1)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5,
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(3)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5 {
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(1) .inner-box-wrapper .menu-link .valign-center h5,
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(3) .inner-box-wrapper .menu-link .valign-center h5 {
     margin-top: 9px;
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(2)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5,
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(4)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5 {
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(2) .inner-box-wrapper .menu-link .valign-center h5,
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(4) .inner-box-wrapper .menu-link .valign-center h5 {
     margin-top: 6px;
   }
 
@@ -4518,15 +3065,15 @@ html.mfp-helper {
     margin-bottom: 38px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     margin-bottom: 40px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     margin-bottom: 38px;
   }
 
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-bottom: 40px;
   }
 }
@@ -4585,41 +3132,13 @@ html.mfp-helper {
     height: calc(100% - ((40px * 3) + 15px + (1.953em + 1.25em)));
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(1)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5,
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(3)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5 {
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(1) .inner-box-wrapper .menu-link .valign-center h5,
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(3) .inner-box-wrapper .menu-link .valign-center h5 {
     margin-top: 11px;
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(2)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5,
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(4)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5 {
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(2) .inner-box-wrapper .menu-link .valign-center h5,
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(4) .inner-box-wrapper .menu-link .valign-center h5 {
     margin-top: 8px;
   }
 
@@ -4645,15 +3164,15 @@ html.mfp-helper {
     margin-bottom: 38px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     margin-bottom: 40px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     margin-bottom: 38px;
   }
 
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-bottom: 40px;
   }
 }
@@ -4799,28 +3318,15 @@ html.mfp-helper {
     margin-left: 20px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .summary
-    p:not(:nth-of-type(1)) {
+  .main-content#about .inner-content .content #personal-info .summary p:not(:nth-of-type(1)) {
     margin-top: 15px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 3) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 3) {
     padding-right: 10px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 4) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 4) {
     padding-left: 10px;
   }
 
@@ -4837,19 +3343,11 @@ html.mfp-helper {
     margin-bottom: 30px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service:nth-of-type(odd) {
+  .main-content#about .inner-content .content #services .single-service:nth-of-type(odd) {
     padding-right: 10px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service:nth-of-type(even) {
+  .main-content#about .inner-content .content #services .single-service:nth-of-type(even) {
     padding-left: 10px;
   }
 
@@ -4857,14 +3355,7 @@ html.mfp-helper {
     padding: 13px 14px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service
-    ul
-    ul
-    .service-name {
+  .main-content#about .inner-content .content #services .single-service ul ul .service-name {
     margin-bottom: 7px;
   }
 
@@ -4897,117 +3388,38 @@ html.mfp-helper {
     margin-bottom: 30px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience:nth-of-type(odd) {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(odd),
+  .main-content#resume .inner-content .content .education .single-education:nth-of-type(odd),
+  .main-content#resume .inner-content .content .experience .single-experience:nth-of-type(odd) {
     padding-right: 10px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience:nth-of-type(even) {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(even),
+  .main-content#resume .inner-content .content .education .single-education:nth-of-type(even),
+  .main-content#resume .inner-content .content .experience .single-experience:nth-of-type(even) {
     padding-left: 10px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    ul
-    .single-skill,
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul ul .single-skill,
+  .main-content#resume .inner-content .content .education .single-education ul ul,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul {
     padding: 13px 14px 0;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    ul
-    .single-skill:last-of-type {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul ul .single-skill:last-of-type {
     padding-bottom: 20px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul {
+  .main-content#resume .inner-content .content .education .single-education ul ul,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul {
     padding-bottom: 14px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    .single-skill
-    ul
-    .progress-wrapper {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .progress-wrapper {
     height: 20px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    .single-skill
-    ul
-    .progress-wrapper
-    .progress {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .progress-wrapper .progress {
     background-size: 30px 30px;
   }
 
@@ -5041,22 +3453,8 @@ html.mfp-helper {
     }
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education
-    ul
-    ul
-    .education-name,
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience
-    ul
-    ul
-    .experience-name {
+  .main-content#resume .inner-content .content .education .single-education ul ul .education-name,
+  .main-content#resume .inner-content .content .experience .single-experience ul ul .experience-name {
     margin-bottom: 6px;
   }
 
@@ -5064,55 +3462,28 @@ html.mfp-helper {
     margin-bottom: 23px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(3n + 1) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 1) {
     padding-right: 10px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(even) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(even) {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(3n + 3) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 3) {
     padding-left: 10px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-icon {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-icon {
     margin-bottom: 4.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-value {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
     margin-bottom: 0.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-value {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
     font-size: 1.728em;
   }
 
@@ -5120,7 +3491,7 @@ html.mfp-helper {
     margin-bottom: 50px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     margin-top: 20px;
     padding: 30px 20px 10px;
   }
@@ -5131,33 +3502,16 @@ html.mfp-helper {
     height: 3px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-filter
-    ul
-    li {
+  .main-content#portfolio .inner-content .content #projects .portfolio-filter ul li {
     margin-bottom: 24px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-item
-    .item-wrapper {
+  .main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper {
     margin-left: -10px;
     margin-right: -10px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-item
-    .item-wrapper
-    .item {
+  .main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item {
     -webkit-flex: 0 0 -webkit-calc(50% - 20px);
     -webkit-flex: 0 0 calc(50% - 20px);
     -ms-flex: 0 0 calc(50% - 20px);
@@ -5170,16 +3524,16 @@ html.mfp-helper {
     margin: 0 10px 20px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row,
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-info>.row,
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-top: 20px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     padding: 22px 20px 17px;
   }
 
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-form>.row {
     padding: 22px 20px 30px;
   }
 
@@ -5190,33 +3544,15 @@ html.mfp-helper {
     height: 3px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li {
     margin-bottom: 17px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li:nth-of-type(odd) {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(odd) {
     padding-right: 10px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li:nth-of-type(even) {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(even) {
     padding-left: 10px;
   }
 
@@ -5228,42 +3564,19 @@ html.mfp-helper {
     margin-bottom: 24px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .note
-    p:not(:nth-of-type(1)) {
+  .main-content#contact .inner-content .content #contact-form .note p:not(:nth-of-type(1)) {
     margin-top: 6px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    .inner-form-group:first-child {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group .inner-form-group:first-child {
     padding-right: 5px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    .inner-form-group:last-child {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group .inner-form-group:last-child {
     padding-left: 5px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    button[type='submit'] {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit'] {
     margin-top: 20px;
   }
 }
@@ -5295,41 +3608,13 @@ html.mfp-helper {
     height: calc(100% - ((40px * 3) + 15px + (1.728em + 1.2em)));
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(1)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5,
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(3)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5 {
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(1) .inner-box-wrapper .menu-link .valign-center h5,
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(3) .inner-box-wrapper .menu-link .valign-center h5 {
     margin-top: 11px;
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(2)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5,
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(4)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5 {
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(2) .inner-box-wrapper .menu-link .valign-center h5,
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(4) .inner-box-wrapper .menu-link .valign-center h5 {
     margin-top: 8px;
   }
 
@@ -5355,39 +3640,25 @@ html.mfp-helper {
     margin-bottom: 38px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     margin-bottom: 40px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     margin-bottom: 38px;
   }
 
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-bottom: 40px;
   }
 }
 
 @media (min-width: 641px) and (max-width: 991px) and (max-height: 445px) {
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    i {
+  .main-content#home .inner-content .content .box-wrapper .inner-box-wrapper .menu-link .valign-center i {
     display: none;
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5 {
+  .main-content#home .inner-content .content .box-wrapper .inner-box-wrapper .menu-link .valign-center h5 {
     margin: 0 !important;
   }
 }
@@ -5436,14 +3707,7 @@ html.mfp-helper {
     padding-top: 7.5px;
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    i {
+  .main-content#home .inner-content .content .box-wrapper .inner-box-wrapper .menu-link .valign-center i {
     font-size: 2.5em;
   }
 
@@ -5457,45 +3721,23 @@ html.mfp-helper {
     margin-left: 15px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 3) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 3) {
     padding-right: 7.5px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 4) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 4) {
     padding-left: 7.5px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .button-wrapper
-    .single-button
-    a {
+  .main-content#about .inner-content .content #personal-info .button-wrapper .single-button a {
     width: 150px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service:nth-of-type(odd) {
+  .main-content#about .inner-content .content #services .single-service:nth-of-type(odd) {
     padding-right: 7.5px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service:nth-of-type(even) {
+  .main-content#about .inner-content .content #services .single-service:nth-of-type(even) {
     padding-left: 7.5px;
   }
 
@@ -5507,64 +3749,23 @@ html.mfp-helper {
     padding-right: 15px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience:nth-of-type(odd) {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(odd),
+  .main-content#resume .inner-content .content .education .single-education:nth-of-type(odd),
+  .main-content#resume .inner-content .content .experience .single-experience:nth-of-type(odd) {
     padding-right: 7.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience:nth-of-type(even) {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(even),
+  .main-content#resume .inner-content .content .education .single-education:nth-of-type(even),
+  .main-content#resume .inner-content .content .experience .single-experience:nth-of-type(even) {
     padding-left: 7.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    .single-skill
-    ul
-    .progress-wrapper {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .progress-wrapper {
     height: 15px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper
-    ul
-    .single-skill
-    ul
-    .progress-wrapper
-    .progress {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper ul .single-skill ul .progress-wrapper .progress {
     background-size: 25px 25px;
   }
 
@@ -5598,46 +3799,24 @@ html.mfp-helper {
     }
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(3n + 1) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 1) {
     padding-right: 7.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(even) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(even) {
     padding-left: 7.5px;
     padding-right: 7.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(3n + 3) {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 3) {
     padding-left: 7.5px;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-icon {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-icon {
     margin-bottom: 0;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact
-    .fun-fact-value {
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact .fun-fact-value {
     margin-bottom: -3px;
   }
 
@@ -5645,28 +3824,17 @@ html.mfp-helper {
     width: 190px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-item
-    .item-wrapper {
+  .main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper {
     margin-left: -7.5px;
     margin-right: -7.5px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-item
-    .item-wrapper
-    .item {
+  .main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item {
     -webkit-flex: 0 0 -webkit-calc(50% - 15px);
     -webkit-flex: 0 0 calc(50% - 15px);
     -ms-flex: 0 0 calc(50% - 15px);
@@ -5679,30 +3847,18 @@ html.mfp-helper {
     margin: 0 7.5px 15px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row,
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-info>.row,
+  .main-content#contact .inner-content .content #contact-form>.row {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 23px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li:nth-of-type(odd) {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(odd) {
     padding-right: 7.5px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li:nth-of-type(even) {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(even) {
     padding-left: 7.5px;
   }
 }
@@ -5734,41 +3890,13 @@ html.mfp-helper {
     height: calc(100% - ((40px * 3) + 15px + (1.728em + 1.2em) - 3px));
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(1)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5,
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(3)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5 {
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(1) .inner-box-wrapper .menu-link .valign-center h5,
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(3) .inner-box-wrapper .menu-link .valign-center h5 {
     margin-top: 11px;
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(2)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5,
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper:nth-of-type(4)
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5 {
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(2) .inner-box-wrapper .menu-link .valign-center h5,
+  .main-content#home .inner-content .content .box-wrapper:nth-of-type(4) .inner-box-wrapper .menu-link .valign-center h5 {
     margin-top: 8px;
   }
 
@@ -5794,15 +3922,15 @@ html.mfp-helper {
     margin-bottom: 38px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     margin-bottom: 40px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     margin-bottom: 38px;
   }
 
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-bottom: 40px;
   }
 }
@@ -5866,37 +3994,17 @@ html.mfp-helper {
     padding-left: 0;
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper
-    .inner-box-wrapper
-    .menu-link
-    .valign-center {
+  .main-content#home .inner-content .content .box-wrapper .inner-box-wrapper .menu-link .valign-center {
     display: block;
     height: 100%;
     text-align: center;
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    i {
+  .main-content#home .inner-content .content .box-wrapper .inner-box-wrapper .menu-link .valign-center i {
     display: none;
   }
 
-  .main-content#home
-    .inner-content
-    .content
-    .box-wrapper
-    .inner-box-wrapper
-    .menu-link
-    .valign-center
-    h5 {
+  .main-content#home .inner-content .content .box-wrapper .inner-box-wrapper .menu-link .valign-center h5 {
     margin: 0 !important;
     position: relative;
     top: 50%;
@@ -5930,64 +4038,31 @@ html.mfp-helper {
     margin-left: 0;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 3),
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 4) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 3),
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 4) {
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 3) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 3) {
     padding-right: 0;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 4) {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 4) {
     padding-left: 0;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .profile:nth-child(2n + 3)
-    ul
-    li:last-child {
+  .main-content#about .inner-content .content #personal-info .profile:nth-child(2n + 3) ul li:last-child {
     margin-bottom: 6px;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .button-wrapper
-    .single-button {
+  .main-content#about .inner-content .content #personal-info .button-wrapper .single-button {
     display: block;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #personal-info
-    .button-wrapper
-    .single-button
-    a {
+  .main-content#about .inner-content .content #personal-info .button-wrapper .single-button a {
     width: 100%;
     margin-right: 0;
   }
@@ -5999,19 +4074,11 @@ html.mfp-helper {
     max-width: 100%;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service:nth-of-type(odd) {
+  .main-content#about .inner-content .content #services .single-service:nth-of-type(odd) {
     padding-right: 0;
   }
 
-  .main-content#about
-    .inner-content
-    .content
-    #services
-    .single-service:nth-of-type(even) {
+  .main-content#about .inner-content .content #services .single-service:nth-of-type(even) {
     padding-left: 0;
   }
 
@@ -6025,59 +4092,19 @@ html.mfp-helper {
     max-width: 100%;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience:nth-of-type(odd),
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(3n + 1),
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-of-type(even) {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(odd),
+  .main-content#resume .inner-content .content .education .single-education:nth-of-type(odd),
+  .main-content#resume .inner-content .content .experience .single-experience:nth-of-type(odd),
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 1),
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-of-type(even) {
     padding-right: 0;
   }
 
-  .main-content#resume
-    .inner-content
-    .content
-    .skills
-    .single-skills-wrapper:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .education
-    .single-education:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .experience
-    .single-experience:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-of-type(even),
-  .main-content#resume
-    .inner-content
-    .content
-    .fun-facts
-    .single-fun-fact:nth-child(3n + 3) {
+  .main-content#resume .inner-content .content .skills .single-skills-wrapper:nth-of-type(even),
+  .main-content#resume .inner-content .content .education .single-education:nth-of-type(even),
+  .main-content#resume .inner-content .content .experience .single-experience:nth-of-type(even),
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-of-type(even),
+  .main-content#resume .inner-content .content .fun-facts .single-fun-fact:nth-child(3n + 3) {
     padding-left: 0;
   }
 
@@ -6085,17 +4112,11 @@ html.mfp-helper {
     width: 100%;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     padding-bottom: 15px;
   }
 
-  .main-content#portfolio
-    .inner-content
-    .content
-    #projects
-    .portfolio-item
-    .item-wrapper
-    .item {
+  .main-content#portfolio .inner-content .content #projects .portfolio-item .item-wrapper .item {
     -webkit-flex: 0 0 -webkit-calc(100% - 15px);
     -webkit-flex: 0 0 calc(100% - 15px);
     -ms-flex: 0 0 calc(100% - 15px);
@@ -6107,78 +4128,36 @@ html.mfp-helper {
     max-width: calc(100% - 15px);
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li {
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li:nth-of-type(odd) {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(odd) {
     padding-right: 0;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li:nth-of-type(even) {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li:nth-of-type(even) {
     padding-left: 0;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    .inner-form-group {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group .inner-form-group {
     width: 100%;
     float: none;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    .inner-form-group:first-child {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group .inner-form-group:first-child {
     padding-right: 0;
     margin-bottom: 10px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    .inner-form-group:last-child {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group .inner-form-group:last-child {
     padding-left: 0;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-form
-    .form-wrapper
-    .form-group
-    button[type='submit'] {
+  .main-content#contact .inner-content .content #contact-form .form-wrapper .form-group button[type='submit'] {
     display: block;
     width: 100%;
     margin-top: 30px;
@@ -6234,15 +4213,15 @@ html.mfp-helper {
     margin-bottom: 38px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     margin-bottom: 40px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     margin-bottom: 38px;
   }
 
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-bottom: 40px;
   }
 }
@@ -6307,9 +4286,7 @@ html.mfp-helper {
   }
 
   .main-content#home .inner-content .content {
-    height: -webkit-calc(
-      100% - ((50px * 3) + 15px + (1.424em + 1.125em) - 4px)
-    );
+    height: -webkit-calc(100% - ((50px * 3) + 15px + (1.424em + 1.125em) - 4px));
     height: -moz-calc(100% - ((50px * 3) + 15px + (1.424em + 1.125em) - 4px));
     height: calc(100% - ((50px * 3) + 15px + (1.424em + 1.125em) - 4px));
   }
@@ -6319,18 +4296,12 @@ html.mfp-helper {
     bottom: -9px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row,
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-info>.row,
+  .main-content#contact .inner-content .content #contact-form>.row {
     padding-top: 24px;
   }
 
-  .main-content#contact
-    .inner-content
-    .content
-    #contact-info
-    .list-contact-info
-    > ul
-    > li {
+  .main-content#contact .inner-content .content #contact-info .list-contact-info>ul>li {
     margin-bottom: 18px;
   }
 }
@@ -6355,9 +4326,7 @@ html.mfp-helper {
   }
 
   .main-content#home .inner-content .content {
-    height: -webkit-calc(
-      100% - ((30px * 3) + 15px + (1.424em + 1.125em) - 4px)
-    );
+    height: -webkit-calc(100% - ((30px * 3) + 15px + (1.424em + 1.125em) - 4px));
     height: -moz-calc(100% - ((30px * 3) + 15px + (1.424em + 1.125em) - 4px));
     height: calc(100% - ((30px * 3) + 15px + (1.424em + 1.125em) - 4px));
   }
@@ -6384,15 +4353,15 @@ html.mfp-helper {
     margin-bottom: 38px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     margin-bottom: 40px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     margin-bottom: 38px;
   }
 
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-bottom: 40px;
   }
 }
@@ -6411,9 +4380,7 @@ html.mfp-helper {
   }
 
   .main-content#home .inner-content .content {
-    height: -webkit-calc(
-      100% - ((20px * 3) + 15px + (1.424em + 1.125em) - 4px)
-    );
+    height: -webkit-calc(100% - ((20px * 3) + 15px + (1.424em + 1.125em) - 4px));
     height: -moz-calc(100% - ((20px * 3) + 15px + (1.424em + 1.125em) - 4px));
     height: calc(100% - ((20px * 3) + 15px + (1.424em + 1.125em) - 4px));
   }
@@ -6440,15 +4407,15 @@ html.mfp-helper {
     margin-bottom: 38px;
   }
 
-  .main-content#portfolio .inner-content .content #projects > .row {
+  .main-content#portfolio .inner-content .content #projects>.row {
     margin-bottom: 40px;
   }
 
-  .main-content#contact .inner-content .content #contact-info > .row {
+  .main-content#contact .inner-content .content #contact-info>.row {
     margin-bottom: 38px;
   }
 
-  .main-content#contact .inner-content .content #contact-form > .row {
+  .main-content#contact .inner-content .content #contact-form>.row {
     margin-bottom: 40px;
   }
 }
