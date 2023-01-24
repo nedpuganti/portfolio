@@ -109,7 +109,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://nedpuganti.github.io/MyPortfolio/",
+            "baseHref": "https://nedpuganti.github.io/MyPortfolio-Angular/",
             "name": "nedpuganti",
             "email": "narenedpuganti@gmail.com",
             "noSilent": true,
