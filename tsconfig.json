@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "downlevelIteration": true,
-    "target": "es6",
+    "target": "es2020",
     "typeRoots": ["node_modules/@types", "src/typings.d.ts"],
     "lib": ["es2018", "dom"],
     "baseUrl": "./src",
