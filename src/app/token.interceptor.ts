@@ -1,7 +1,7 @@
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { Injectable, Injector } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable, throwError as observableThrowError } from 'rxjs';
-import { catchError, filter, finalize, switchMap, take, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -24,7 +24,7 @@ export class TokenInterceptor implements HttpInterceptor {
 
       // send the newly created request
       return next.handle(request).pipe(
-        catchError((error, caught) => {
+        catchError((error, _caught) => {
           //  intercept the response error and displace it to the console
           console.log('Error Occurred');
 
@@ -38,8 +38,9 @@ export class TokenInterceptor implements HttpInterceptor {
           return observableThrowError(error);
         }),
         tap((res: any) => {
-          if (res.body) {
-            const responseObj: any = res.body;
+          if (res?.body) {
+            const responseObj: any = res?.body;
+            console.log(responseObj);
           }
         })
       ) as any;

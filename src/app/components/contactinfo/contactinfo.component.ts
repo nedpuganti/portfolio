@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contactinfo',
   templateUrl: './contactinfo.component.html',
   styleUrls: ['./contactinfo.component.scss']
 })
-export class ContactinfoComponent implements OnInit {
+export class ContactinfoComponent {
   contactInfo: any = {
     phoneNumber: '4239028634',
     email: 'contact@narenedpuganti.com',
@@ -15,8 +15,4 @@ export class ContactinfoComponent implements OnInit {
 
   instagramLink = 'https://www.instagram.com/nedpuganti';
   twitterLink = 'https://twitter.com/nedpuganti91';
-
-  constructor() {}
-
-  ngOnInit() {}
 }

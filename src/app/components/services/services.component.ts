@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss']
 })
-export class ServicesComponent implements OnInit {
+export class ServicesComponent {
   services: any[] = [
     {
       name: 'UI/Web Development',
@@ -53,8 +53,4 @@ export class ServicesComponent implements OnInit {
       types: ['Twilio', 'BridgeDataOut', 'E-Signatures', 'SmartyStreets / Usps', 'GoogleMaps', 'Etc..']
     }
   ];
-
-  constructor() {}
-
-  ngOnInit() {}
 }

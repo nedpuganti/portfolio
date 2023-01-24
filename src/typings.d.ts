@@ -1,3 +1,3 @@
-declare var $: any;
-declare var jQuery: any;
-declare var swal: any;
+declare let $: any;
+declare let jQuery: any;
+declare let swal: any;

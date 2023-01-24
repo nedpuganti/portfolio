@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent implements OnInit {
+export class ExperienceComponent {
   experiences: any[] = [
     {
       when: '2016 - Present',
@@ -41,8 +41,4 @@ export class ExperienceComponent implements OnInit {
     //     'Used .net c# and sql as technologies and written a web portal for final year project at university',
     // },
   ];
-
-  constructor() {}
-
-  ngOnInit() {}
 }

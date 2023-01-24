@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss']
 })
-export class EducationComponent implements OnInit {
+export class EducationComponent {
   educations: any[] = [
     {
       when: '2014 - 2015',
@@ -40,8 +40,4 @@ export class EducationComponent implements OnInit {
       url: 'http://www.stjohnsgvm.org/'
     }
   ];
-
-  constructor() {}
-
-  ngOnInit() {}
 }

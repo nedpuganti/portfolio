@@ -7,8 +7,6 @@ import TypeIt from 'typeit';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
-
   ngOnInit() {
     this.initTypeIt();
   }

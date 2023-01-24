@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RegisterService } from '@app/services/register.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { RegisterService } from '@app/services/register.service';
   templateUrl: './personalinfo.component.html',
   styleUrls: ['./personalinfo.component.scss']
 })
-export class PersonalinfoComponent implements OnInit {
+export class PersonalinfoComponent {
   personalInfo: any = {
     summary: `I am a Full Stack Web Developer from Atlanta, USA. I am very passionate and dedicated to my work.I have ${this.registerService.getExperienceYearsCount()} years more work experience and enjoy working in a team or individual.`,
     firstName: 'Naren',
@@ -23,6 +23,4 @@ export class PersonalinfoComponent implements OnInit {
   githubLink = 'https://github.com/nedpuganti';
 
   constructor(private registerService: RegisterService) {}
-
-  ngOnInit() {}
 }

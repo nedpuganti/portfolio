@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent {
   softSkills = [
     {
       name: 'Leadership',
@@ -43,8 +43,4 @@ export class SkillsComponent implements OnInit {
       progress: 80
     }
   ];
-
-  constructor() {}
-
-  ngOnInit() {}
 }

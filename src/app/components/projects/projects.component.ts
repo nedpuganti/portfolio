@@ -34,6 +34,7 @@ export class ProjectsComponent implements OnInit {
     this.currentProjects$ = [];
     if (category) {
       this.currentTab = category;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       this.currentProjects$ = projectsData.projects.filter((el: any) => this.currentTab === el.category);
     } else {
       this.currentTab = 'All';

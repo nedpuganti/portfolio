@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RegisterService } from '@app/services/register.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { RegisterService } from '@app/services/register.service';
   templateUrl: './funfacts.component.html',
   styleUrls: ['./funfacts.component.scss']
 })
-export class FunfactsComponent implements OnInit {
+export class FunfactsComponent {
   funFacts: any[] = [
     {
       name: 'Years Experience',
@@ -22,6 +22,4 @@ export class FunfactsComponent implements OnInit {
     }
   ];
   constructor(private registerService: RegisterService) {}
-
-  ngOnInit() {}
 }

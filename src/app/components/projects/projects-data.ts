@@ -1,4 +1,4 @@
-export let projects = [
+export const projects = [
   {
     id: 1,
     image: 'assets/img/projects/mone_mobile.png',
