@@ -6,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgxMaskModule } from 'ngx-mask';
 import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
@@ -19,17 +18,10 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import { RegisterService } from './services/register.service';
 import { TokenInterceptor } from './token.interceptor';
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FullComponent,
-    HomeComponent,
-    AboutComponent,
-    ResumeComponent,
-    PortfolioComponent,
-    ContactComponent
-  ],
+  declarations: [AppComponent, FullComponent, HomeComponent, AboutComponent, ResumeComponent, PortfolioComponent, ContactComponent],
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -48,7 +40,6 @@ import { TokenInterceptor } from './token.interceptor';
       positionClass: 'toast-bottom-full-width',
       countDuplicates: true
     }),
-    NgxMaskModule.forRoot(),
     SharedComponentModule
   ],
   providers: [
@@ -57,6 +48,7 @@ import { TokenInterceptor } from './token.interceptor';
       useClass: TokenInterceptor,
       multi: true
     },
+    provideEnvironmentNgxMask(),
     RegisterService
   ],
   bootstrap: [AppComponent]

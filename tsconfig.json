@@ -10,9 +10,9 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "downlevelIteration": true,
-    "target": "es2020",
+    "target": "ES2022",
     "typeRoots": ["node_modules/@types", "src/typings.d.ts"],
-    "lib": ["es2018", "dom"],
+    "lib": ["ES2022", "dom"],
     "baseUrl": "./src",
     "paths": {
       "@app/*": ["app/*"],
@@ -21,11 +21,7 @@
       "@shared/*": ["app/shared/*"],
       "@utils/*": ["app/utils/*"]
     },
-    // "noImplicitAny": true,
-    // "noImplicitReturns": true,
-    // "noImplicitThis": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "strictNullChecks": true,
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

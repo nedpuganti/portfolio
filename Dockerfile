@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:17-alpine as node
+FROM node:18-alpine as node
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install

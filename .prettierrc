@@ -1,10 +1,26 @@
 {
-  "printWidth": 80,
+  "printWidth": 140,
   "tabWidth": 2,
   "useTabs": false,
   "semi": true,
   "singleQuote": true,
   "bracketSpacing": true,
-  "eslintIntegration": true,
-  "jsxBracketSameLine": false
+  "jsxBracketSameLine": true,
+  "trailingComma": "none",
+  "quoteProps": "consistent",
+  "arrowParens": "always",
+  "overrides": [
+    {
+      "files": "package*.json",
+      "options": {
+        "printWidth": 1000
+      }
+    },
+    {
+      "files": "angular.json",
+      "options": {
+        "printWidth": 80
+      }
+    }
+  ]
 }

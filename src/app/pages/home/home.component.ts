@@ -4,7 +4,7 @@ import TypeIt from 'typeit';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   constructor() {}
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
         startDelay: 800,
         strings: ['Frontend', 'Full Stack Developer'],
         breakLines: false,
-        loop: true,
+        loop: true
       }).go();
     } else {
       return false;

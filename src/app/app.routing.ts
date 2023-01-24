@@ -15,28 +15,28 @@ export const AppRoutes: Routes = [
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       {
         path: 'home',
-        component: HomeComponent,
+        component: HomeComponent
       },
       {
         path: 'about',
-        component: AboutComponent,
+        component: AboutComponent
       },
       {
         path: 'resume',
-        component: ResumeComponent,
+        component: ResumeComponent
       },
       {
         path: 'portfolio',
-        component: PortfolioComponent,
+        component: PortfolioComponent
       },
       {
         path: 'contact',
-        component: ContactComponent,
-      },
-    ],
+        component: ContactComponent
+      }
+    ]
   },
   {
     path: '**',
-    redirectTo: '/home',
-  },
+    redirectTo: '/home'
+  }
 ];

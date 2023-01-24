@@ -1,19 +1,7 @@
-import {
-  HttpEvent,
-  HttpHandler,
-  HttpInterceptor,
-  HttpRequest,
-} from '@angular/common/http';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable, Injector } from '@angular/core';
 import { Observable, throwError as observableThrowError } from 'rxjs';
-import {
-  catchError,
-  filter,
-  finalize,
-  switchMap,
-  take,
-  tap,
-} from 'rxjs/operators';
+import { catchError, filter, finalize, switchMap, take, tap } from 'rxjs/operators';
 
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -22,10 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 export class TokenInterceptor implements HttpInterceptor {
   constructor(private router: Router, private toastr: ToastrService) {}
 
-  intercept(
-    request: HttpRequest<any>,
-    next: HttpHandler,
-  ): Observable<HttpEvent<any>> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const authToken = localStorage.getItem('authToken');
 
     // console.log('intercepted request ... ');
@@ -33,7 +18,7 @@ export class TokenInterceptor implements HttpInterceptor {
     if (authToken !== null || authToken !== 'undefined') {
       // Clone the request to add the new header.
       request = request.clone({
-        headers: request.headers.set('x-auth-token', `${authToken}`),
+        headers: request.headers.set('x-auth-token', `${authToken}`)
       });
       // console.log('Sending request with new header now ...');
 
@@ -45,7 +30,7 @@ export class TokenInterceptor implements HttpInterceptor {
 
           if (error.status === 500) {
             this.toastr.error(error.message, error.status, {
-              positionClass: 'toast-bottom-right',
+              positionClass: 'toast-bottom-right'
             });
           }
 
@@ -56,7 +41,7 @@ export class TokenInterceptor implements HttpInterceptor {
           if (res.body) {
             const responseObj: any = res.body;
           }
-        }),
+        })
       ) as any;
     }
   }

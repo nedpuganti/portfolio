@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss'],
+  styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
   experiences: any[] = [
@@ -11,15 +11,14 @@ export class ExperienceComponent implements OnInit {
       when: '2016 - Present',
       where: 'Allied Informatics',
       name: 'Full-Stack Frontend Developer',
-      description:
-        'HTML5, CSS3, jQuery, JavaScript, Angular, Ionic, Cordova, Flutter, Material, Agile, REST Services...',
+      description: 'HTML5, CSS3, jQuery, JavaScript, Angular, Ionic, Cordova, Flutter, Material, Agile, REST Services...'
     },
     {
       when: '2014 - 2016',
       where: '',
       name: 'Developer',
-      description: 'Premier Cosmetic Surgery, Asa.help ...',
-    },
+      description: 'Premier Cosmetic Surgery, Asa.help ...'
+    }
     // {
     //   when: '2016',
     //   where: 'FREELANCE',

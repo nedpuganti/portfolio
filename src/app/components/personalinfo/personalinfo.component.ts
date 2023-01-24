@@ -4,7 +4,7 @@ import { RegisterService } from '@app/services/register.service';
 @Component({
   selector: 'app-personalinfo',
   templateUrl: './personalinfo.component.html',
-  styleUrls: ['./personalinfo.component.scss'],
+  styleUrls: ['./personalinfo.component.scss']
 })
 export class PersonalinfoComponent implements OnInit {
   personalInfo: any = {
@@ -16,7 +16,7 @@ export class PersonalinfoComponent implements OnInit {
     phoneNumber: '4239028634',
     email: 'contact@narenedpuganti.com',
     address: 'N/A',
-    languages: 'Telugu, English',
+    languages: 'Telugu, English'
   };
 
   cvLink = '#';

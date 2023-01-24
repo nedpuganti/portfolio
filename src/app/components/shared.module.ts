@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgxMaskModule } from 'ngx-mask';
+import { NgxMaskPipe } from 'ngx-mask';
 import { ContactformComponent } from './contactform/contactform.component';
 import { ContactinfoComponent } from './contactinfo/contactinfo.component';
 import { EducationComponent } from './education/education.component';
@@ -15,14 +15,7 @@ import { ServicesComponent } from './services/services.component';
 import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgbModule,
-    NgxMaskModule,
-    RouterModule
-  ],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, NgbModule, NgxMaskPipe, RouterModule],
   declarations: [
     PersonalinfoComponent,
     ServicesComponent,
