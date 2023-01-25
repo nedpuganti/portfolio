@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "prettier": "prettier --write \"./**/*.{js,ts}\"",
-    "build-github": "ng build --configuration production --base-href 'https://nedpuganti.github.io/MyPortfolio-Angular/'",
-    "deploy-github": "ng deploy --base-href=https://nedpuganti.github.io/MyPortfolio-Angular/"
+    "build-github": "ng build --configuration production --base-href 'https://narenedpuganti.com/'",
+    "deploy-github": "ng deploy --base-href=https://narenedpuganti.com/"
   },
   "private": true,
   "dependencies": {
