@@ -1,55 +1,60 @@
 {
-  "window.zoomLevel": 0,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.activityBar.visible": true,
-  "editor.tabSize": 2,
+  "breadcrumbs.enabled": true,
+  "cSpell.language": "en,en-US",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.bracketPairColorization.enabled": true,
   // "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
-  "editor.wordWrap": "on",
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.minimap.enabled": false,
-  "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
+  "editor.minimap.enabled": false,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
   "javascript.validate.enable": false,
   "explorer.confirmDelete": false,
-  "git.autofetch": true,
-  "breadcrumbs.enabled": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "emmet.includeLanguages": {
     "html": "html"
   },
-  "git.enableSmartCommit": true,
-  "editor.suggestSelection": "first",
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "diffEditor.ignoreTrimWhitespace": false,
-  "cSpell.language": "en,en-US",
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.ignoreRebaseWarning": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[html]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[typescript]": {
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "git.ignoreRebaseWarning": true
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "yaml.schemas": {
+    "file:///Users/inarenedpuganti/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+    "kubernetes://schema/apps/v1%40deployment": "file:///Users/inarenedpuganti/Documents/Projects/ceras/IMHOME_NG_Provider_UI/kubernetes-config/deployment-alpha.yml"
+  }
 }
