@@ -1,4 +1,4 @@
-export const projects = [
+export const mocksProjects = [
   {
     id: 1,
     image: 'assets/img/projects/mone_mobile.png',

@@ -38,10 +38,10 @@
     <div class="portfolio-item col-12">
       <div class="item-wrapper row">
         <!-- Single Item Starts -->
-        <div class="item web-templates col-md-4 col-sm-6 col-12" *ngFor="let item of currentProjects$">
+        <div class="item web-templates col-md-4 col-sm-6 col-12" *ngFor="let item of projectsData$ | async">
           <!-- Image Starts -->
           <div class="image">
-            <img *ngIf="item.image !== null" src="{{ item.image }}" alt="Data Landing Page" height="226" />
+            <img *ngIf="item.image !== null" [src]="item.image" alt="Data Landing Page" height="226" />
           </div>
           <!-- Image Ends -->
           <!-- Overlay Starts -->

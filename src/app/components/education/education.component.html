@@ -5,7 +5,7 @@
   <!-- Education Heading Ends -->
   <div class="row no-gutters">
     <!-- Single Education Starts -->
-    <div class="single-education col-sm-6 col-12" *ngFor="let education of educations">
+    <div class="single-education col-sm-6 col-12" *ngFor="let education of educations$ | async">
       <ul>
         <li class="education-when-where">
           <span class="when">{{ education.when }} </span>

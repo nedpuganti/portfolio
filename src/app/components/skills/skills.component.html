@@ -16,7 +16,7 @@
         <li>
           <ul>
             <!-- Single Skill Starts -->
-            <li class="single-skill" *ngFor="let skill of softSkills">
+            <li class="single-skill" *ngFor="let skill of softSkills$ | async">
               <ul>
                 <li class="skill-name">
                   <i class="fas fa-angle-double-right"></i><span>{{ skill.name }}</span>
@@ -51,7 +51,7 @@
         <li>
           <ul>
             <!-- Single Skill Starts -->
-            <li class="single-skill" *ngFor="let skill of hardSkills">
+            <li class="single-skill" *ngFor="let skill of hardSkills$ | async">
               <ul>
                 <li class="skill-name">
                   <i class="fas fa-angle-double-right"></i><span>{{ skill.name }}</span>

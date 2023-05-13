@@ -5,7 +5,7 @@
   <!-- Experience Heading Ends -->
   <div class="row no-gutters">
     <!-- Single Experience Starts -->
-    <div class="single-experience col-sm-6 col-12" *ngFor="let experience of experiences">
+    <div class="single-experience col-sm-6 col-12" *ngFor="let experience of experiences$ | async">
       <ul>
         <li class="experience-when-where">
           <span class="when">{{ experience.when }} </span>

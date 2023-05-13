@@ -5,7 +5,7 @@
   <!-- Fun Facts Heading Ends -->
   <div class="row no-gutters">
     <!-- Single Fun Fact Starts -->
-    <div class="single-fun-fact col-12 col-sm-4" *ngFor="let fact of funFacts">
+    <div class="single-fun-fact col-12 col-sm-4" *ngFor="let fact of funFacts$ | async">
       <ul>
         <li class="fun-fact-icon">
           <i class="fas fa-business-time fa-3x"></i>

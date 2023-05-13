@@ -1,46 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { NgbProgressbar } from '@ng-bootstrap/ng-bootstrap';
+import { AsyncPipe, NgFor } from '@angular/common';
+import { RegisterService } from '@app/services/register.service';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.scss'],
+  standalone: true,
+  imports: [NgFor, NgbProgressbar, AsyncPipe]
 })
 export class SkillsComponent {
-  softSkills = [
-    {
-      name: 'Leadership',
-      progress: 70
-    },
-    {
-      name: 'Teamwork',
-      progress: 85
-    },
-    {
-      name: 'Communication',
-      progress: 75
-    },
-    {
-      name: 'Problem Solving',
-      progress: 90
-    }
-  ];
+  registerService = inject(RegisterService);
 
-  hardSkills = [
-    {
-      name: 'HTML5 / SASS / CSS / Bootstrap',
-      progress: 85
-    },
-    {
-      name: 'Javascript / Angular / React.js / Nodejs',
-      progress: 90
-    },
-    {
-      name: 'Mongo / SQL / POSTGRES',
-      progress: 70
-    },
-    {
-      name: 'Jenkins / Docker / Kubernetes / Git',
-      progress: 80
-    }
-  ];
+  hardSkills$ = this.registerService.getHardSkills();
+  softSkills$ = this.registerService.getSoftSkills();
 }

@@ -1,25 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RegisterService } from '@app/services/register.service';
+import { AsyncPipe, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-funfacts',
   templateUrl: './funfacts.component.html',
-  styleUrls: ['./funfacts.component.scss']
+  styleUrls: ['./funfacts.component.scss'],
+  standalone: true,
+  imports: [NgFor, AsyncPipe]
 })
 export class FunfactsComponent {
-  funFacts: any[] = [
-    {
-      name: 'Years Experience',
-      value: this.registerService.getExperienceYearsCount()
-    },
-    {
-      name: 'Done Projects',
-      value: 40
-    },
-    {
-      name: 'Happy Clients',
-      value: 20
-    }
-  ];
-  constructor(private registerService: RegisterService) {}
+  registerService = inject(RegisterService);
+
+  funFacts$ = this.registerService.getFunFacts();
 }

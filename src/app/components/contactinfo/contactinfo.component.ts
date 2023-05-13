@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { NgxMaskPipe } from 'ngx-mask';
 
 @Component({
-  selector: 'app-contactinfo',
-  templateUrl: './contactinfo.component.html',
-  styleUrls: ['./contactinfo.component.scss']
+    selector: 'app-contactinfo',
+    templateUrl: './contactinfo.component.html',
+    styleUrls: ['./contactinfo.component.scss'],
+    standalone: true,
+    imports: [NgxMaskPipe]
 })
 export class ContactinfoComponent {
   contactInfo: any = {

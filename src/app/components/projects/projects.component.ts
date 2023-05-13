@@ -1,21 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import * as projectsData from './projects-data';
+import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
+import { RegisterService } from '@app/services/register.service';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
+  standalone: true,
+  imports: [NgClass, NgFor, NgIf, AsyncPipe]
 })
 export class ProjectsComponent implements OnInit {
-  currentTab: string;
-  currentProjects$ = [];
-  currentProject: any = {};
+  modalService = inject(NgbModal);
+  registerService = inject(RegisterService);
 
-  constructor(private modalService: NgbModal) {}
+  projectsData$ = this.registerService.getProjects('');
+
+  currentTab: string;
+  currentProject: any = {};
 
   ngOnInit() {
     this.currentTab = 'All';
-    this.currentProjects$ = projectsData.projects;
   }
 
   openProjectDetails(modelContent, projectData) {
@@ -31,14 +35,12 @@ export class ProjectsComponent implements OnInit {
   }
 
   getProjects(category = '') {
-    this.currentProjects$ = [];
     if (category) {
       this.currentTab = category;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      this.currentProjects$ = projectsData.projects.filter((el: any) => this.currentTab === el.category);
+      this.projectsData$ = this.registerService.getProjects(category);
     } else {
       this.currentTab = 'All';
-      this.currentProjects$ = projectsData.projects;
+      this.projectsData$ = this.registerService.getProjects('');
     }
   }
 }

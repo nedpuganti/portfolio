@@ -5,7 +5,7 @@
   <!-- Services Heading Ends -->
   <div class="row no-gutters">
     <!-- Single Service Starts -->
-    <div class="single-service col-sm-6 col-12" *ngFor="let service of services; let i = index">
+    <div class="single-service col-sm-6 col-12" *ngFor="let service of services$ | async; let i = index">
       <ul>
         <li class="service-number">
           <span class="first-word">Service </span>
