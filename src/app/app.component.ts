@@ -2,11 +2,18 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: true,
-    imports: [RouterOutlet]
+  selector: 'app-root',
+  template: `
+    <!-- Pre Load Starts -->
+    <div id="pre-load">
+      <div class="load-circle"></div>
+    </div>
+    <!-- Pre Load Ends -->
+    <router-outlet></router-outlet>
+  `,
+  styles: [],
+  standalone: true,
+  imports: [RouterOutlet]
 })
 export class AppComponent implements OnInit {
   ngOnInit() {
