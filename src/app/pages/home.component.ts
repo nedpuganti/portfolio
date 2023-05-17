@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import TypeIt from 'typeit';
 
 @Component({
-  selector: 'app-home',
+  selector: 'pfo-home',
   template: `<!-- Main Content (Home) Starts -->
     <div id="home" class="main-content active">
       <!-- Content Hanging On Home Section Starts -->
@@ -85,21 +85,20 @@ import TypeIt from 'typeit';
   standalone: true
 })
 export class HomeComponent implements OnInit {
-  ngOnInit() {
+  ngOnInit(): void {
     this.initTypeIt();
   }
 
-  initTypeIt() {
+  initTypeIt(): void {
     if (typeof TypeIt != 'undefined') {
-      new TypeIt('.passion', {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      new (TypeIt as any)('.passion', {
         speed: 200,
         startDelay: 800,
         strings: ['Frontend', 'Full Stack Developer'],
         breakLines: false,
         loop: true
       }).go();
-    } else {
-      return false;
     }
   }
 }

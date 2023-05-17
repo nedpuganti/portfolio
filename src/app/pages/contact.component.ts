@@ -3,8 +3,8 @@ import { ContactinfoComponent } from '../components/contactinfo.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-contact',
-  template: ` <app-contactinfo></app-contactinfo> `,
+  selector: 'pfo-contact',
+  template: ` <pfo-contactinfo/> `,
   styles: [],
   standalone: true,
   imports: [RouterLink, ContactinfoComponent]

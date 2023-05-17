@@ -1,4 +1,6 @@
-export const mockServices = [
+import { Service } from '@app/interfaces/service.interface';
+
+export const mockServices: Service[] = [
   {
     name: 'UI/Web Development',
     types: ['Html', 'Css/Scss', 'Bootstrap', 'Tailwind']

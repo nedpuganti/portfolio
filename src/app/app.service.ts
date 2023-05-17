@@ -1,61 +1,67 @@
 import { Injectable } from '@angular/core';
+import { ContactInfo, FunFacts, PersonalInfo } from '@app/interfaces/personal.interface';
 import { Observable, of } from 'rxjs';
+import { Education } from './interfaces/education.interface';
+import { Experience } from './interfaces/experience.interface';
+import { Project } from './interfaces/project.interface';
+import { Service } from './interfaces/service.interface';
+import { Skill } from './interfaces/skill.interface';
 import {
-  mockHardSkills,
-  mockSoftSkills,
-  mocksProjects,
-  mockServices,
+  mockContactInfo,
   mockEducation,
   mockExperience,
   mockFunFacts,
-  mockContactInfo,
-  mockPersonalInfo
+  mockHardSkills,
+  mockPersonalInfo,
+  mockServices,
+  mockSoftSkills,
+  mocksProjects
 } from './mocks';
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
-  getExperienceYearsCount() {
+  getExperienceYearsCount(): number {
     const startYear = 2014;
-    const currentYear = new Date().getFullYear();
+    const currentYear: number = new Date().getFullYear();
     return currentYear - startYear;
   }
 
-  getHardSkills() {
+  getHardSkills(): Observable<Skill[]> {
     return of(mockHardSkills);
   }
 
-  getSoftSkills() {
+  getSoftSkills(): Observable<Skill[]> {
     return of(mockSoftSkills);
   }
 
-  getServices() {
+  getServices(): Observable<Service[]> {
     return of(mockServices);
   }
 
-  getFunFacts() {
+  getFunFacts(): Observable<FunFacts[]> {
     return of(mockFunFacts(this.getExperienceYearsCount()));
   }
 
-  getContactInfo() {
+  getContactInfo(): Observable<ContactInfo> {
     return of(mockContactInfo);
   }
 
-  getPersonalInfo() {
+  getPersonalInfo(): Observable<PersonalInfo> {
     return of(mockPersonalInfo(this.getExperienceYearsCount()));
   }
 
-  getExperiences() {
+  getExperiences(): Observable<Experience[]> {
     return of(mockExperience);
   }
 
-  getEducations() {
+  getEducations(): Observable<Education[]> {
     return of(mockEducation);
   }
 
-  getProjects(category: string): Observable<any[]> {
+  getProjects(category: string): Observable<Project[]> {
     if (category) {
-      return of(mocksProjects.filter((el: any) => category === el.category));
+      return of(mocksProjects.filter((project: Project) => category === project.category));
     }
 
     return of(mocksProjects);

@@ -3,8 +3,8 @@ import { ProjectsComponent } from '../components/projects.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-portfolio',
-  template: ` <app-projects></app-projects> `,
+  selector: 'pfo-portfolio',
+  template: ` <pfo-projects/> `,
   styles: [],
   standalone: true,
   imports: [RouterLink, ProjectsComponent]

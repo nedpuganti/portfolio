@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-layout',
+  selector: 'pfo-layout',
   template: `
     <!-- Wrapper Starts -->
     <div id="wrapper">
@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
         <div class="row no-gutters v-full">
           <!-- Left Wrapper Starts -->
           <div id="left-wrapper" class="col-12 col-md-8">
-            <router-outlet></router-outlet>
+            <router-outlet/>
           </div>
           <!-- Left Wrapper Ends -->
           <!-- Right Wrapper Starts -->

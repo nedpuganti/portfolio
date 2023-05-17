@@ -1,10 +1,12 @@
 import { AsyncPipe, NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { AppService } from '@app/app.service';
+import { ContactInfo } from '@app/interfaces/personal.interface';
 import { NgxMaskPipe } from 'ngx-mask';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-contactinfo',
+  selector: 'pfo-contactinfo',
   template: `
     <ng-container
       *ngIf="{
@@ -26,7 +28,7 @@ import { NgxMaskPipe } from 'ngx-mask';
                 <span class="icon-of-value">
                   <i class="fas fa-map-marker-alt"></i>
                 </span>
-                <span class="value">{{ data?.contactInfo.address }}</span>
+                <span class="value">{{ data?.contactInfo?.address }}</span>
               </li>
               <!-- Single Contact Info Ends -->
               <!-- Single Contact Info Starts -->
@@ -35,7 +37,7 @@ import { NgxMaskPipe } from 'ngx-mask';
                 <span class="icon-of-value">
                   <i class="fas fa-mobile-alt"></i>
                 </span>
-                <span class="value">+1 {{ data?.contactInfo.phoneNumber | mask : '(000) 000-0000' }}</span>
+                <span class="value">+1 {{ (data?.contactInfo)!.phoneNumber | mask : '(000) 000-0000' }}</span>
               </li>
               <!-- Single Contact Info Ends -->
               <!-- Single Contact Info Starts -->
@@ -44,7 +46,7 @@ import { NgxMaskPipe } from 'ngx-mask';
                 <span class="icon-of-value">
                   <i class="fas fa-envelope"></i>
                 </span>
-                <span class="value">{{ data?.contactInfo.email }}</span>
+                <span class="value">{{ data?.contactInfo?.email }}</span>
               </li>
               <!-- Single Contact Info Ends -->
               <!-- Single Contact Info Starts -->
@@ -53,7 +55,7 @@ import { NgxMaskPipe } from 'ngx-mask';
                 <span class="icon-of-value">
                   <i class="fas fa-globe"></i>
                 </span>
-                <span class="value">{{ data?.contactInfo.website }}</span>
+                <span class="value">{{ data?.contactInfo?.website }}</span>
               </li>
               <!-- Single Contact Info Ends -->
               <!-- Single Contact Info Starts -->
@@ -126,7 +128,7 @@ import { NgxMaskPipe } from 'ngx-mask';
 export class ContactinfoComponent {
   registerService = inject(AppService);
 
-  contactInfo$: any = this.registerService.getContactInfo();
+  contactInfo$: Observable<ContactInfo> = this.registerService.getContactInfo();
 
   instagramLink = 'https://www.instagram.com/nedpuganti';
   twitterLink = 'https://twitter.com/nedpuganti91';

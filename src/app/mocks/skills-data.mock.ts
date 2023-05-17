@@ -1,4 +1,6 @@
-export const mockHardSkills = [
+import { Skill } from '@app/interfaces/skill.interface';
+
+export const mockHardSkills: Skill[] = [
   {
     name: 'HTML5 / SASS / CSS / Bootstrap',
     progress: 85
@@ -17,7 +19,7 @@ export const mockHardSkills = [
   }
 ];
 
-export const mockSoftSkills = [
+export const mockSoftSkills: Skill[] = [
   {
     name: 'Leadership',
     progress: 70

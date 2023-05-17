@@ -1,9 +1,11 @@
-import { Component, inject } from '@angular/core';
 import { AsyncPipe, NgFor } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { AppService } from '@app/app.service';
+import { Education } from '@app/interfaces/education.interface';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-education',
+  selector: 'pfo-education',
   template: `
     <!-- Education Starts -->
     <div class="education">
@@ -46,5 +48,5 @@ import { AppService } from '@app/app.service';
 export class EducationComponent {
   registerService = inject(AppService);
 
-  educations$ = this.registerService.getEducations();
+  educations$: Observable<Education[]> = this.registerService.getEducations();
 }
