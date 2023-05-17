@@ -1,39 +1,16 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ServicesComponent } from '../components/services.component';
-import { PersonalinfoComponent } from '../components/personalinfo.component';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { PersonalinfoComponent } from '../components/personalinfo.component';
+import { ServicesComponent } from '../components/services.component';
 
 @Component({
-  selector: 'app-about',
+  selector: 'pfo-about',
   template: `
-    <app-personalinfo></app-personalinfo>
-    <app-services></app-services>
+    <pfo-personalinfo></pfo-personalinfo>
+    <pfo-services></pfo-services>
   `,
   styles: [],
   standalone: true,
   imports: [RouterLink, PersonalinfoComponent, ServicesComponent]
 })
-export class AboutComponent implements OnInit {
-  @Input()
-  title1: string;
-
-  @Input()
-  title2: string;
-
-  @Input()
-  pageId: string;
-
-  @Output() pageData: EventEmitter<any> = new EventEmitter();
-
-  ngOnInit(): void {
-    this.getDetailPageData();
-  }
-
-  getDetailPageData() {
-    this.pageData.emit({
-      title1: this.title1,
-      title2: this.title2,
-      pageId: this.pageId
-    });
-  }
-}
+export class AboutComponent {}

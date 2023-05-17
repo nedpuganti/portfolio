@@ -3,9 +3,11 @@ import { AppService } from '@app/app.service';
 import { NgxMaskPipe } from 'ngx-mask';
 import { RouterLink } from '@angular/router';
 import { AsyncPipe, NgIf } from '@angular/common';
+import { Observable } from 'rxjs';
+import { PersonalInfo } from '@app/interfaces/personal.interface';
 
 @Component({
-  selector: 'app-personalinfo',
+  selector: 'pfo-personalinfo',
   template: `
     <ng-container
       *ngIf="{
@@ -24,7 +26,7 @@ import { AsyncPipe, NgIf } from '@angular/common';
           <!-- Summary Starts -->
           <div class="summary col-md-10 col-sm-9 col-12">
             <!-- Single Paragraph Starts -->
-            <p [innerHtml]="data?.personalInfo.summary"></p>
+            <p [innerHtml]="data?.personalInfo?.summary"></p>
             <!-- Single Paragraph Ends -->
           </div>
           <!-- Summary Ends -->
@@ -35,28 +37,28 @@ import { AsyncPipe, NgIf } from '@angular/common';
               <li>
                 <span class="label"> <i class="fas fa-angle-double-right"></i><span>First Name</span> </span>
                 <span class="dash">-</span>
-                <span class="value">{{ data?.personalInfo.firstName }}</span>
+                <span class="value">{{ data?.personalInfo?.firstName }}</span>
               </li>
               <!-- Single Content On Profile Ends -->
               <!-- Single Content On Profile Starts -->
               <li>
                 <span class="label"> <i class="fas fa-angle-double-right"></i><span>Last Name</span> </span>
                 <span class="dash">-</span>
-                <span class="value">{{ data?.personalInfo.lastName }}</span>
+                <span class="value">{{ data?.personalInfo?.lastName }}</span>
               </li>
               <!-- Single Content On Profile Ends -->
               <!-- Single Content On Profile Starts -->
               <li>
                 <span class="label"> <i class="fas fa-angle-double-right"></i><span>Date of Birth</span> </span>
                 <span class="dash">-</span>
-                <span class="value">{{ data?.personalInfo.dob }}</span>
+                <span class="value">{{ data?.personalInfo?.dob }}</span>
               </li>
               <!-- Single Content On Profile Ends -->
               <!-- Single Content On Profile Starts -->
               <li>
                 <span class="label"> <i class="fas fa-angle-double-right"></i><span>Nationality</span> </span>
                 <span class="dash">-</span>
-                <span class="value">{{ data?.personalInfo.nationality }}</span>
+                <span class="value">{{ data?.personalInfo?.nationality }}</span>
               </li>
               <!-- Single Content On Profile Ends -->
             </ul>
@@ -69,28 +71,28 @@ import { AsyncPipe, NgIf } from '@angular/common';
               <li>
                 <span class="label"> <i class="fas fa-angle-double-right"></i><span>Phone</span> </span>
                 <span class="dash">-</span>
-                <span class="value">+1 {{ data?.personalInfo.phoneNumber | mask : '(000) 000-0000' }}</span>
+                <span class="value">+1 {{ (data?.personalInfo)!.phoneNumber | mask : '(000) 000-0000' }}</span>
               </li>
               <!-- Single Content On Profile Ends -->
               <!-- Single Content On Profile Starts -->
               <li>
                 <span class="label"> <i class="fas fa-angle-double-right"></i><span>Email</span> </span>
                 <span class="dash">-</span>
-                <span class="value">{{ data?.personalInfo.email }}</span>
+                <span class="value">{{ data?.personalInfo?.email }}</span>
               </li>
               <!-- Single Content On Profile Ends -->
               <!-- Single Content On Profile Starts -->
               <li>
                 <span class="label"> <i class="fas fa-angle-double-right"></i><span>Address</span> </span>
                 <span class="dash">-</span>
-                <span class="value">{{ data?.personalInfo.address }}</span>
+                <span class="value">{{ data?.personalInfo?.address }}</span>
               </li>
               <!-- Single Content On Profile Ends -->
               <!-- Single Content On Profile Starts -->
               <li>
                 <span class="label"> <i class="fas fa-angle-double-right"></i><span>Languages</span> </span>
                 <span class="dash">-</span>
-                <span class="value">{{ data?.personalInfo.languages }}</span>
+                <span class="value">{{ data?.personalInfo?.languages }}</span>
               </li>
               <!-- Single Content On Profile Ends -->
             </ul>
@@ -190,7 +192,7 @@ import { AsyncPipe, NgIf } from '@angular/common';
 export class PersonalinfoComponent {
   registerService = inject(AppService);
 
-  personalInfo$: any = this.registerService.getPersonalInfo();
+  personalInfo$: Observable<PersonalInfo> = this.registerService.getPersonalInfo();
 
   cvLink = '#';
   githubLink = 'https://github.com/nedpuganti';

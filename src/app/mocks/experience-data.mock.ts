@@ -1,4 +1,6 @@
-export const mockExperience = [
+import { Experience } from '@app/interfaces/experience.interface';
+
+export const mockExperience: Experience[] = [
   {
     when: '2016 - Present',
     where: 'Allied Informatics',

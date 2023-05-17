@@ -21,10 +21,16 @@
       "@shared/*": ["app/shared/*"],
       "@utils/*": ["app/utils/*"]
     },
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": true,
+    "strictTemplates": true
   }
 }

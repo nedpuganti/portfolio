@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'pfo-root',
   template: `
     <!-- Pre Load Starts -->
     <div id="pre-load">
@@ -16,18 +16,18 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet]
 })
 export class AppComponent implements OnInit {
-  ngOnInit() {
+  ngOnInit(): void {
     this.initLoader();
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event) {
+  onResize(event: { target: { innerHeight: string | number | null } }): void {
     $('html').css({
       height: event.target.innerHeight
     });
   }
 
-  initLoader() {
+  initLoader(): void {
     $('#pre-load').fadeOut(1000);
   }
 }

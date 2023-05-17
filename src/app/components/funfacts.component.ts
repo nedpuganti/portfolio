@@ -1,9 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { AppService } from '@app/app.service';
 import { AsyncPipe, NgFor } from '@angular/common';
+import { Observable } from 'rxjs';
+import { FunFacts } from '@app/interfaces/personal.interface';
 
 @Component({
-  selector: 'app-funfacts',
+  selector: 'pfo-funfacts',
   template: `
     <!-- Fun Facts Starts -->
     <div class="fun-facts">
@@ -35,5 +37,5 @@ import { AsyncPipe, NgFor } from '@angular/common';
 export class FunfactsComponent {
   registerService = inject(AppService);
 
-  funFacts$ = this.registerService.getFunFacts();
+  funFacts$: Observable<FunFacts[]> = this.registerService.getFunFacts();
 }

@@ -1,9 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { AppService } from '@app/app.service';
+import { Observable } from 'rxjs';
+import { Experience } from '@app/interfaces/experience.interface';
 
 @Component({
-  selector: 'app-experience',
+  selector: 'pfo-experience',
   template: `
     <!-- Experience Starts -->
     <div class="experience">
@@ -40,5 +42,5 @@ import { AppService } from '@app/app.service';
 export class ExperienceComponent {
   registerService = inject(AppService);
 
-  experiences$ = this.registerService.getExperiences();
+  experiences$: Observable<Experience[]> = this.registerService.getExperiences();
 }

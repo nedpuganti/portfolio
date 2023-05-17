@@ -2,9 +2,11 @@ import { Component, inject } from '@angular/core';
 import { NgbProgressbar } from '@ng-bootstrap/ng-bootstrap';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { AppService } from '@app/app.service';
+import { Observable } from 'rxjs';
+import { Skill } from '@app/interfaces/skill.interface';
 
 @Component({
-  selector: 'app-skills',
+  selector: 'pfo-skills',
   template: `
     <!-- Skills Starts -->
     <div class="skills">
@@ -91,6 +93,6 @@ import { AppService } from '@app/app.service';
 export class SkillsComponent {
   registerService = inject(AppService);
 
-  hardSkills$ = this.registerService.getHardSkills();
-  softSkills$ = this.registerService.getSoftSkills();
+  hardSkills$: Observable<Skill[]> = this.registerService.getHardSkills();
+  softSkills$: Observable<Skill[]> = this.registerService.getSoftSkills();
 }

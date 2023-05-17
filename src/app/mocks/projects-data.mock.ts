@@ -1,4 +1,6 @@
-export const mocksProjects = [
+import { Project } from '@app/interfaces/project.interface';
+
+export const mocksProjects: Project[] = [
   {
     id: 1,
     image: 'assets/img/projects/mone_mobile.png',

@@ -2,8 +2,10 @@ import { Component, OnInit, inject } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { AppService } from '@app/app.service';
+import { Observable } from 'rxjs';
+import { Project } from '@app/interfaces/project.interface';
 @Component({
-  selector: 'app-projects',
+  selector: 'pfo-projects',
   template: `
     <!-- Projects Starts -->
     <div id="projects">
@@ -180,18 +182,26 @@ export class ProjectsComponent implements OnInit {
   modalService = inject(NgbModal);
   registerService = inject(AppService);
 
-  projectsData$ = this.registerService.getProjects('');
+  projectsData$: Observable<Project[]> = this.registerService.getProjects('');
 
   currentTab: string;
-  currentProject: any = {};
+  currentProject: Project = {
+    id: 0,
+    image: '',
+    title: '',
+    category: '',
+    client: '',
+    date: null,
+    description: '',
+    link: null
+  };
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.currentTab = 'All';
   }
 
-  openProjectDetails(modelContent, projectData) {
-    this.currentProject = {};
-    this.currentProject = { ...projectData };
+  openProjectDetails(modelContent: any, projectData: Project): void {
+    this.currentProject = projectData;
 
     this.modalService.open(modelContent, {
       size: 'lg',
@@ -201,7 +211,7 @@ export class ProjectsComponent implements OnInit {
     });
   }
 
-  getProjects(category = '') {
+  getProjects(category = ''): void {
     if (category) {
       this.currentTab = category;
       this.projectsData$ = this.registerService.getProjects(category);

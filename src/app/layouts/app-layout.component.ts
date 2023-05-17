@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-layout',
+  selector: 'pfo-layout',
   template: `
     <!-- Wrapper Starts -->
     <div id="wrapper">

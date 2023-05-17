@@ -5,12 +5,12 @@ import { SkillsComponent } from '../components/skills.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-resume',
+  selector: 'pfo-resume',
   template: `
-    <app-skills></app-skills>
-    <app-education></app-education>
-    <!-- <app-experience></app-experience> -->
-    <app-funfacts></app-funfacts>
+    <pfo-skills></pfo-skills>
+    <pfo-education></pfo-education>
+    <!-- <pfo-experience></pfo-experience> -->
+    <pfo-funfacts></pfo-funfacts>
     <!-- Button Wrapper Starts -->
     <div class="button-wrapper">
       <!-- Single Button Starts -->

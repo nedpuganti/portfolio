@@ -4,7 +4,7 @@ import { ActivatedRoute, Event, NavigationEnd, Router, RouterLink, RouterOutlet 
 import { filter, map, mergeMap, startWith, take } from 'rxjs';
 
 @Component({
-  selector: 'app-detail-layout',
+  selector: 'pfo-detail-layout',
   template: `
     <ng-template [ngIf]="pageId">
       <!-- Main Content (pageId) Starts -->
@@ -63,11 +63,11 @@ export class DetailLayoutComponent {
         filter((event: Event) => event instanceof NavigationEnd),
         startWith(this.router),
         map(() => this.activatedRoute),
-        map((route) => route.firstChild),
-        mergeMap((route) => route.data),
+        map((route: ActivatedRoute) => route.firstChild),
+        mergeMap((route: ActivatedRoute) => route.data),
         take(1)
       )
-      .subscribe((data) => {
+      .subscribe((data: Record<string, string>) => {
         if (data) {
           this.pageId = data.pageId;
 

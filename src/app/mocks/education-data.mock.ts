@@ -1,4 +1,6 @@
-export const mockEducation = [
+import { Education } from '@app/interfaces/education.interface';
+
+export const mockEducation: Education[] = [
   {
     when: '2014 - 2015',
     where: 'USA',

@@ -1,9 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { AppService } from '@app/app.service';
+import { Service } from '@app/interfaces/service.interface';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-services',
+  selector: 'pfo-services',
   template: `
     <!-- Services Starts -->
     <div id="services">
@@ -42,5 +44,5 @@ import { AppService } from '@app/app.service';
 export class ServicesComponent {
   registerService = inject(AppService);
 
-  services$ = this.registerService.getServices();
+  services$: Observable<Service[]> = this.registerService.getServices();
 }
