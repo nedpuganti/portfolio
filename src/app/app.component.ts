@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -13,7 +13,8 @@ import { RouterOutlet } from '@angular/router';
   `,
   styles: [],
   standalone: true,
-  imports: [RouterOutlet]
+  imports: [RouterOutlet],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {

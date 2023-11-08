@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { AppService } from '@app/app.service';
 import { Service } from '@app/interfaces/service.interface';
@@ -14,7 +14,8 @@ import { Observable } from 'rxjs';
       <!-- Services Heading Ends -->
       <div class="row no-gutters">
         <!-- Single Service Starts -->
-        <div class="single-service col-sm-6 col-12" *ngFor="let service of services$ | async; let i = index">
+        @for (service of services$ | async; track service; let i = $index) {
+        <div class="single-service col-sm-6 col-12">
           <ul>
             <li class="service-number">
               <span class="first-word">Service </span>
@@ -26,12 +27,15 @@ import { Observable } from 'rxjs';
                   <i class="fas fa-angle-double-right"></i><span>{{ service.name }}</span>
                 </li>
                 <li class="service-body">
-                  <p class="mb-0" *ngFor="let type of service.types">{{ type }}</p>
+                  @for (type of service.types; track type) {
+                  <p class="mb-0">{{ type }}</p>
+                  }
                 </li>
               </ul>
             </li>
           </ul>
         </div>
+        }
         <!-- Single Service Ends -->
       </div>
     </div>
@@ -39,7 +43,8 @@ import { Observable } from 'rxjs';
   `,
   styles: [],
   standalone: true,
-  imports: [NgFor, AsyncPipe]
+  imports: [NgFor, AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ServicesComponent {
   registerService = inject(AppService);

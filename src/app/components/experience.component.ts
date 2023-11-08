@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { AppService } from '@app/app.service';
 import { Observable } from 'rxjs';
@@ -14,7 +14,8 @@ import { Experience } from '@app/interfaces/experience.interface';
       <!-- Experience Heading Ends -->
       <div class="row no-gutters">
         <!-- Single Experience Starts -->
-        <div class="single-experience col-sm-6 col-12" *ngFor="let experience of experiences$ | async">
+        @for (experience of experiences$ | async; track experience) {
+        <div class="single-experience col-sm-6 col-12">
           <ul>
             <li class="experience-when-where">
               <span class="when">{{ experience.when }} </span>
@@ -30,6 +31,7 @@ import { Experience } from '@app/interfaces/experience.interface';
             </li>
           </ul>
         </div>
+        }
         <!-- Single Experience Ends -->
       </div>
     </div>
@@ -37,7 +39,8 @@ import { Experience } from '@app/interfaces/experience.interface';
   `,
   styles: [],
   standalone: true,
-  imports: [NgFor, AsyncPipe]
+  imports: [NgFor, AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperienceComponent {
   registerService = inject(AppService);

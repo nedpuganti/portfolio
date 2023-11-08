@@ -9,7 +9,7 @@ export const mockContactInfo: ContactInfo = {
 
 export function mockPersonalInfo(count: number): PersonalInfo {
   return {
-    summary: `I am a Full Stack Web Developer from Atlanta, USA. I am very passionate and dedicated to my work.I have ${count} years more work experience and enjoy working in a team or individual.`,
+    summary: `I am a Full Stack Web Developer from Atlanta, USA. I am very passionate and dedicated to my work. I have ${count} years more work experience and enjoy working in a team or individual.`,
     firstName: 'Naren',
     lastName: 'Edpuganti',
     dob: 'June 1991',

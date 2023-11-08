@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FunfactsComponent } from '../components/funfacts.component';
 import { EducationComponent } from '../components/education.component';
 import { SkillsComponent } from '../components/skills.component';
@@ -28,7 +28,8 @@ import { RouterLink } from '@angular/router';
   `,
   styles: [],
   standalone: true,
-  imports: [RouterLink, SkillsComponent, EducationComponent, FunfactsComponent]
+  imports: [RouterLink, SkillsComponent, EducationComponent, FunfactsComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ResumeComponent {
   resumeLink = '#';

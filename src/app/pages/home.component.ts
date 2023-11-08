@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import TypeIt from 'typeit';
 
 @Component({
@@ -82,7 +82,8 @@ import TypeIt from 'typeit';
     </div>
     <!-- Main Content (Home) Ends --> `,
   styles: [],
-  standalone: true
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
   ngOnInit(): void {

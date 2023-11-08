@@ -1,5 +1,5 @@
 import { AsyncPipe, NgFor } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { AppService } from '@app/app.service';
 import { Education } from '@app/interfaces/education.interface';
 import { Observable } from 'rxjs';
@@ -14,7 +14,8 @@ import { Observable } from 'rxjs';
       <!-- Education Heading Ends -->
       <div class="row no-gutters">
         <!-- Single Education Starts -->
-        <div class="single-education col-sm-6 col-12" *ngFor="let education of educations$ | async">
+        @for (education of educations$ | async; track education) {
+        <div class="single-education col-sm-6 col-12">
           <ul>
             <li class="education-when-where">
               <span class="when">{{ education.when }} </span>
@@ -36,6 +37,7 @@ import { Observable } from 'rxjs';
             </li>
           </ul>
         </div>
+        }
         <!-- Single Education Ends -->
       </div>
     </div>
@@ -43,7 +45,8 @@ import { Observable } from 'rxjs';
   `,
   styles: [],
   standalone: true,
-  imports: [NgFor, AsyncPipe]
+  imports: [NgFor, AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EducationComponent {
   registerService = inject(AppService);

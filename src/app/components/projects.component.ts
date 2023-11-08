@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { AppService } from '@app/app.service';
@@ -47,10 +47,13 @@ import { Project } from '@app/interfaces/project.interface';
         <div class="portfolio-item col-12">
           <div class="item-wrapper row">
             <!-- Single Item Starts -->
-            <div class="item web-templates col-md-4 col-sm-6 col-12" *ngFor="let item of projectsData$ | async">
+            @for (item of projectsData$ | async; track item) {
+            <div class="item web-templates col-md-4 col-sm-6 col-12">
               <!-- Image Starts -->
               <div class="image">
-                <img *ngIf="item.image !== null" [src]="item.image" alt="Data Landing Page" height="226" />
+                @if (item.image) {
+                <img [src]="item.image" alt="Data Landing Page" height="226" />
+                }
               </div>
               <!-- Image Ends -->
               <!-- Overlay Starts -->
@@ -87,6 +90,7 @@ import { Project } from '@app/interfaces/project.interface';
               </div>
               <!-- Overlay Ends -->
             </div>
+            }
             <!-- Single Item Ends -->
           </div>
         </div>
@@ -110,13 +114,11 @@ import { Project } from '@app/interfaces/project.interface';
         <div id="restaurant-logo-collection" class="project-popup p-0">
           <!-- Project Picture On Popup Starts -->
 
-          <img class="project-picture" *ngIf="currentProject.image !== null" src="{{ currentProject.image }}" alt="Data Landing Page" />
-          <img
-            class="project-picture"
-            *ngIf="currentProject.image === null"
-            src="assets/img/projects/restaurant-logo-collection.jpg"
-            alt="Data Landing Page"
-          />
+          @if (currentProject.image) {
+          <img class="project-picture" src="{{ currentProject.image }}" alt="Data Landing Page" />
+          } @else {
+          <img class="project-picture" src="assets/img/projects/restaurant-logo-collection.jpg" alt="Data Landing Page" />
+          }
           <!-- Project Picture On Popup Ends -->
           <!-- Project Name Starts -->
           <h5 class="project-name">{{ currentProject.title }}</h5>
@@ -158,7 +160,8 @@ import { Project } from '@app/interfaces/project.interface';
           </div>
           <!-- Project Info Ends -->
           <!-- Project source Button Starts -->
-          <a class="project-source" href="{{ currentProject.link }}" target="_blank" *ngIf="currentProject.link !== null">
+          @if (currentProject.link) {
+          <a class="project-source" href="{{ currentProject.link }}" target="_blank">
             <span class="front">
               <i class="fas fa-long-arrow-alt-right"></i>
               <span class="value">Visit <span>Project</span></span>
@@ -168,6 +171,7 @@ import { Project } from '@app/interfaces/project.interface';
               <span class="value">Visit <span>Project</span></span>
             </span>
           </a>
+          }
           <!-- Project Source Button Ends -->
         </div>
         <!-- Project Popup Ends -->
@@ -176,7 +180,8 @@ import { Project } from '@app/interfaces/project.interface';
   `,
   styles: [],
   standalone: true,
-  imports: [NgClass, NgFor, NgIf, AsyncPipe]
+  imports: [NgClass, NgFor, NgIf, AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectsComponent implements OnInit {
   modalService = inject(NgbModal);

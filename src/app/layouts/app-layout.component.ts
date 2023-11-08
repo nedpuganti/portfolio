@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
         <div class="row no-gutters v-full">
           <!-- Left Wrapper Starts -->
           <div id="left-wrapper" class="col-12 col-md-8">
-            <router-outlet/>
+            <router-outlet />
           </div>
           <!-- Left Wrapper Ends -->
           <!-- Right Wrapper Starts -->
@@ -27,6 +27,7 @@ import { RouterOutlet } from '@angular/router';
   `,
   styles: [],
   standalone: true,
-  imports: [RouterOutlet]
+  imports: [RouterOutlet],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppLayoutComponent {}

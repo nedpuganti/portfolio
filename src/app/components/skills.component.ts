@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { NgbProgressbar } from '@ng-bootstrap/ng-bootstrap';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { AppService } from '@app/app.service';
@@ -26,7 +26,8 @@ import { Skill } from '@app/interfaces/skill.interface';
             <li>
               <ul>
                 <!-- Single Skill Starts -->
-                <li class="single-skill" *ngFor="let skill of softSkills$ | async">
+                @for (skill of softSkills$ | async; track skill) {
+                <li class="single-skill">
                   <ul>
                     <li class="skill-name">
                       <i class="fas fa-angle-double-right"></i><span>{{ skill.name }}</span>
@@ -42,6 +43,7 @@ import { Skill } from '@app/interfaces/skill.interface';
                     </li>
                   </ul>
                 </li>
+                }
                 <!-- Single Skill Ends -->
               </ul>
             </li>
@@ -60,7 +62,8 @@ import { Skill } from '@app/interfaces/skill.interface';
             <li>
               <ul>
                 <!-- Single Skill Starts -->
-                <li class="single-skill" *ngFor="let skill of hardSkills$ | async">
+                @for (skill of hardSkills$ | async; track skill) {
+                <li class="single-skill">
                   <ul>
                     <li class="skill-name">
                       <i class="fas fa-angle-double-right"></i><span>{{ skill.name }}</span>
@@ -72,10 +75,11 @@ import { Skill } from '@app/interfaces/skill.interface';
                     <!-- </li> -->
 
                     <li>
-                      <ngb-progressbar [value]="skill.progress" [striped]="true" [animated]="true" [height]="'40px'"> </ngb-progressbar>
+                      <ngb-progressbar [value]="skill.progress" [striped]="true" [animated]="true" [height]="'40px'" />
                     </li>
                   </ul>
                 </li>
+                }
                 <!-- Single Skill Ends -->
               </ul>
             </li>
@@ -88,7 +92,8 @@ import { Skill } from '@app/interfaces/skill.interface';
   `,
   styles: [],
   standalone: true,
-  imports: [NgFor, NgbProgressbar, AsyncPipe]
+  imports: [NgFor, NgbProgressbar, AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SkillsComponent {
   registerService = inject(AppService);

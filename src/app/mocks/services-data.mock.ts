@@ -7,12 +7,7 @@ export const mockServices: Service[] = [
   },
   {
     name: 'Web/Frontend Development',
-    types: [
-      'Javascript / jQuery / Typescript',
-      'Angular (Material, Flex)',
-      'React js'
-      // 'Python'
-    ]
+    types: ['Javascript / jQuery / Typescript', 'Angular (Angular, Material)', 'React js', 'Nx']
   },
   {
     name: 'Mobile Development',
@@ -28,22 +23,22 @@ export const mockServices: Service[] = [
   },
   {
     name: 'DevOps',
-    types: ['Jenkins', 'Docker', 'Kubernetes', 'Nginx']
+    types: ['Jenkins', 'Docker', 'Kubernetes', 'Nginx', 'ArgoCD', 'CertManager']
   },
   {
     name: 'Cloud',
-    types: ['AWS (S3, SNS, SQS, SES)', 'GCP']
+    types: ['AWS (S3, SNS, SQS, SES, etc.)', 'GCP']
+  },
+  {
+    name: 'Testing',
+    types: ['Jest', 'Cypress', 'Junit', 'Cucumber']
   },
   {
     name: 'Other Skills',
-    types: ['Ajax / RestApi / Graphql', 'Gulp', 'Sequelize / Hibernate / JPA', 'RabbitMQ / Kafka', 'Redis (Cache)']
+    types: ['Ajax / RestApi / Graphql', 'Gulp', 'Sequelize / Knex / Hibernate / JPA', 'RabbitMQ / Kafka', 'Redis (Cache)']
   },
   {
     name: 'Other Tools',
-    types: ['ELK Stack (Logs)', 'Grafana (Analytics)', 'Swagger', 'PostMan', 'VS Code / IntelliJ', 'Jira', 'Git']
-  },
-  {
-    name: 'External',
-    types: ['Twilio', 'BridgeDataOut', 'E-Signatures', 'SmartyStreets / Usps', 'GoogleMaps', 'Etc..']
+    types: ['ELK Stack (Logs)', 'Grafana (Analytics)', 'Swagger', 'Sonar', 'VS Code / IntelliJ', 'Jira', 'Git']
   }
 ];

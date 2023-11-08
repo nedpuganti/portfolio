@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { AppService } from '@app/app.service';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { Observable } from 'rxjs';
@@ -14,7 +14,8 @@ import { FunFacts } from '@app/interfaces/personal.interface';
       <!-- Fun Facts Heading Ends -->
       <div class="row no-gutters">
         <!-- Single Fun Fact Starts -->
-        <div class="single-fun-fact col-12 col-sm-4" *ngFor="let fact of funFacts$ | async">
+        @for (fact of funFacts$ | async; track fact) {
+        <div class="single-fun-fact col-12 col-sm-4">
           <ul>
             <li class="fun-fact-icon">
               <i class="fas fa-business-time fa-3x"></i>
@@ -25,6 +26,7 @@ import { FunFacts } from '@app/interfaces/personal.interface';
             </li>
           </ul>
         </div>
+        }
         <!-- Single Fun Fact Ends -->
       </div>
     </div>
@@ -32,7 +34,8 @@ import { FunFacts } from '@app/interfaces/personal.interface';
   `,
   styles: [],
   standalone: true,
-  imports: [NgFor, AsyncPipe]
+  imports: [NgFor, AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FunfactsComponent {
   registerService = inject(AppService);

@@ -900,7 +900,7 @@ html.mfp-helper {
   -moz-border-radius: 50%;
   border-radius: 50%;
   display: none;
-  background-image: url('../img/profile.jpg');
+  background-image: url('/assets/img/profile.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2082,7 +2082,7 @@ html.mfp-helper {
 .lg-profile-picture {
   width: 100%;
   height: 100%;
-  background-image: url('../img/myphoto.jpg');
+  background-image: url('/assets/img/myphoto.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -4426,3 +4426,13 @@ html.mfp-helper {
     font-size: 0.9em;
   }
 }
+
+/* .main-content {
+  border-radius: 25px 0 0 25px;
+}
+
+#right-wrapper,
+.lg-profile-picture {
+  padding: 0;
+  border-radius: 0 25px 25px 0;
+} */
