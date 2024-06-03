@@ -1,4 +1,4 @@
-import { Education } from '@app/interfaces/education.interface';
+import { Education } from '../interfaces/education.interface';
 
 export const mockEducation: Education[] = [
   {

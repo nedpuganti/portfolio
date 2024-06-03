@@ -1,25 +1,25 @@
-import { Service } from '@app/interfaces/service.interface';
+import { Service } from '../interfaces/service.interface';
 
 export const mockServices: Service[] = [
   {
     name: 'UI/Web Development',
-    types: ['Html', 'Css/Scss', 'Bootstrap', 'Tailwind']
+    types: ['Html', 'Css/Scss', 'Bootstrap', 'Tailwind', 'Responsive Design']
   },
   {
     name: 'Web/Frontend Development',
-    types: ['Javascript / jQuery / Typescript', 'Angular (Angular, Material)', 'React js', 'Nx']
+    types: ['Javascript / jQuery / Typescript', 'Angular (Angular, Material)', 'Nx', 'Astro']
   },
   {
     name: 'Mobile Development',
-    types: ['Apache Cordova', 'Ionic Framework', 'React Native', 'Flutter']
+    types: ['Apache Cordova', 'Ionic Framework', 'Flutter']
   },
   {
     name: 'Backend Development',
-    types: ['Nodejs (ExpressJs, Nestjs)', 'ASP .Net c#', 'SpringBoot + Kotlin']
+    types: ['Nodejs (ExpressJs, Nestjs)']
   },
   {
     name: 'Database',
-    types: ['Mongo', 'Postgres', 'Sql', 'Sql Server']
+    types: ['Mongo', 'Postgres', 'Sql', 'Firebase']
   },
   {
     name: 'DevOps',
@@ -31,14 +31,14 @@ export const mockServices: Service[] = [
   },
   {
     name: 'Testing',
-    types: ['Jest', 'Cypress', 'Junit', 'Cucumber']
+    types: ['Jest', 'Cypress', 'Cucumber']
   },
   {
     name: 'Other Skills',
-    types: ['Ajax / RestApi / Graphql', 'Gulp', 'Sequelize / Knex / Hibernate / JPA', 'RabbitMQ / Kafka', 'Redis (Cache)']
+    types: ['Ajax / RestApi / Graphql', 'Gulp', 'Sequelize / Knex', 'RabbitMQ / Kafka', 'Redis (Cache)']
   },
   {
     name: 'Other Tools',
-    types: ['ELK Stack (Logs)', 'Grafana (Analytics)', 'Swagger', 'Sonar', 'VS Code / IntelliJ', 'Jira', 'Git']
+    types: ['ELK Stack (Logs)', 'Grafana (Analytics)', 'Swagger', 'Sonar', 'VS Code / IntelliJ', 'Jira', 'Git', 'Postman']
   }
 ];

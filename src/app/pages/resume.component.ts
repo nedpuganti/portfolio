@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FunfactsComponent } from '../components/funfacts.component';
-import { EducationComponent } from '../components/education.component';
-import { SkillsComponent } from '../components/skills.component';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+
+import { EducationComponent } from '../components/education.component';
+import { FunfactsComponent } from '../components/funfacts.component';
+import { SkillsComponent } from '../components/skills.component';
 
 @Component({
   selector: 'pfo-resume',
@@ -28,8 +29,7 @@ import { RouterLink } from '@angular/router';
   `,
   styles: [],
   standalone: true,
-  imports: [RouterLink, SkillsComponent, EducationComponent, FunfactsComponent],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  imports: [RouterLink, SkillsComponent, EducationComponent, FunfactsComponent]
 })
 export class ResumeComponent {
   resumeLink = '#';

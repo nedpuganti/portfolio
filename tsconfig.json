@@ -1,36 +1,30 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "moduleResolution": "bundler",
     "importHelpers": true,
-    "downlevelIteration": true,
     "target": "ES2022",
-    "typeRoots": ["node_modules/@types", "src/typings.d.ts"],
-    "lib": ["ES2022", "dom"],
-    "baseUrl": "./src",
-    "paths": {
-      "@app/*": ["app/*"],
-      "@environments/*": ["environments/*"],
-      "@services/*": ["app/services/*"],
-      "@shared/*": ["app/shared/*"],
-      "@utils/*": ["app/utils/*"]
-    },
-    "useDefineForClassFields": false,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "module": "ES2022",
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
+    "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
     "strictTemplates": true
   }
 }

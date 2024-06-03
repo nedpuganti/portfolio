@@ -1,9 +1,10 @@
-import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
-import { AppService } from '@app/app.service';
-import { Observable } from 'rxjs';
-import { Project } from '@app/interfaces/project.interface';
+import { NgClass } from '@angular/common';
+import { Component, computed, inject, Injector, Signal, signal, TemplateRef, WritableSignal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+
+import { AppService } from '../app.service';
+import { Project } from '../interfaces/project.interface';
+
 @Component({
   selector: 'pfo-projects',
   template: `
@@ -18,26 +19,28 @@ import { Project } from '@app/interfaces/project.interface';
           <ul>
             <!-- Single Filter Starts -->
             <li>
-              <a href="javascript:void(0);" [ngClass]="currentTab === 'All' ? 'current' : ''" (click)="getProjects()">All Projects</a>
+              <a [ngClass]="currentTab() === 'All' ? 'current' : ''" (click)="getProjects()" href="javascript:void(0);">All Projects</a>
             </li>
             <!-- Single Filter Ends -->
             <!-- Single Filter Starts -->
             <li>
-              <a href="javascript:void(0);" [ngClass]="currentTab === 'Mobile' ? 'current' : ''" (click)="getProjects('Mobile')"
+              <a [ngClass]="currentTab() === 'Mobile' ? 'current' : ''" (click)="getProjects('Mobile')" href="javascript:void(0);"
                 >Mobile Apps</a
               >
             </li>
             <!-- Single Filter Ends -->
             <!-- Single Filter Starts -->
             <li>
-              <a href="javascript:void(0);" [ngClass]="currentTab === 'Website' ? 'current' : ''" (click)="getProjects('Website')"
+              <a [ngClass]="currentTab() === 'Website' ? 'current' : ''" (click)="getProjects('Website')" href="javascript:void(0);"
                 >Websites</a
               >
             </li>
             <!-- Single Filter Ends -->
             <!-- Single Filter Starts -->
             <li>
-              <a href="javascript:void(0);" [ngClass]="currentTab === 'Portal' ? 'current' : ''" (click)="getProjects('Portal')">Portals</a>
+              <a [ngClass]="currentTab() === 'Portal' ? 'current' : ''" (click)="getProjects('Portal')" href="javascript:void(0);"
+                >Portals</a
+              >
             </li>
             <!-- Single Filter Ends -->
           </ul>
@@ -47,49 +50,49 @@ import { Project } from '@app/interfaces/project.interface';
         <div class="portfolio-item col-12">
           <div class="item-wrapper row">
             <!-- Single Item Starts -->
-            @for (item of projectsData$ | async; track item) {
-            <div class="item web-templates col-md-4 col-sm-6 col-12">
-              <!-- Image Starts -->
-              <div class="image">
-                @if (item.image) {
-                <img [src]="item.image" alt="Data Landing Page" height="226" />
-                }
-              </div>
-              <!-- Image Ends -->
-              <!-- Overlay Starts -->
-              <div class="overlay">
-                <!-- View More (Button) Starts -->
-                <a class="view-more" (click)="openProjectDetails(modelContent, item)">
-                  <span class="front">
-                    <i class="far fa-eye"></i><span class="value">View <span>More</span></span>
-                  </span>
-                  <span class="back">
-                    <i class="far fa-eye"></i><span class="value">View <span>More</span></span>
-                  </span>
-                </a>
-                <!-- View More (Button) Ends -->
-                <!-- Image Info Starts -->
-                <div class="image-info">
-                  <!-- Project Name Starts -->
-                  <span class="project-name">{{ item.title }}</span>
-                  <!-- Project Name Ends -->
-                  <!-- Project Tags Starts -->
-                  <span class="project-tags">
-                    <!-- Tag Icon Starts -->
-                    <span class="tag-icon">
-                      <i class="fas fa-tags"></i>
-                    </span>
-                    <!-- Tag Icon Ends -->
-                    <!-- Tag Label Starts -->
-                    <span class="tag-label">{{ item.category }}</span>
-                    <!-- Tag Label Ends -->
-                  </span>
-                  <!-- Project Tags Ends -->
+            @for (item of displayProjects(); track $index) {
+              <div class="item web-templates col-md-4 col-sm-6 col-12">
+                <!-- Image Starts -->
+                <div class="image">
+                  @if (item.image) {
+                    <img [src]="item.image" alt="Data Landing Page" height="226" />
+                  }
                 </div>
-                <!-- Image Info Ends -->
+                <!-- Image Ends -->
+                <!-- Overlay Starts -->
+                <div class="overlay">
+                  <!-- View More (Button) Starts -->
+                  <a class="view-more" (click)="openProjectDetails(modelContent, item)">
+                    <span class="front">
+                      <i class="far fa-eye"></i><span class="value">View <span>More</span></span>
+                    </span>
+                    <span class="back">
+                      <i class="far fa-eye"></i><span class="value">View <span>More</span></span>
+                    </span>
+                  </a>
+                  <!-- View More (Button) Ends -->
+                  <!-- Image Info Starts -->
+                  <div class="image-info">
+                    <!-- Project Name Starts -->
+                    <span class="project-name">{{ item.title }}</span>
+                    <!-- Project Name Ends -->
+                    <!-- Project Tags Starts -->
+                    <span class="project-tags">
+                      <!-- Tag Icon Starts -->
+                      <span class="tag-icon">
+                        <i class="fas fa-tags"></i>
+                      </span>
+                      <!-- Tag Icon Ends -->
+                      <!-- Tag Label Starts -->
+                      <span class="tag-label">{{ item.category }}</span>
+                      <!-- Tag Label Ends -->
+                    </span>
+                    <!-- Project Tags Ends -->
+                  </div>
+                  <!-- Image Info Ends -->
+                </div>
+                <!-- Overlay Ends -->
               </div>
-              <!-- Overlay Ends -->
-            </div>
             }
             <!-- Single Item Ends -->
           </div>
@@ -107,17 +110,17 @@ import { Project } from '@app/interfaces/project.interface';
     </button>
   </div> -->
       <div class="modal-body">
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <button class="close" (click)="modal.dismiss('Cross click')" type="button" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
         <!-- Project Popup Starts -->
-        <div id="restaurant-logo-collection" class="project-popup p-0">
+        <div class="project-popup p-0" id="restaurant-logo-collection">
           <!-- Project Picture On Popup Starts -->
 
           @if (currentProject.image) {
-          <img class="project-picture" src="{{ currentProject.image }}" alt="Data Landing Page" />
+            <img class="project-picture" src="{{ currentProject.image }}" alt="Data Landing Page" />
           } @else {
-          <img class="project-picture" src="assets/img/projects/restaurant-logo-collection.jpg" alt="Data Landing Page" />
+            <img class="project-picture" src="assets/img/projects/restaurant-logo-collection.jpg" alt="Data Landing Page" />
           }
           <!-- Project Picture On Popup Ends -->
           <!-- Project Name Starts -->
@@ -161,16 +164,16 @@ import { Project } from '@app/interfaces/project.interface';
           <!-- Project Info Ends -->
           <!-- Project source Button Starts -->
           @if (currentProject.link) {
-          <a class="project-source" href="{{ currentProject.link }}" target="_blank">
-            <span class="front">
-              <i class="fas fa-long-arrow-alt-right"></i>
-              <span class="value">Visit <span>Project</span></span>
-            </span>
-            <span class="back">
-              <i class="fas fa-long-arrow-alt-right"></i>
-              <span class="value">Visit <span>Project</span></span>
-            </span>
-          </a>
+            <a class="project-source" href="{{ currentProject.link }}" target="_blank">
+              <span class="front">
+                <i class="fas fa-long-arrow-alt-right"></i>
+                <span class="value">Visit <span>Project</span></span>
+              </span>
+              <span class="back">
+                <i class="fas fa-long-arrow-alt-right"></i>
+                <span class="value">Visit <span>Project</span></span>
+              </span>
+            </a>
           }
           <!-- Project Source Button Ends -->
         </div>
@@ -180,16 +183,17 @@ import { Project } from '@app/interfaces/project.interface';
   `,
   styles: [],
   standalone: true,
-  imports: [NgClass, NgFor, NgIf, AsyncPipe],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  imports: [NgClass]
 })
-export class ProjectsComponent implements OnInit {
-  modalService = inject(NgbModal);
-  registerService = inject(AppService);
+export class ProjectsComponent {
+  readonly registerService = inject(AppService);
+  readonly injector = inject(Injector);
 
-  projectsData$: Observable<Project[]> = this.registerService.getProjects('');
+  projectsData$: Signal<Project[]> = toSignal(this.registerService.getProjects(''), { initialValue: [] });
+  projectsData: Signal<WritableSignal<Project[]>> = computed(() => signal(this.projectsData$()));
+  displayProjects: Signal<Project[]> = this.projectsData();
 
-  currentTab: string;
+  currentTab = signal('All');
   currentProject: Project = {
     id: 0,
     image: '',
@@ -201,28 +205,23 @@ export class ProjectsComponent implements OnInit {
     link: null
   };
 
-  ngOnInit(): void {
-    this.currentTab = 'All';
-  }
-
-  openProjectDetails(modelContent: any, projectData: Project): void {
+  openProjectDetails(modelContent: TemplateRef<unknown>, projectData: Project): void {
     this.currentProject = projectData;
 
-    this.modalService.open(modelContent, {
-      size: 'lg',
-      scrollable: true,
-      centered: true,
-      backdropClass: 'dark-backdrop'
-    });
+    // this.modalService.open(modelContent, {
+    //   size: 'lg',
+    //   scrollable: true,
+    //   centered: true,
+    //   backdropClass: 'dark-backdrop'
+    // });
   }
 
   getProjects(category = ''): void {
-    if (category) {
-      this.currentTab = category;
-      this.projectsData$ = this.registerService.getProjects(category);
-    } else {
-      this.currentTab = 'All';
-      this.projectsData$ = this.registerService.getProjects('');
-    }
+    this.currentTab.update(() => category || 'All');
+    this.projectsData$ = toSignal(this.registerService.getProjects(category), {
+      initialValue: [],
+      injector: this.injector
+    });
+    this.projectsData().set(this.projectsData$());
   }
 }

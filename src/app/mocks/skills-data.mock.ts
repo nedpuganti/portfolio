@@ -1,4 +1,4 @@
-import { Skill } from '@app/interfaces/skill.interface';
+import { Skill } from '../interfaces/skill.interface';
 
 export const mockHardSkills: Skill[] = [
   {

@@ -2,13 +2,7 @@
 export default {
   displayName: 'myportfolio-ui',
   // preset: './jest.preset.js',
-  moduleNameMapper: {
-    '@app/(.*)': '<rootDir>/src/app/$1',
-    '@environments/(.*)': ['<rootDir>/src/environments/$1'],
-    '@services/(.*)': ['<rootDir>/src/app/services/$1'],
-    '@shared/(.*)': ['<rootDir>/src/app/shared/$1'],
-    '@utils/(.*)': ['<rootDir>/src/app/shared/utils/$1']
-  },
+  moduleNameMapper: {},
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {},
   // coverageDirectory: './coverage/provider-ui',

@@ -1,8 +1,8 @@
-import { ContactInfo, FunFacts, PersonalInfo } from '@app/interfaces/personal.interface';
+import { ContactInfo, FunFacts, PersonalInfo } from '../interfaces/personal.interface';
 
 export const mockContactInfo: ContactInfo = {
-  phoneNumber: '4239028634',
-  email: 'contact@narenedpuganti.com',
+  phoneNumber: '(423) 902-8634',
+  email: 'itsmenarene@gmail.com',
   address: 'N/A',
   website: 'www.narenedpuganti.com'
 };
@@ -14,8 +14,8 @@ export function mockPersonalInfo(count: number): PersonalInfo {
     lastName: 'Edpuganti',
     dob: 'June 1991',
     nationality: 'India',
-    phoneNumber: '4239028634',
-    email: 'contact@narenedpuganti.com',
+    phoneNumber: '(423) 902-8634',
+    email: 'itsmenarene@gmail.com',
     address: 'N/A',
     languages: 'Telugu, English'
   };

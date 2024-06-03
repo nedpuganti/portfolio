@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { AsyncPipe, NgFor } from '@angular/common';
-import { AppService } from '@app/app.service';
-import { Observable } from 'rxjs';
-import { Experience } from '@app/interfaces/experience.interface';
+import { Component, inject, Signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+
+import { AppService } from '../app.service';
+import { Experience } from '../interfaces/experience.interface';
 
 @Component({
   selector: 'pfo-experience',
@@ -14,23 +14,23 @@ import { Experience } from '@app/interfaces/experience.interface';
       <!-- Experience Heading Ends -->
       <div class="row no-gutters">
         <!-- Single Experience Starts -->
-        @for (experience of experiences$ | async; track experience) {
-        <div class="single-experience col-sm-6 col-12">
-          <ul>
-            <li class="experience-when-where">
-              <span class="when">{{ experience.when }} </span>
-              <span class="where">{{ experience.where }}</span>
-            </li>
-            <li>
-              <ul>
-                <li class="experience-name">
-                  <i class="fas fa-angle-double-right"></i><span>{{ experience.name }}</span>
-                </li>
-                <li class="experience-body" [innerHtml]="experience.description"></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+        @for (experience of experiences$(); track $index) {
+          <div class="single-experience col-sm-6 col-12">
+            <ul>
+              <li class="experience-when-where">
+                <span class="when">{{ experience.when }} </span>
+                <span class="where">{{ experience.where }}</span>
+              </li>
+              <li>
+                <ul>
+                  <li class="experience-name">
+                    <i class="fas fa-angle-double-right"></i><span>{{ experience.name }}</span>
+                  </li>
+                  <li class="experience-body" [innerHtml]="experience.description"></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         }
         <!-- Single Experience Ends -->
       </div>
@@ -38,12 +38,10 @@ import { Experience } from '@app/interfaces/experience.interface';
     <!-- Experience Ends -->
   `,
   styles: [],
-  standalone: true,
-  imports: [NgFor, AsyncPipe],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  standalone: true
 })
 export class ExperienceComponent {
-  registerService = inject(AppService);
+  readonly registerService = inject(AppService);
 
-  experiences$: Observable<Experience[]> = this.registerService.getExperiences();
+  experiences$: Signal<Experience[]> = toSignal(this.registerService.getExperiences(), { initialValue: [] });
 }
