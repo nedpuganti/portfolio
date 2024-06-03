@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 
 import { AppLayoutComponent } from './layouts/app-layout.component';
+import { DetailLayoutComponent } from './layouts/detail-layout.component';
 import { AboutComponent } from './pages/about.component';
 import { ContactComponent } from './pages/contact.component';
 import { HomeComponent } from './pages/home.component';
 import { PortfolioComponent } from './pages/portfolio.component';
 import { ResumeComponent } from './pages/resume.component';
-import { DetailLayoutComponent } from './layouts/detail-layout.component';
 
 export const AppRoutes: Routes = [
   {

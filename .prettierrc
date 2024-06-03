@@ -22,5 +22,6 @@
         "printWidth": 80
       }
     }
-  ]
+  ],
+  "plugins": ["prettier-plugin-jsdoc", "prettier-plugin-css-order", "prettier-plugin-organize-attributes"]
 }

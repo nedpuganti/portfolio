@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -13,8 +13,7 @@ import { RouterOutlet } from '@angular/router';
   `,
   styles: [],
   standalone: true,
-  imports: [RouterOutlet],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  imports: [RouterOutlet]
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {
@@ -23,12 +22,18 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: { target: { innerHeight: string | number | null } }): void {
-    $('html').css({
-      height: event.target.innerHeight
-    });
+    document.documentElement.style.height = `${event.target.innerHeight}px`;
   }
 
   initLoader(): void {
-    $('#pre-load').fadeOut(1000);
+    const preLoadElement = document.getElementById('pre-load');
+    if (preLoadElement) {
+      preLoadElement.style.transition = 'opacity 1s ease-in-out';
+      preLoadElement.style.opacity = '1';
+
+      setTimeout(() => {
+        preLoadElement.style.display = 'none';
+      }, 1000);
+    }
   }
 }

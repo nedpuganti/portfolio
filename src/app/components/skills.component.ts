@@ -1,8 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { NgbProgressbar } from '@ng-bootstrap/ng-bootstrap';
-import { AsyncPipe, NgFor } from '@angular/common';
+import { Component, inject, Signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { AppService } from '@app/app.service';
-import { Observable } from 'rxjs';
 import { Skill } from '@app/interfaces/skill.interface';
 
 @Component({
@@ -26,23 +24,28 @@ import { Skill } from '@app/interfaces/skill.interface';
             <li>
               <ul>
                 <!-- Single Skill Starts -->
-                @for (skill of softSkills$ | async; track skill) {
-                <li class="single-skill">
-                  <ul>
-                    <li class="skill-name">
-                      <i class="fas fa-angle-double-right"></i><span>{{ skill.name }}</span>
-                    </li>
-                    <!-- Range Of Percentage 0% - 100% -->
-                    <li class="percentage">{{ skill.progress }}%</li>
-                    <!-- <li class="progress-wrapper"> -->
-                    <!-- <span class="progress"></span> -->
-                    <!-- </li> -->
+                @for (skill of softSkills$(); track $index) {
+                  <li class="single-skill">
+                    <ul>
+                      <li class="skill-name">
+                        <i class="fas fa-angle-double-right"></i><span>{{ skill.name }}</span>
+                      </li>
+                      <!-- Range Of Percentage 0% - 100% -->
+                      <li class="percentage">{{ skill.progress }}%</li>
+                      <!-- <li class="progress-wrapper"> -->
+                      <!-- <span class="progress"></span> -->
+                      <!-- </li> -->
 
-                    <li>
-                      <ngb-progressbar [value]="skill.progress" [striped]="true" [animated]="true" [height]="'40px'"> </ngb-progressbar>
-                    </li>
-                  </ul>
-                </li>
+                      <li>
+                        <div class="progress" style="height:40px">
+                          <div
+                            class="progress-bar progress-bar progress-bar-striped progress-bar-animated"
+                            [style]="{ width: skill.progress + '%' }"
+                          ></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
                 }
                 <!-- Single Skill Ends -->
               </ul>
@@ -62,23 +65,28 @@ import { Skill } from '@app/interfaces/skill.interface';
             <li>
               <ul>
                 <!-- Single Skill Starts -->
-                @for (skill of hardSkills$ | async; track skill) {
-                <li class="single-skill">
-                  <ul>
-                    <li class="skill-name">
-                      <i class="fas fa-angle-double-right"></i><span>{{ skill.name }}</span>
-                    </li>
-                    <!-- Range Of Percentage 0% - 100% -->
-                    <li class="percentage">{{ skill.progress }}%</li>
-                    <!-- <li class="progress-wrapper"> -->
-                    <!-- <span class="progress"></span> -->
-                    <!-- </li> -->
+                @for (skill of hardSkills$(); track $index) {
+                  <li class="single-skill">
+                    <ul>
+                      <li class="skill-name">
+                        <i class="fas fa-angle-double-right"></i><span>{{ skill.name }}</span>
+                      </li>
+                      <!-- Range Of Percentage 0% - 100% -->
+                      <li class="percentage">{{ skill.progress }}%</li>
+                      <!-- <li class="progress-wrapper"> -->
+                      <!-- <span class="progress"></span> -->
+                      <!-- </li> -->
 
-                    <li>
-                      <ngb-progressbar [value]="skill.progress" [striped]="true" [animated]="true" [height]="'40px'" />
-                    </li>
-                  </ul>
-                </li>
+                      <li>
+                        <div class="progress" style="height:40px">
+                          <div
+                            class="progress-bar progress-bar progress-bar-striped progress-bar-animated"
+                            [style]="{ width: skill.progress + '%' }"
+                          ></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
                 }
                 <!-- Single Skill Ends -->
               </ul>
@@ -91,13 +99,11 @@ import { Skill } from '@app/interfaces/skill.interface';
     <!-- Skills Ends -->
   `,
   styles: [],
-  standalone: true,
-  imports: [NgFor, NgbProgressbar, AsyncPipe],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  standalone: true
 })
 export class SkillsComponent {
-  registerService = inject(AppService);
+  readonly registerService = inject(AppService);
 
-  hardSkills$: Observable<Skill[]> = this.registerService.getHardSkills();
-  softSkills$: Observable<Skill[]> = this.registerService.getSoftSkills();
+  hardSkills$: Signal<Skill[]> = toSignal(this.registerService.getHardSkills(), { initialValue: [] });
+  softSkills$: Signal<Skill[]> = toSignal(this.registerService.getSoftSkills(), { initialValue: [] });
 }

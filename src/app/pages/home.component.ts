@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import TypeIt from 'typeit';
 
 @Component({
   selector: 'pfo-home',
   template: `<!-- Main Content (Home) Starts -->
-    <div id="home" class="main-content active">
+    <div class="main-content active" id="home">
       <!-- Content Hanging On Home Section Starts -->
       <div class="hanging">
         <div class="logo-hanging">
@@ -28,9 +28,9 @@ import TypeIt from 'typeit';
         <!-- Content Starts -->
         <div class="content">
           <!-- About Menu Starts -->
-          <div id="about-menu" class="box-wrapper">
+          <div class="box-wrapper" id="about-menu">
             <div class="inner-box-wrapper">
-              <a href="#about" class="menu-link">
+              <a class="menu-link" href="#about">
                 <div class="valign-center">
                   <i class="fas fa-id-card fa-3x"></i>
                   <h5>About <span>Me</span></h5>
@@ -40,9 +40,9 @@ import TypeIt from 'typeit';
           </div>
           <!-- About Menu Ends -->
           <!-- Resume Menu Starts -->
-          <div id="resume-menu" class="box-wrapper">
+          <div class="box-wrapper" id="resume-menu">
             <div class="inner-box-wrapper">
-              <a href="#resume" class="menu-link">
+              <a class="menu-link" href="#resume">
                 <div class="valign-center">
                   <i class="fas fa-newspaper fa-3x"></i>
                   <h5>My <span>Resume</span></h5>
@@ -52,9 +52,9 @@ import TypeIt from 'typeit';
           </div>
           <!-- Resume Menu Ends -->
           <!-- Portfolio Menu Starts -->
-          <div id="portfolio-menu" class="box-wrapper">
+          <div class="box-wrapper" id="portfolio-menu">
             <div class="inner-box-wrapper">
-              <a href="#portfolio" class="menu-link">
+              <a class="menu-link" href="#portfolio">
                 <div class="valign-center">
                   <i class="fas fa-toolbox fa-3x"></i>
                   <h5>My <span>Portfolio</span></h5>
@@ -64,9 +64,9 @@ import TypeIt from 'typeit';
           </div>
           <!-- Portfolio Menu Ends -->
           <!-- Contact Menu Starts -->
-          <div id="contact-menu" class="box-wrapper">
+          <div class="box-wrapper" id="contact-menu">
             <div class="inner-box-wrapper">
-              <a href="#contact" class="menu-link">
+              <a class="menu-link" href="#contact">
                 <div class="valign-center">
                   <i class="fas fa-envelope fa-3x"></i>
                   <h5>Contact <span>Me</span></h5>
@@ -82,8 +82,7 @@ import TypeIt from 'typeit';
     </div>
     <!-- Main Content (Home) Ends --> `,
   styles: [],
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  standalone: true
 })
 export class HomeComponent implements OnInit {
   ngOnInit(): void {
@@ -92,11 +91,10 @@ export class HomeComponent implements OnInit {
 
   initTypeIt(): void {
     if (typeof TypeIt != 'undefined') {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      new (TypeIt as any)('.passion', {
+      new TypeIt('.passion', {
         speed: 200,
         startDelay: 800,
-        strings: ['Frontend', 'Full Stack Developer'],
+        strings: ['Senior Frontend', 'Full Stack Developer'],
         breakLines: false,
         loop: true
       }).go();

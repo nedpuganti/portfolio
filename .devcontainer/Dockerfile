@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 
 # USER root
 
-RUN su node -c "npm install -g @angular/cli npm"
+RUN su node -c "npm install -g @angular/cli bun"
 
 EXPOSE 4000 4200 8080 3000 443 80 22
 
@@ -14,6 +14,6 @@ EXPOSE 4000 4200 8080 3000 443 80 22
 #Install Prerequisites
 RUN apt-get update
 RUN apt-get install -y \
-    lsb-release \
-    curl \
-    git
+  lsb-release \
+  curl \
+  git

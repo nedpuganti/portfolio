@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+
 import { PersonalinfoComponent } from '../components/personalinfo.component';
 import { ServicesComponent } from '../components/services.component';
 
@@ -11,7 +12,6 @@ import { ServicesComponent } from '../components/services.component';
   `,
   styles: [],
   standalone: true,
-  imports: [RouterLink, PersonalinfoComponent, ServicesComponent],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  imports: [RouterLink, PersonalinfoComponent, ServicesComponent]
 })
 export class AboutComponent {}

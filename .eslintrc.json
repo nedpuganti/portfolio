@@ -4,6 +4,7 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
+  "plugins": ["@angular-eslint/eslint-plugin", "@angular-eslint/template", "simple-import-sort", "import"],
   "overrides": [
     {
       "files": ["*.ts"],
@@ -15,13 +16,6 @@
       ],
       "rules": {
         "@typescript-eslint/no-inferrable-types": "error",
-        "@typescript-eslint/no-unused-vars": [
-          "error",
-          {
-            "varsIgnorePattern": "^_",
-            "argsIgnorePattern": "^_"
-          }
-        ],
         "@angular-eslint/component-selector": [
           "error",
           {
@@ -29,7 +23,21 @@
             "prefix": "pfo",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "varsIgnorePattern": "^_",
+            "argsIgnorePattern": "^_",
+            "caughtErrorsIgnorePattern": "^_"
+          }
+        ],
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error"
       }
     },
     {

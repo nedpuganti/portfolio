@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ContactInfo, FunFacts, PersonalInfo } from '@app/interfaces/personal.interface';
 import { Observable, of } from 'rxjs';
+
 import { Education } from './interfaces/education.interface';
 import { Experience } from './interfaces/experience.interface';
 import { Project } from './interfaces/project.interface';
@@ -17,6 +18,7 @@ import {
   mockSoftSkills,
   mocksProjects
 } from './mocks';
+
 @Injectable({
   providedIn: 'root'
 })
