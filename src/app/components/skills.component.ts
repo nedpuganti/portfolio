@@ -99,11 +99,10 @@ import { Skill } from '../interfaces/skill.interface';
     </div>
     <!-- Skills Ends -->
   `,
-  styles: [],
-  standalone: true
+  styles: []
 })
 export class SkillsComponent {
-  readonly registerService = inject(AppService);
+  readonly registerService: AppService = inject(AppService);
 
   hardSkills$: Signal<Skill[]> = toSignal(this.registerService.getHardSkills(), { initialValue: [] });
   softSkills$: Signal<Skill[]> = toSignal(this.registerService.getSoftSkills(), { initialValue: [] });

@@ -41,11 +41,10 @@ import { Service } from '../interfaces/service.interface';
     </div>
     <!-- Services Ends -->
   `,
-  styles: [],
-  standalone: true
+  styles: []
 })
 export class ServicesComponent {
-  readonly registerService = inject(AppService);
+  readonly registerService: AppService = inject(AppService);
 
   services$: Signal<Service[]> = toSignal(this.registerService.getServices(), { initialValue: [] });
 }

@@ -117,11 +117,10 @@ import { ContactInfo } from '../interfaces/personal.interface';
     }
     <!-- Contact Info Ends -->
   `,
-  styles: [],
-  standalone: true
+  styles: []
 })
 export class ContactinfoComponent {
-  readonly registerService = inject(AppService);
+  readonly registerService: AppService = inject(AppService);
 
   contactInfo$: Signal<ContactInfo | undefined> = toSignal(this.registerService.getContactInfo());
 

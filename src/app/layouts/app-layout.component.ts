@@ -26,7 +26,6 @@ import { RouterOutlet } from '@angular/router';
     <!-- Wrapper Ends -->
   `,
   styles: [],
-  standalone: true,
   imports: [RouterOutlet]
 })
 export class AppLayoutComponent {}

@@ -182,11 +182,10 @@ import { PersonalInfo } from '../interfaces/personal.interface';
     <!-- Personal Info Ends -->
   `,
   styles: [],
-  standalone: true,
   imports: [RouterLink]
 })
 export class PersonalinfoComponent {
-  readonly registerService = inject(AppService);
+  readonly registerService: AppService = inject(AppService);
 
   personalInfo$: Signal<PersonalInfo | undefined> = toSignal(this.registerService.getPersonalInfo());
 

@@ -81,8 +81,7 @@ import TypeIt from 'typeit';
       <!-- Inner Content Ends -->
     </div>
     <!-- Main Content (Home) Ends --> `,
-  styles: [],
-  standalone: true
+  styles: []
 })
 export class HomeComponent implements OnInit {
   ngOnInit(): void {

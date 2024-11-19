@@ -1,6 +1,6 @@
-import { NgClass } from '@angular/common';
-import { Component, computed, inject, Injector, Signal, signal, TemplateRef, WritableSignal } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
+import { Component, inject, Injector, ResourceLoaderParams, ResourceRef, signal, TemplateRef, WritableSignal } from '@angular/core';
+import { rxResource } from '@angular/core/rxjs-interop';
+import { Observable } from 'rxjs';
 
 import { AppService } from '../app.service';
 import { Project } from '../interfaces/project.interface';
@@ -18,29 +18,25 @@ import { Project } from '../interfaces/project.interface';
         <div class="portfolio-filter col-12">
           <ul>
             <!-- Single Filter Starts -->
-            <li>
-              <a [ngClass]="currentTab() === 'All' ? 'current' : ''" (click)="getProjects()" href="javascript:void(0);">All Projects</a>
-            </li>
+            <li><a [class]="currentTab() === '' ? 'current' : ''" (click)="getProjects()" href="javascript:void(0);">All Projects</a></li>
             <!-- Single Filter Ends -->
             <!-- Single Filter Starts -->
             <li>
-              <a [ngClass]="currentTab() === 'Mobile' ? 'current' : ''" (click)="getProjects('Mobile')" href="javascript:void(0);"
+              <a [class]="currentTab() === 'Mobile' ? 'current' : ''" (click)="getProjects('Mobile')" href="javascript:void(0);"
                 >Mobile Apps</a
               >
             </li>
             <!-- Single Filter Ends -->
             <!-- Single Filter Starts -->
             <li>
-              <a [ngClass]="currentTab() === 'Website' ? 'current' : ''" (click)="getProjects('Website')" href="javascript:void(0);"
+              <a [class]="currentTab() === 'Website' ? 'current' : ''" (click)="getProjects('Website')" href="javascript:void(0);"
                 >Websites</a
               >
             </li>
             <!-- Single Filter Ends -->
             <!-- Single Filter Starts -->
             <li>
-              <a [ngClass]="currentTab() === 'Portal' ? 'current' : ''" (click)="getProjects('Portal')" href="javascript:void(0);"
-                >Portals</a
-              >
+              <a [class]="currentTab() === 'Portal' ? 'current' : ''" (click)="getProjects('Portal')" href="javascript:void(0);">Portals</a>
             </li>
             <!-- Single Filter Ends -->
           </ul>
@@ -50,7 +46,7 @@ import { Project } from '../interfaces/project.interface';
         <div class="portfolio-item col-12">
           <div class="item-wrapper row">
             <!-- Single Item Starts -->
-            @for (item of displayProjects(); track $index) {
+            @for (item of projectsData$.value(); track $index) {
               <div class="item web-templates col-md-4 col-sm-6 col-12">
                 <!-- Image Starts -->
                 <div class="image">
@@ -79,9 +75,7 @@ import { Project } from '../interfaces/project.interface';
                     <!-- Project Tags Starts -->
                     <span class="project-tags">
                       <!-- Tag Icon Starts -->
-                      <span class="tag-icon">
-                        <i class="fas fa-tags"></i>
-                      </span>
+                      <span class="tag-icon"> <i class="fas fa-tags"></i> </span>
                       <!-- Tag Icon Ends -->
                       <!-- Tag Label Starts -->
                       <span class="tag-label">{{ item.category }}</span>
@@ -101,7 +95,6 @@ import { Project } from '../interfaces/project.interface';
       </div>
     </div>
     <!-- Projects Ends -->
-
     <ng-template #modelContent let-modal>
       <!-- <div class="modal-header">
     <h4 class="modal-title">Modal title</h4>
@@ -116,7 +109,6 @@ import { Project } from '../interfaces/project.interface';
         <!-- Project Popup Starts -->
         <div class="project-popup p-0" id="restaurant-logo-collection">
           <!-- Project Picture On Popup Starts -->
-
           @if (currentProject.image) {
             <img class="project-picture" src="{{ currentProject.image }}" alt="Data Landing Page" />
           } @else {
@@ -132,9 +124,7 @@ import { Project } from '../interfaces/project.interface';
             <ul class="list-info-project">
               <!-- Single List Starts -->
               <li>
-                <span class="label">Client</span>
-                <span class="separator">: </span>
-                <span class="value">{{ currentProject.client }}</span>
+                <span class="label">Client</span> <span class="separator">: </span> <span class="value">{{ currentProject.client }}</span>
               </li>
               <!-- Single List Ends -->
               <!-- Single List Starts -->
@@ -146,8 +136,7 @@ import { Project } from '../interfaces/project.interface';
               <!-- Single List Ends -->
               <!-- Single List Starts -->
               <li>
-                <span class="label">Categories</span>
-                <span class="separator">: </span>
+                <span class="label">Categories</span> <span class="separator">: </span>
                 <span class="value">{{ currentProject.category }}</span>
               </li>
               <!-- Single List Ends -->
@@ -166,12 +155,10 @@ import { Project } from '../interfaces/project.interface';
           @if (currentProject.link) {
             <a class="project-source" href="{{ currentProject.link }}" target="_blank">
               <span class="front">
-                <i class="fas fa-long-arrow-alt-right"></i>
-                <span class="value">Visit <span>Project</span></span>
+                <i class="fas fa-long-arrow-alt-right"></i> <span class="value">Visit <span>Project</span></span>
               </span>
               <span class="back">
-                <i class="fas fa-long-arrow-alt-right"></i>
-                <span class="value">Visit <span>Project</span></span>
+                <i class="fas fa-long-arrow-alt-right"></i> <span class="value">Visit <span>Project</span></span>
               </span>
             </a>
           }
@@ -182,18 +169,12 @@ import { Project } from '../interfaces/project.interface';
     </ng-template>
   `,
   styles: [],
-  standalone: true,
-  imports: [NgClass]
+  imports: []
 })
 export class ProjectsComponent {
-  readonly registerService = inject(AppService);
+  readonly registerService: AppService = inject(AppService);
   readonly injector = inject(Injector);
 
-  projectsData$: Signal<Project[]> = toSignal(this.registerService.getProjects(''), { initialValue: [] });
-  projectsData: Signal<WritableSignal<Project[]>> = computed(() => signal(this.projectsData$()));
-  displayProjects: Signal<Project[]> = this.projectsData();
-
-  currentTab = signal('All');
   currentProject: Project = {
     id: 0,
     image: '',
@@ -204,6 +185,12 @@ export class ProjectsComponent {
     description: '',
     link: null
   };
+
+  currentTab: WritableSignal<string> = signal('');
+  projectsData$: ResourceRef<Project[] | undefined> = rxResource({
+    request: this.currentTab,
+    loader: ({ request }: ResourceLoaderParams<string>): Observable<Project[]> => this.registerService.getProjects(request)
+  });
 
   openProjectDetails(modelContent: TemplateRef<unknown>, projectData: Project): void {
     this.currentProject = projectData;
@@ -217,11 +204,6 @@ export class ProjectsComponent {
   }
 
   getProjects(category = ''): void {
-    this.currentTab.update(() => category || 'All');
-    this.projectsData$ = toSignal(this.registerService.getProjects(category), {
-      initialValue: [],
-      injector: this.injector
-    });
-    this.projectsData().set(this.projectsData$());
+    this.currentTab.set(category || '');
   }
 }

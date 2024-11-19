@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 import { ContactinfoComponent } from '../components/contactinfo.component';
 
@@ -7,7 +6,6 @@ import { ContactinfoComponent } from '../components/contactinfo.component';
   selector: 'pfo-contact',
   template: ` <pfo-contactinfo /> `,
   styles: [],
-  standalone: true,
-  imports: [RouterLink, ContactinfoComponent]
+  imports: [ContactinfoComponent]
 })
 export class ContactComponent {}

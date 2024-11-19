@@ -1,5 +1,5 @@
 import { TitleCasePipe, UpperCasePipe } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, Signal, signal, WritableSignal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Event, NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { filter, map, mergeMap, startWith, take, tap } from 'rxjs';
@@ -52,18 +52,17 @@ import { filter, map, mergeMap, startWith, take, tap } from 'rxjs';
     }
   `,
   styles: [],
-  standalone: true,
   imports: [RouterOutlet, RouterLink, TitleCasePipe, UpperCasePipe]
 })
 export class DetailLayoutComponent {
-  private router = inject(Router);
-  private activatedRoute = inject(ActivatedRoute);
+  readonly router = inject(Router);
+  readonly activatedRoute = inject(ActivatedRoute);
 
-  title1 = signal<string>('');
-  title2 = signal<string>('');
-  pageId = signal('');
+  title1: WritableSignal<string> = signal<string>('');
+  title2: WritableSignal<string> = signal<string>('');
+  pageId: WritableSignal<string> = signal('');
 
-  readRouteData = toSignal(
+  readRouteData: Signal<Record<string, string> | undefined> = toSignal(
     this.router.events.pipe(
       filter((event: Event) => event instanceof NavigationEnd),
       startWith(this.router),

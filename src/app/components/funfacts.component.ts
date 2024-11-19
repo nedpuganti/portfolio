@@ -32,11 +32,10 @@ import { FunFacts } from '../interfaces/personal.interface';
     </div>
     <!-- Fun Facts Ends -->
   `,
-  styles: [],
-  standalone: true
+  styles: []
 })
 export class FunfactsComponent {
-  readonly registerService = inject(AppService);
+  readonly registerService: AppService = inject(AppService);
 
   funFacts$: Signal<FunFacts[]> = toSignal(this.registerService.getFunFacts(), { initialValue: [] });
 }
