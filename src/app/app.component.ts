@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, inject, OnInit, Renderer2 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -12,27 +12,28 @@ import { RouterOutlet } from '@angular/router';
     <router-outlet />
   `,
   styles: [],
-  standalone: true,
   imports: [RouterOutlet]
 })
 export class AppComponent implements OnInit {
+  readonly renderer: Renderer2 = inject(Renderer2);
+
   ngOnInit(): void {
     this.initLoader();
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: { target: { innerHeight: string | number | null } }): void {
-    document.documentElement.style.height = `${event.target.innerHeight}px`;
+    this.renderer.setStyle(document.documentElement, 'height', `${event.target.innerHeight}px`);
   }
 
   initLoader(): void {
-    const preLoadElement = document.getElementById('pre-load');
+    const preLoadElement = this.renderer.selectRootElement('#pre-load', true);
     if (preLoadElement) {
-      preLoadElement.style.transition = 'opacity 1s ease-in-out';
-      preLoadElement.style.opacity = '1';
+      this.renderer.setStyle(preLoadElement, 'transition', 'opacity 1s ease-in-out');
+      this.renderer.setStyle(preLoadElement, 'opacity', '1');
 
       setTimeout(() => {
-        preLoadElement.style.display = 'none';
+        this.renderer.setStyle(preLoadElement, 'display', 'none');
       }, 1000);
     }
   }

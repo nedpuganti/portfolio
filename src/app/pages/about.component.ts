@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 import { PersonalinfoComponent } from '../components/personalinfo.component';
 import { ServicesComponent } from '../components/services.component';
@@ -11,7 +10,6 @@ import { ServicesComponent } from '../components/services.component';
     <pfo-services />
   `,
   styles: [],
-  standalone: true,
-  imports: [RouterLink, PersonalinfoComponent, ServicesComponent]
+  imports: [PersonalinfoComponent, ServicesComponent]
 })
 export class AboutComponent {}

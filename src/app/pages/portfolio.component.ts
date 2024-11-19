@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 import { ProjectsComponent } from '../components/projects.component';
 
@@ -7,7 +6,6 @@ import { ProjectsComponent } from '../components/projects.component';
   selector: 'pfo-portfolio',
   template: ` <pfo-projects /> `,
   styles: [],
-  standalone: true,
-  imports: [RouterLink, ProjectsComponent]
+  imports: [ProjectsComponent]
 })
 export class PortfolioComponent {}

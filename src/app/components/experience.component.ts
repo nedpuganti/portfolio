@@ -37,11 +37,10 @@ import { Experience } from '../interfaces/experience.interface';
     </div>
     <!-- Experience Ends -->
   `,
-  styles: [],
-  standalone: true
+  styles: []
 })
 export class ExperienceComponent {
-  readonly registerService = inject(AppService);
+  readonly registerService: AppService = inject(AppService);
 
   experiences$: Signal<Experience[]> = toSignal(this.registerService.getExperiences(), { initialValue: [] });
 }

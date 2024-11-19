@@ -43,11 +43,10 @@ import { Education } from '../interfaces/education.interface';
     </div>
     <!-- Education Ends -->
   `,
-  styles: [],
-  standalone: true
+  styles: []
 })
 export class EducationComponent {
-  readonly registerService = inject(AppService);
+  readonly registerService: AppService = inject(AppService);
 
   educations$: Signal<Education[]> = toSignal(this.registerService.getEducations(), { initialValue: [] });
 }
