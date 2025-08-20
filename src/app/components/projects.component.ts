@@ -188,8 +188,8 @@ export class ProjectsComponent {
 
   currentTab: WritableSignal<string> = signal('');
   projectsData$: ResourceRef<Project[] | undefined> = rxResource({
-    request: this.currentTab,
-    loader: ({ request }: ResourceLoaderParams<string>): Observable<Project[]> => this.registerService.getProjects(request)
+    params: this.currentTab,
+    stream: ({ params }: ResourceLoaderParams<string>): Observable<Project[]> => this.registerService.getProjects(params)
   });
 
   openProjectDetails(modelContent: TemplateRef<unknown>, projectData: Project): void {
