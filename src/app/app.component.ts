@@ -1,4 +1,4 @@
-import { Component, HostListener, inject, OnInit, Renderer2 } from '@angular/core';
+import { Component, inject, OnInit, Renderer2 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -12,7 +12,10 @@ import { RouterOutlet } from '@angular/router';
     <router-outlet />
   `,
   styles: [],
-  imports: [RouterOutlet]
+  imports: [RouterOutlet],
+  host: {
+    '(window:resize)': 'onResize()'
+  }
 })
 export class AppComponent implements OnInit {
   readonly renderer: Renderer2 = inject(Renderer2);
@@ -21,9 +24,8 @@ export class AppComponent implements OnInit {
     this.initLoader();
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: { target: { innerHeight: string | number | null } }): void {
-    this.renderer.setStyle(document.documentElement, 'height', `${event.target.innerHeight}px`);
+  onResize(): void {
+    this.renderer.setStyle(document.documentElement, 'height', `${window.innerHeight}px`);
   }
 
   initLoader(): void {
