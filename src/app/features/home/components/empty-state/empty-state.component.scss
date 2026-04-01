@@ -1,0 +1,25 @@
+.empty-state {
+  position: relative;
+  display: grid;
+  gap: 1.6rem;
+  align-content: center;
+  justify-items: center;
+  height: 100%;
+  min-height: 0;
+  padding: 1.6rem 1.6rem 1.9rem;
+  overflow: auto;
+  isolation: isolate;
+}
+
+.empty-state app-hero-intro,
+.empty-state app-prompt-chip-list {
+  width: 100%;
+  max-width: 1080px;
+}
+
+@media (max-width: 1380px) {
+  .empty-state {
+    align-content: start;
+    padding-top: 1.35rem;
+  }
+}

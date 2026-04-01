@@ -1,0 +1,14 @@
+@let icon = definition();
+
+<svg class="app-icon" [attr.viewBox]="icon.viewBox" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  @for (path of icon.paths; track path.d) {
+    <path
+      [attr.d]="path.d"
+      [attr.fill]="path.fill ?? 'none'"
+      [attr.stroke]="path.fill ? 'none' : 'currentColor'"
+      [attr.stroke-width]="path.strokeWidth ?? 1.75"
+      [attr.stroke-linecap]="path.strokeLinecap ?? 'round'"
+      [attr.stroke-linejoin]="path.strokeLinejoin ?? 'round'"
+    />
+  }
+</svg>

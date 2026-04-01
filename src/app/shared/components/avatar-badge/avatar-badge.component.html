@@ -1,0 +1,18 @@
+<section class="avatar-badge surface-card" [class.avatar-badge--compact]="compact()">
+  <div class="avatar-badge__visual">
+    <div class="avatar-badge__glow"></div>
+    <img [src]="profile().avatarImage" [alt]="profile().name" />
+  </div>
+
+  <div class="avatar-badge__content">
+    <div>
+      <p class="avatar-badge__name">{{ profile().name }}</p>
+      <p class="avatar-badge__role">{{ profile().role }}</p>
+    </div>
+
+    <div class="avatar-badge__meta">
+      <span>{{ profile().location }}</span>
+      <span>{{ profile().availability }}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,112 @@
+<aside class="sidebar surface-card" [class.sidebar--no-recent]="!chatState.recentConversations().length">
+  <div class="sidebar__brand">
+    <div class="sidebar__mark glow-ring">
+      <span>NE</span>
+    </div>
+
+    <div class="sidebar__brand-copy">
+      <div class="sidebar__brand-header">
+        <div>
+          <h1>{{ portfolioData.profile().name }}</h1>
+          <p class="sidebar__role">{{ portfolioData.profile().role }}</p>
+        </div>
+
+        <div class="sidebar__theme-compact" role="group" aria-label="Theme mode">
+          @for (option of themeOptions; track option.value) {
+            <button
+              type="button"
+              class="sidebar__theme-icon"
+              [class.sidebar__theme-icon--active]="themeService.mode() === option.value"
+              [attr.aria-label]="option.label"
+              [attr.aria-pressed]="themeService.mode() === option.value"
+              (click)="setTheme(option.value)"
+            >
+              <app-icon [name]="option.value === 'auto' ? 'AU' : option.value === 'dark' ? 'DK' : 'LT'" />
+            </button>
+          }
+        </div>
+      </div>
+
+      <span
+        class="sidebar__presence"
+        [class.sidebar__presence--offline]="portfolioData.apiStatus() === 'offline'"
+        [class.sidebar__presence--checking]="portfolioData.apiStatus() === 'checking'"
+      >
+        {{ portfolioData.apiStatusLabel() }}
+      </span>
+    </div>
+  </div>
+
+  <section class="sidebar__actions surface-card" aria-label="Quick actions">
+    <button class="button button--ghost sidebar__new" type="button" (click)="startNewConversation()">
+      <span class="button__icon"><app-icon name="NC" /></span>
+      <span class="sidebar__button-label">New Conversation</span>
+    </button>
+
+    <a class="button button--primary sidebar__resume" [href]="portfolioData.profile().resumeHref" download>
+      <span class="button__icon"><app-icon name="CV" /></span>
+      <span class="sidebar__button-label">Download Resume</span>
+    </a>
+  </section>
+
+  <nav aria-label="Primary navigation" class="sidebar__nav">
+    @for (item of navItems; track item.href) {
+      <a
+        class="sidebar__nav-link"
+        [routerLink]="item.href"
+        routerLinkActive="sidebar__nav-link--active"
+        [routerLinkActiveOptions]="{ exact: item.href === '/' }"
+        [attr.aria-label]="item.label"
+      >
+        <span class="icon-pill"><app-icon [name]="item.iconLabel" /></span>
+        <span class="sidebar__nav-text">{{ item.label }}</span>
+      </a>
+    }
+  </nav>
+
+  <section class="sidebar__settings surface-card">
+    <div>
+      <p class="sidebar__settings-title">Theme</p>
+      <p class="sidebar__settings-copy">
+        Follow your system by default, or switch to a fixed dark or light interface.
+      </p>
+    </div>
+
+    <div class="sidebar__theme-options" role="group" aria-label="Theme mode">
+      @for (option of themeOptions; track option.value) {
+        <button
+          type="button"
+          class="sidebar__theme-button"
+          [class.sidebar__theme-button--active]="themeService.mode() === option.value"
+          [attr.aria-pressed]="themeService.mode() === option.value"
+          (click)="setTheme(option.value)"
+        >
+          {{ option.label }}
+        </button>
+      }
+    </div>
+  </section>
+
+  @if (chatState.recentConversations().length) {
+    <section class="sidebar__recent">
+      <p class="sidebar__label">Recent conversations</p>
+
+      <div class="sidebar__recent-list">
+        @for (conversation of chatState.recentConversations(); track conversation.id) {
+          <button type="button" (click)="openRecentConversation(conversation.prompt)">
+            <span class="icon-pill"><app-icon name="RC" /></span>
+            <span class="sidebar__recent-text">{{ conversation.label }}</span>
+          </button>
+        }
+      </div>
+    </section>
+  }
+
+  <div class="sidebar__socials">
+    @for (link of portfolioData.profile().socialLinks; track link.url) {
+      <a [href]="link.url" target="_blank" rel="noreferrer" [attr.aria-label]="link.label">
+        <span class="icon-pill"><app-icon [name]="link.iconLabel" /></span>
+      </a>
+    }
+  </div>
+</aside>

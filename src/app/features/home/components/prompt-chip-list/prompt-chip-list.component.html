@@ -1,0 +1,12 @@
+<div class="prompt-chip-list" [class.prompt-chip-list--inline]="inline()">
+  @for (suggestion of suggestions(); track suggestion.id) {
+    <button type="button" class="prompt-chip surface-card" (click)="selectPrompt(suggestion.prompt)">
+      <span class="icon-pill"><app-icon [name]="suggestion.iconLabel" /></span>
+
+      <div>
+        <span class="prompt-chip__label">{{ suggestion.label }}</span>
+        <small>{{ suggestion.description }}</small>
+      </div>
+    </button>
+  }
+</div>

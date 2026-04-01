@@ -1,0 +1,10 @@
+<section class="widget surface-card">
+  <div class="widget__header">
+    <h3>{{ widget().title }}</h3>
+    @if (widget().description) {
+      <p>{{ widget().description }}</p>
+    }
+  </div>
+
+  <app-project-carousel [projects]="widget().projects ?? []" [compact]="true" />
+</section>

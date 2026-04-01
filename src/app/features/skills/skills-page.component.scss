@@ -1,0 +1,106 @@
+.skills-page__groups,
+.skills-page__soft-groups,
+.skills-page__services {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.skills-page__groups {
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+.skills-page__group {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
+  gap: var(--space-4);
+  height: 100%;
+  padding: var(--space-5);
+}
+
+.skills-page__group-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.skills-page__group-header h3,
+.skills-page__nested-group h4,
+.skills-page__section-label,
+.skills-page__group > p,
+.skills-page__nested-description {
+  margin: 0;
+}
+
+.skills-page__group p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.skills-page__pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: var(--space-2);
+}
+
+.skills-page__skill-sections {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.skills-page__skill-section {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.skills-page__section-label {
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills-page__nested-groups {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.skills-page__nested-group {
+  display: grid;
+  gap: 0.85rem;
+  margin-inline-start: calc(var(--skill-group-depth, 0) * 0.9rem);
+  padding-left: calc(var(--skill-group-depth, 0) * 0.9rem);
+  border-left: 1px solid color-mix(in srgb, var(--chip-border) 75%, transparent);
+}
+
+.skills-page__nested-group h4 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.skills-page__nested-description {
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.skills-page__services {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.skills-page__group--wide {
+  min-height: 0;
+}
+
+@media (max-width: 960px) {
+  .skills-page__groups,
+  .skills-page__soft-groups,
+  .skills-page__services {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,9 @@
+<section class="widget surface-card">
+  <h3>{{ widget().title }}</h3>
+
+  <div class="widget__list">
+    @for (item of widget().education ?? []; track item.id) {
+      <app-education-card [item]="item" />
+    }
+  </div>
+</section>

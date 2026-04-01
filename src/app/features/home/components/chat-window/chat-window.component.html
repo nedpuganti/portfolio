@@ -1,0 +1,9 @@
+<section #scrollContainer class="chat-window" aria-live="polite">
+  @for (message of messages(); track message.id) {
+    <app-chat-message [message]="message" />
+  }
+
+  @if (typing()) {
+    <app-typing-indicator />
+  }
+</section>

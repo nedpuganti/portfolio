@@ -1,0 +1,10 @@
+<article class="service-card surface-card">
+  <h3>{{ service().title }}</h3>
+  <p class="service-card__summary">{{ service().summary }}</p>
+
+  <ul>
+    @for (capability of service().capabilities; track capability) {
+      <li>{{ capability }}</li>
+    }
+  </ul>
+</article>

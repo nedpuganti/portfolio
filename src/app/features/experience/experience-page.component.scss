@@ -1,0 +1,22 @@
+.experience-page__stats,
+.experience-page__timeline {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.experience-page__stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .experience-page__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .experience-page__stats {
+    grid-template-columns: 1fr;
+  }
+}

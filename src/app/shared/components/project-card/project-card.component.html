@@ -1,0 +1,63 @@
+<article class="project-card surface-card glow-ring" [class.project-card--compact]="compact()">
+  <div class="project-card__image-wrap">
+    <img [src]="project().previewImage" [alt]="project().title" />
+  </div>
+
+  <div class="project-card__body">
+    <div class="project-card__header">
+      <div>
+        <p class="project-card__eyebrow">
+          {{ project().category }}
+          @if (project().year) {
+            <span> · {{ project().year }}</span>
+          }
+        </p>
+        <h3>{{ project().title }}</h3>
+      </div>
+
+      <span class="project-card__client">{{ project().client }}</span>
+    </div>
+
+    <p class="project-card__description">{{ project().shortDescription }}</p>
+
+    <div class="project-card__chip-group">
+      <p class="project-card__chip-label">Formats</p>
+      <div class="project-card__badges">
+        @for (badge of project().badges; track badge) {
+          <span>{{ badge }}</span>
+        }
+      </div>
+    </div>
+
+    @if (project().industries.length) {
+      <div class="project-card__chip-group">
+        <p class="project-card__chip-label">Industries</p>
+        <div class="project-card__stack">
+          @for (industry of project().industries; track industry) {
+            <span>{{ industry }}</span>
+          }
+        </div>
+      </div>
+    }
+
+    <div class="project-card__chip-group">
+      <p class="project-card__chip-label">Technology</p>
+      <div class="project-card__stack">
+        @for (technology of project().techStack; track technology) {
+          <span>{{ technology }}</span>
+        }
+      </div>
+    </div>
+
+    @if (project().links?.length) {
+      <div class="project-card__links">
+        @for (link of project().links ?? []; track link.url) {
+          <a class="button button--ghost" [href]="link.url" target="_blank" rel="noreferrer">
+            <span class="button__icon"><app-icon [name]="projectLinkIcon(link.kind)" /></span>
+            {{ link.label }}
+          </a>
+        }
+      </div>
+    }
+  </div>
+</article>

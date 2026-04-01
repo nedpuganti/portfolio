@@ -1,0 +1,14 @@
+<div class="shell-frame">
+  <div class="shell">
+    <app-sidebar class="shell__sidebar"></app-sidebar>
+
+    <div class="shell__main">
+      <app-topbar></app-topbar>
+      <main #workspace class="shell__workspace surface-card">
+        <router-outlet />
+      </main>
+    </div>
+
+    <app-context-panel class="shell__context"></app-context-panel>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<article class="education-card surface-card">
+  <div class="education-card__meta">
+    <span class="eyebrow">{{ item().duration }}</span>
+    <span>{{ item().location }}</span>
+  </div>
+
+  <div class="education-card__content">
+    <h3>{{ item().degree }}</h3>
+    <p class="education-card__institution">{{ item().institution }}</p>
+    <p class="education-card__summary">{{ item().summary }}</p>
+  </div>
+
+  <div class="education-card__tags">
+    @for (area of item().focusAreas; track area) {
+      <span>{{ area }}</span>
+    }
+  </div>
+</article>

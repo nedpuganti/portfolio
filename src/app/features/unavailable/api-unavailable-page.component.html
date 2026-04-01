@@ -1,0 +1,33 @@
+<main class="api-unavailable">
+  <section class="api-unavailable__card surface-card glow-ring">
+    <div class="api-unavailable__brand">
+      <span class="api-unavailable__icon">
+        <app-icon name="ER" />
+      </span>
+
+      <div>
+        <p class="api-unavailable__eyebrow">From Naren</p>
+        <h1>I couldn't load my latest portfolio data right now</h1>
+      </div>
+    </div>
+
+    <p class="api-unavailable__copy">
+      {{
+        portfolioData.error() ||
+          'The API behind my portfolio did not respond, so I cannot show the latest projects, experience, and profile details at the moment. Please try again in a bit.'
+      }}
+    </p>
+
+    <div class="api-unavailable__actions">
+      <button class="button button--primary" type="button" [disabled]="retrying()" (click)="retry()">
+        <span class="button__icon"><app-icon name="RC" /></span>
+        {{ retrying() ? 'Retrying...' : 'Reload My Portfolio' }}
+      </button>
+
+      <a class="button button--ghost" routerLink="/">
+        <span class="button__icon"><app-icon name="AI" /></span>
+        Back to Home
+      </a>
+    </div>
+  </section>
+</main>

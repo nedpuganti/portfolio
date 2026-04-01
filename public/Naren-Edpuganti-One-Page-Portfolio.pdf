@@ -1,0 +1,513 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 8184 >>
+stream
+1.000 1.000 1.000 rg
+0.00 0.00 595.00 842.00 re f
+0.169 0.435 1.000 rg
+0.00 834.00 595.00 8.00 re f
+0.059 0.090 0.161 rg
+28.00 722.00 539.00 98.00 re f
+0.169 0.435 1.000 rg
+28.00 722.00 539.00 5.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 24 Tf
+1 0 0 1 46.00 778.00 Tm
+(Naren Edpuganti) Tj
+ET
+BT
+0.827 0.871 0.965 rg
+/F1 11.2 Tf
+1 0 0 1 46.00 763.80 Tm
+(Platform Engineering and Full-Stack Product Developer) Tj
+ET
+BT
+0.678 0.753 0.925 rg
+/F1 9.3 Tf
+1 0 0 1 46.00 749.70 Tm
+(Atlanta, Georgia | itsmenarene@gmail.com) Tj
+ET
+BT
+0.678 0.753 0.925 rg
+/F1 9.3 Tf
+1 0 0 1 46.00 737.30 Tm
+(narenedpuganti.com | github.com/nedpuganti) Tj
+ET
+1 w
+0.192 0.298 0.522 RG
+0.082 0.133 0.231 rg
+370.00 746.00 50.00 52.00 re B
+BT
+1.000 1.000 1.000 rg
+/F2 15 Tf
+1 0 0 1 380.00 773.00 Tm
+(12+) Tj
+ET
+BT
+0.710 0.788 0.957 rg
+/F1 7.8 Tf
+1 0 0 1 380.00 756.20 Tm
+(YEARS) Tj
+ET
+1 w
+0.192 0.298 0.522 RG
+0.082 0.133 0.231 rg
+430.00 746.00 50.00 52.00 re B
+BT
+1.000 1.000 1.000 rg
+/F2 15 Tf
+1 0 0 1 440.00 773.00 Tm
+(30+) Tj
+ET
+BT
+0.710 0.788 0.957 rg
+/F1 7.8 Tf
+1 0 0 1 440.00 756.20 Tm
+(PRODUCTS) Tj
+ET
+1 w
+0.192 0.298 0.522 RG
+0.082 0.133 0.231 rg
+490.00 746.00 76.00 52.00 re B
+BT
+1.000 1.000 1.000 rg
+/F2 14.5 Tf
+1 0 0 1 500.00 773.50 Tm
+(Web  Mobile  AI) Tj
+ET
+BT
+0.710 0.788 0.957 rg
+/F1 7.8 Tf
+1 0 0 1 500.00 756.20 Tm
+(COVERAGE) Tj
+ET
+1 w
+0.851 0.890 0.973 RG
+0.933 0.957 1.000 rg
+28.00 28.00 166.00 678.00 re B
+1 w
+0.851 0.890 0.973 RG
+1.000 1.000 1.000 rg
+40.00 556.00 142.00 134.00 re B
+BT
+0.169 0.435 1.000 rg
+/F2 8.4 Tf
+1 0 0 1 58.00 665.60 Tm
+(PROFILE) Tj
+ET
+BT
+0.090 0.137 0.231 rg
+/F2 12.2 Tf
+1 0 0 1 58.00 644.80 Tm
+(Frontend craft with platform depth) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 625.70 Tm
+(More than a decade delivering Angular apps,) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 613.50 Tm
+(dashboards, admin portals, websites, and mobile) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 601.30 Tm
+(experiences. Strong at connecting product polish) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 589.10 Tm
+(with APIs, delivery systems, and cross-team) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 576.90 Tm
+(execution.) Tj
+ET
+1 w
+0.851 0.890 0.973 RG
+1.000 1.000 1.000 rg
+40.00 408.00 142.00 136.00 re B
+BT
+0.169 0.435 1.000 rg
+/F2 8.4 Tf
+1 0 0 1 58.00 519.60 Tm
+(CORE STACK) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 502.10 Tm
+(Angular, TypeScript, SCSS, design systems, Nx) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 489.90 Tm
+(Ionic, Flutter, Capacitor) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 477.70 Tm
+(Node.js, NestJS, Express) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 465.50 Tm
+(Postgres, MongoDB, SQL Server) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 453.30 Tm
+(Dashboards, portals, merchant tooling) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 441.10 Tm
+(Responsive UX and product UI systems) Tj
+ET
+1 w
+0.851 0.890 0.973 RG
+1.000 1.000 1.000 rg
+40.00 273.00 142.00 123.00 re B
+BT
+0.169 0.435 1.000 rg
+/F2 8.4 Tf
+1 0 0 1 58.00 371.60 Tm
+(AI AND ML) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 354.10 Tm
+(Portfolio GenAI Chatbot \(2026\)) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 341.90 Tm
+(Node.js, Express, Gemini AI) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 329.70 Tm
+(RAG architecture) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 317.50 Tm
+(Vector embeddings) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 305.30 Tm
+(Conversational portfolio UX) Tj
+ET
+1 w
+0.851 0.890 0.973 RG
+1.000 1.000 1.000 rg
+40.00 116.00 142.00 145.00 re B
+BT
+0.169 0.435 1.000 rg
+/F2 8.4 Tf
+1 0 0 1 58.00 236.60 Tm
+(EDUCATION) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 219.10 Tm
+(Master of Computer Science) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 206.90 Tm
+(University of Tennessee at Chattanooga) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 194.70 Tm
+(2014 - 2015) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 173.35 Tm
+(Bachelor of Computer Science) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 161.15 Tm
+(SRKIT) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 58.00 148.95 Tm
+(2009 - 2013) Tj
+ET
+1 w
+0.851 0.890 0.973 RG
+1.000 1.000 1.000 rg
+212.00 515.00 355.00 191.00 re B
+0.169 0.435 1.000 rg
+212.00 515.00 4.00 191.00 re f
+BT
+0.169 0.435 1.000 rg
+/F2 8.4 Tf
+1 0 0 1 230.00 681.60 Tm
+(SELECTED WORK) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 664.10 Tm
+(Mobile) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 651.90 Tm
+(- ) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 242.00 651.90 Tm
+(Mercury|One, Mercury|One Inventory, and setup flows for Aboveo.) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 639.70 Tm
+(- ) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 242.00 639.70 Tm
+(Trunow, Trunow Retailer, and Trunow Locations with Ionic Framework and Angular.) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 618.35 Tm
+(Web and Product Surfaces) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 606.15 Tm
+(- ) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 242.00 606.15 Tm
+(Aboveo website with Angular and Nx.) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 593.95 Tm
+(- ) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 242.00 593.95 Tm
+(Trunow website with Angular and Angular Material.) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 581.75 Tm
+(- ) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 242.00 581.75 Tm
+(Asa Help with C# .NET and SQL Server.) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 560.40 Tm
+(Operational Products) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 548.20 Tm
+(- ) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 242.00 548.20 Tm
+(Mercury|One Financial, SoldnPay, ASA Admin Portal, and Ceras Admin Dashboard for reporting, merchant tooling, and internal operations.) Tj
+ET
+1 w
+0.851 0.890 0.973 RG
+1.000 1.000 1.000 rg
+212.00 372.00 355.00 133.00 re B
+0.169 0.435 1.000 rg
+212.00 372.00 4.00 133.00 re f
+BT
+0.169 0.435 1.000 rg
+/F2 8.4 Tf
+1 0 0 1 230.00 480.60 Tm
+(EXPERIENCE SNAPSHOT) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 463.10 Tm
+(Senior Full-Stack and Platform Engineer, Allied Informatics \(2016 - Present\)) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 450.90 Tm
+(Building product-facing frontend systems, dashboards, portals, websites, and mobile apps while contributing to API integration, release workflows,) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 438.70 Tm
+(and platform decisions.) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 417.35 Tm
+(Frontend and client delivery work \(2014 - 2016\)) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 405.15 Tm
+(Built responsive websites and custom product interfaces with HTML, SCSS, JavaScript, jQuery, and ASP.NET.) Tj
+ET
+1 w
+0.851 0.890 0.973 RG
+1.000 1.000 1.000 rg
+212.00 251.00 355.00 111.00 re B
+0.169 0.435 1.000 rg
+212.00 251.00 4.00 111.00 re f
+BT
+0.169 0.435 1.000 rg
+/F2 8.4 Tf
+1 0 0 1 230.00 337.60 Tm
+(STRENGTHS) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 320.10 Tm
+(Product-minded execution) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 307.90 Tm
+(Operational empathy for internal tools) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 295.70 Tm
+(Strong ownership across design, build, and delivery) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 283.50 Tm
+(Comfortable across web, mobile, APIs, and platform collaboration) Tj
+ET
+1 w
+0.851 0.890 0.973 RG
+1.000 1.000 1.000 rg
+212.00 130.00 355.00 111.00 re B
+0.169 0.435 1.000 rg
+212.00 130.00 4.00 111.00 re f
+BT
+0.169 0.435 1.000 rg
+/F2 8.4 Tf
+1 0 0 1 230.00 216.60 Tm
+(FOCUS AREAS) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 199.10 Tm
+(Financial and operational dashboards) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 186.90 Tm
+(Admin portals and merchant tooling) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 174.70 Tm
+(Cross-platform mobile delivery) Tj
+ET
+BT
+0.325 0.384 0.498 rg
+/F1 8.9 Tf
+1 0 0 1 230.00 162.50 Tm
+(AI-assisted portfolio experiences) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000008487 00000 n 
+0000008557 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+8632
+%%EOF
