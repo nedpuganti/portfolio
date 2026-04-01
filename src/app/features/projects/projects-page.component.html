@@ -1,0 +1,24 @@
+<section class="projects-page page-section">
+  <app-section-title
+    eyebrow="Projects"
+    title="Product work across web, portal, dashboard, and mobile"
+    description="These projects show a balance of product thinking, implementation depth, and the UI polish expected from real production systems."
+  />
+
+  <div class="projects-page__groups">
+    @for (group of projectGroups(); track group.category) {
+      <section class="projects-page__group">
+        <header>
+          <h3>{{ group.category }}</h3>
+          <p>{{ group.projects.length }} projects</p>
+        </header>
+
+        <div class="projects-page__grid">
+          @for (project of group.projects; track project.id) {
+            <app-project-card [project]="project" />
+          }
+        </div>
+      </section>
+    }
+  </div>
+</section>

@@ -1,17 +1,28 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
-import { provideRouter, withComponentInputBinding, withHashLocation, withInMemoryScrolling, withViewTransitions } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
+import {
+  ApplicationConfig,
+  inject,
+  provideAppInitializer,
+  provideBrowserGlobalErrorListeners,
+  provideZonelessChangeDetection
+} from '@angular/core';
+import { provideRouter, withComponentInputBinding, withInMemoryScrolling, withViewTransitions } from '@angular/router';
 
-import { AppRoutes } from './app.routes';
+import { appRoutes } from './app.routes';
+import { PortfolioDataService } from './core/services/portfolio-data.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(
-      AppRoutes,
-      withHashLocation(),
+      appRoutes,
       withInMemoryScrolling({ scrollPositionRestoration: 'enabled' }),
       withComponentInputBinding(),
       withViewTransitions()
     ),
+    provideHttpClient(),
+    provideAppInitializer(() => {
+      void inject(PortfolioDataService).load(2000);
+    }),
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection()
   ]

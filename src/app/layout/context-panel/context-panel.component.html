@@ -1,0 +1,55 @@
+@let state = chatState.contextPanelState();
+
+<aside class="context-panel">
+  <header class="context-panel__header surface-card">
+    <span class="eyebrow">{{ state.eyebrow }}</span>
+    <h2>{{ state.title }}</h2>
+    <p>{{ state.description }}</p>
+  </header>
+
+  <div class="context-panel__widgets">
+    @for (widget of state.widgets; track widget.id) {
+      @switch (widget.type) {
+        @case ('featured-projects') {
+          <app-featured-projects-widget [widget]="widget" />
+        }
+        @case ('about') {
+          <app-about-widget [widget]="widget" />
+        }
+        @case ('skills') {
+          <app-skills-widget [widget]="widget" />
+        }
+        @case ('education') {
+          <app-education-widget [widget]="widget" />
+        }
+        @case ('quick-stats') {
+          <app-quick-stats-widget [widget]="widget" />
+        }
+      }
+    }
+  </div>
+
+  @if (state.actions.length > 0) {
+    <div class="context-panel__actions surface-card">
+      @for (action of state.actions; track action.href) {
+        @if (isRouteAction(action)) {
+          <a class="button button--ghost" [routerLink]="action.href">
+            <span class="button__icon"><app-icon [name]="action.iconLabel" /></span>
+            {{ action.label }}
+          </a>
+        } @else {
+          <a
+            class="button button--ghost"
+            [href]="action.href"
+            [attr.download]="action.type === 'download' ? '' : null"
+            [attr.target]="action.type === 'external' ? '_blank' : null"
+            [attr.rel]="action.type === 'external' ? 'noreferrer' : null"
+          >
+            <span class="button__icon"><app-icon [name]="action.iconLabel" /></span>
+            {{ action.label }}
+          </a>
+        }
+      }
+    </div>
+  }
+</aside>

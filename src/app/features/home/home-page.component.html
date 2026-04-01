@@ -1,0 +1,26 @@
+<section class="home-page" [class.home-page--empty]="chatState.messages().length === 0">
+  @if (chatState.messages().length > 0) {
+    <div class="home-page__suggestions">
+      <app-prompt-chip-list [suggestions]="inlineSuggestions()" [inline]="true" (promptSelected)="submitPrompt($event)" />
+    </div>
+  }
+
+  <div class="home-page__content">
+    @if (chatState.messages().length > 0) {
+      <app-chat-window [messages]="chatState.messages()" [typing]="chatState.loading()" />
+    } @else {
+      <app-empty-state [suggestions]="chatState.promptSuggestions()" (promptSelected)="submitPrompt($event)" />
+    }
+  </div>
+
+  @if (chatState.error(); as errorMessage) {
+    <div class="home-page__error surface-card" role="status" aria-live="polite">
+      <span class="icon-pill"><app-icon name="ER" /></span>
+      <p>{{ errorMessage }}</p>
+    </div>
+  }
+
+  <footer class="home-page__composer">
+    <app-chat-input [disabled]="chatState.loading()" (submitted)="submitPrompt($event)" />
+  </footer>
+</section>

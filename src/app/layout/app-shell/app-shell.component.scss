@@ -1,0 +1,149 @@
+:host {
+  display: block;
+  min-height: 100%;
+  height: 100%;
+}
+
+.shell-frame {
+  height: 100dvh;
+  min-height: 100dvh;
+  padding: 1.05rem;
+  overflow: hidden;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: 286px minmax(0, 1fr) 348px;
+  gap: 1.1rem;
+  width: min(100%, var(--max-width));
+  height: calc(100dvh - 2rem);
+  margin-inline: auto;
+}
+
+.shell__main {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 1rem;
+  min-width: 0;
+  min-height: 0;
+}
+
+.shell__sidebar,
+.shell__context,
+.shell__workspace {
+  min-height: 0;
+}
+
+.shell__sidebar,
+.shell__context {
+  position: relative;
+}
+
+.shell__workspace {
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  background:
+    radial-gradient(circle at top left, rgba(140, 109, 255, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+}
+
+@media (min-width: 1900px) {
+  .shell-frame {
+    padding: 1.3rem;
+  }
+
+  .shell {
+    grid-template-columns: 308px minmax(0, 1.2fr) 372px;
+    gap: 1.25rem;
+    height: calc(100dvh - 2.6rem);
+  }
+
+  .shell__main {
+    gap: 1.15rem;
+  }
+}
+
+@media (min-width: 2400px) {
+  .shell {
+    grid-template-columns: 320px minmax(0, 1.28fr) 388px;
+    gap: 1.4rem;
+  }
+}
+
+@media (max-width: 1380px) {
+  .shell {
+    grid-template-columns: 272px minmax(0, 1fr);
+    height: calc(100dvh - 2rem);
+  }
+
+  .shell__context {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 721px) {
+  .shell-frame {
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: var(--space-4);
+    overflow: hidden;
+  }
+
+  .shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+    min-height: calc(100dvh - 2rem);
+    height: calc(100dvh - 2rem);
+  }
+
+  .shell__main {
+    gap: 0.85rem;
+    min-height: 0;
+  }
+
+  .shell__context {
+    display: none;
+  }
+
+  .shell__workspace {
+    overflow: auto;
+    scrollbar-gutter: stable;
+  }
+}
+
+@media (max-width: 720px) {
+  .shell-frame {
+    height: auto;
+    padding: var(--space-4);
+    overflow: visible;
+  }
+
+  .shell {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    height: auto;
+  }
+
+  .shell__main {
+    gap: 0.85rem;
+  }
+
+  .shell__context {
+    display: none;
+  }
+
+  .shell__workspace {
+    overflow: visible;
+    scrollbar-gutter: auto;
+  }
+  .shell-frame {
+    padding: 0.75rem;
+  }
+
+  .shell {
+    gap: 0.75rem;
+  }
+}

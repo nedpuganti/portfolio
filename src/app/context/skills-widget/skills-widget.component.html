@@ -1,0 +1,21 @@
+<section class="widget surface-card">
+  <div class="widget__header">
+    <h3>{{ widget().title }}</h3>
+    @if (widget().description) {
+      <p>{{ widget().description }}</p>
+    }
+  </div>
+
+  <div class="widget__groups">
+    @for (category of widget().skills ?? []; track category.id) {
+      <div class="widget__group">
+        <h4>{{ category.title }}</h4>
+        <div class="widget__pills">
+          @for (skill of category.skills.slice(0, 4); track skill.name) {
+            <app-skill-pill [skill]="skill" />
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

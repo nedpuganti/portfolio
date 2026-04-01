@@ -1,0 +1,25 @@
+Naren Edpuganti
+Platform Engineering and Full-Stack Product Developer
+Atlanta, Georgia
+Email: itsmenarene@gmail.com
+Website: https://narenedpuganti.com
+
+Summary
+Product-minded frontend engineer with more than a decade of experience building Angular apps, dashboards, admin portals, websites, and mobile experiences. Known for pairing UI quality with a strong understanding of delivery systems, API integration, and platform collaboration.
+
+Core Strengths
+- Angular, TypeScript, SCSS, design systems
+- Dashboards, portals, and operational tooling
+- Ionic and Flutter mobile development
+- Node.js, NestJS, Postgres, MongoDB
+- Platform-aware product delivery and team collaboration
+
+Selected Areas of Work
+- Financial and operational dashboards
+- Admin portals and merchant tooling
+- Mobile apps for rewards, setup, and product workflows
+- Responsive websites and polished product marketing experiences
+
+Education
+- Master of Computer Science, University of Tennessee at Chattanooga
+- Bachelor of Computer Science, SRKIT

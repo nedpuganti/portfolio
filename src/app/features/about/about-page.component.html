@@ -1,0 +1,31 @@
+<section class="about-page page-section">
+  <app-section-title
+    eyebrow="About"
+    title="A product-minded frontend engineer with platform awareness"
+    description="I enjoy building interfaces that feel premium for users and dependable for the teams operating them behind the scenes."
+  />
+
+  <div class="about-page__hero">
+    <app-avatar-badge [profile]="portfolioData.profile()" />
+
+    <article class="about-page__story surface-card">
+      <h3>Short bio</h3>
+      <p>{{ portfolioData.profile().shortBio }}</p>
+      @if (portfolioData.profile().longBio) {
+        <p>{{ portfolioData.profile().longBio }}</p>
+      }
+    </article>
+  </div>
+
+  <div class="about-page__stats">
+    @for (stat of portfolioData.getQuickStats(); track stat.label) {
+      <app-stat-card [stat]="stat" />
+    }
+  </div>
+
+  <div class="about-page__services">
+    @for (service of portfolioData.services(); track service.id) {
+      <app-service-card [service]="service" />
+    }
+  </div>
+</section>

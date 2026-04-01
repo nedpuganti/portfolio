@@ -1,90 +1,400 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
 
-.cursor-pointer {
-  cursor: pointer;
+:root {
+  --bg: #090913;
+  --bg-elevated: rgba(17, 18, 32, 0.72);
+  --bg-panel: rgba(15, 17, 30, 0.88);
+  --bg-soft: rgba(255, 255, 255, 0.04);
+  --surface-border: rgba(255, 255, 255, 0.06);
+  --surface-border-strong: rgba(153, 110, 255, 0.24);
+  --text-primary: #f4f7ff;
+  --text-secondary: #a8b0c8;
+  --text-muted: #7d86a6;
+  --accent: #8c6dff;
+  --accent-strong: #b86cff;
+  --accent-cyan: #54d2ff;
+  --accent-lime: #83f7b8;
+  --accent-warm: #ffaf68;
+  --danger: #ff6b7d;
+  --shadow-lg: 0 30px 88px rgba(4, 6, 18, 0.54);
+  --shadow-md: 0 18px 48px rgba(5, 7, 19, 0.36);
+  --radius-xl: 30px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 14px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --max-width: 2160px;
+  --app-background:
+    radial-gradient(circle at top left, rgba(140, 109, 255, 0.22), transparent 28%),
+    radial-gradient(circle at top right, rgba(84, 210, 255, 0.18), transparent 24%),
+    radial-gradient(circle at 20% 80%, rgba(184, 108, 255, 0.12), transparent 26%),
+    linear-gradient(180deg, #0a0b15 0%, #070810 100%);
+  --grid-line: rgba(255, 255, 255, 0.02);
+  --surface-background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    linear-gradient(135deg, rgba(140, 109, 255, 0.035), transparent 34%);
+  --eyebrow-border: rgba(255, 255, 255, 0.08);
+  --eyebrow-background: rgba(255, 255, 255, 0.03);
+  --button-background: rgba(255, 255, 255, 0.045);
+  --button-hover-background: rgba(255, 255, 255, 0.075);
+  --button-ghost-background: rgba(255, 255, 255, 0.024);
+  --button-border: rgba(255, 255, 255, 0.06);
+  --icon-pill-background: rgba(255, 255, 255, 0.065);
+  --chip-background: rgba(255, 255, 255, 0.045);
+  --chip-border: rgba(255, 255, 255, 0.08);
+  --chip-text: var(--text-secondary);
+  --chip-shadow: none;
+  --scrollbar-thumb: rgba(255, 255, 255, 0.12);
+  color-scheme: dark;
 }
 
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #ddd !important;
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ebf1fb;
+    --bg-elevated: rgba(255, 255, 255, 0.92);
+    --bg-panel: rgba(250, 252, 255, 0.97);
+    --bg-soft: rgba(67, 87, 133, 0.08);
+    --surface-border: rgba(56, 74, 122, 0.14);
+    --surface-border-strong: rgba(108, 97, 255, 0.24);
+    --text-primary: #1b2338;
+    --text-secondary: #44526f;
+    --text-muted: #5e6b89;
+    --shadow-lg: 0 28px 72px rgba(98, 111, 154, 0.16);
+    --shadow-md: 0 14px 32px rgba(105, 118, 158, 0.14);
+    --app-background:
+      radial-gradient(circle at top left, rgba(140, 109, 255, 0.16), transparent 28%),
+      radial-gradient(circle at top right, rgba(84, 210, 255, 0.12), transparent 24%),
+      radial-gradient(circle at 20% 80%, rgba(184, 108, 255, 0.06), transparent 26%),
+      linear-gradient(180deg, #f8faff 0%, #ebf1fb 100%);
+    --grid-line: rgba(79, 98, 143, 0.05);
+    --surface-background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 255, 0.92)),
+      linear-gradient(135deg, rgba(140, 109, 255, 0.035), transparent 38%);
+    --eyebrow-border: rgba(56, 74, 122, 0.14);
+    --eyebrow-background: rgba(255, 255, 255, 0.82);
+    --button-background: rgba(255, 255, 255, 0.92);
+    --button-hover-background: rgba(239, 244, 255, 0.98);
+    --button-ghost-background: rgba(255, 255, 255, 0.82);
+    --button-border: rgba(56, 74, 122, 0.14);
+    --icon-pill-background: rgba(84, 210, 255, 0.16);
+    --chip-background: rgba(84, 104, 154, 0.14);
+    --chip-border: rgba(84, 104, 154, 0.18);
+    --chip-text: #32425f;
+    --chip-shadow: none;
+    --scrollbar-thumb: rgba(79, 98, 143, 0.28);
+    color-scheme: light;
+  }
 }
 
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #ddd !important;
+:root[data-theme='light'] {
+  --bg: #ebf1fb;
+  --bg-elevated: rgba(255, 255, 255, 0.92);
+  --bg-panel: rgba(250, 252, 255, 0.97);
+  --bg-soft: rgba(67, 87, 133, 0.08);
+  --surface-border: rgba(56, 74, 122, 0.14);
+  --surface-border-strong: rgba(108, 97, 255, 0.24);
+  --text-primary: #1b2338;
+  --text-secondary: #44526f;
+  --text-muted: #5e6b89;
+  --shadow-lg: 0 28px 72px rgba(98, 111, 154, 0.16);
+  --shadow-md: 0 14px 32px rgba(105, 118, 158, 0.14);
+  --app-background:
+    radial-gradient(circle at top left, rgba(140, 109, 255, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(84, 210, 255, 0.12), transparent 24%),
+    radial-gradient(circle at 20% 80%, rgba(184, 108, 255, 0.06), transparent 26%),
+    linear-gradient(180deg, #f8faff 0%, #ebf1fb 100%);
+  --grid-line: rgba(79, 98, 143, 0.05);
+  --surface-background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 255, 0.92)),
+    linear-gradient(135deg, rgba(140, 109, 255, 0.035), transparent 38%);
+  --eyebrow-border: rgba(56, 74, 122, 0.14);
+  --eyebrow-background: rgba(255, 255, 255, 0.82);
+  --button-background: rgba(255, 255, 255, 0.92);
+  --button-hover-background: rgba(239, 244, 255, 0.98);
+  --button-ghost-background: rgba(255, 255, 255, 0.82);
+  --button-border: rgba(56, 74, 122, 0.14);
+  --icon-pill-background: rgba(84, 210, 255, 0.16);
+  --chip-background: rgba(84, 104, 154, 0.14);
+  --chip-border: rgba(84, 104, 154, 0.18);
+  --chip-text: #32425f;
+  --chip-shadow: none;
+  --scrollbar-thumb: rgba(79, 98, 143, 0.28);
+  color-scheme: light;
 }
 
-:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #ddd !important;
+:root[data-theme='dark'] {
+  --bg: #090913;
+  --bg-elevated: rgba(17, 18, 32, 0.72);
+  --bg-panel: rgba(15, 17, 30, 0.88);
+  --bg-soft: rgba(255, 255, 255, 0.04);
+  --surface-border: rgba(255, 255, 255, 0.06);
+  --surface-border-strong: rgba(153, 110, 255, 0.24);
+  --text-primary: #f4f7ff;
+  --text-secondary: #a8b0c8;
+  --text-muted: #7d86a6;
+  --shadow-lg: 0 30px 88px rgba(4, 6, 18, 0.54);
+  --shadow-md: 0 18px 48px rgba(5, 7, 19, 0.36);
+  --app-background:
+    radial-gradient(circle at top left, rgba(140, 109, 255, 0.22), transparent 28%),
+    radial-gradient(circle at top right, rgba(84, 210, 255, 0.18), transparent 24%),
+    radial-gradient(circle at 20% 80%, rgba(184, 108, 255, 0.12), transparent 26%),
+    linear-gradient(180deg, #0a0b15 0%, #070810 100%);
+  --grid-line: rgba(255, 255, 255, 0.02);
+  --surface-background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    linear-gradient(135deg, rgba(140, 109, 255, 0.035), transparent 34%);
+  --eyebrow-border: rgba(255, 255, 255, 0.08);
+  --eyebrow-background: rgba(255, 255, 255, 0.03);
+  --button-background: rgba(255, 255, 255, 0.045);
+  --button-hover-background: rgba(255, 255, 255, 0.075);
+  --button-ghost-background: rgba(255, 255, 255, 0.024);
+  --button-border: rgba(255, 255, 255, 0.06);
+  --icon-pill-background: rgba(255, 255, 255, 0.065);
+  --chip-background: rgba(255, 255, 255, 0.045);
+  --chip-border: rgba(255, 255, 255, 0.08);
+  --chip-text: var(--text-secondary);
+  --chip-shadow: none;
+  --scrollbar-thumb: rgba(255, 255, 255, 0.12);
+  color-scheme: dark;
 }
 
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: #ddd !important;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
-  /* remove scrollbar space */
-  background: transparent;
-  /* optional: just make scrollbar invisible */
+html,
+body {
+  height: 100%;
 }
 
-::-webkit-scrollbar-thumb {
-  background: transparent;
+body {
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  color: var(--text-primary);
+  background: var(--app-background);
+  background-attachment: fixed;
 }
 
-// input[type='search'] {
-//   &::-webkit-search-cancel-button {
-//     -webkit-appearance: searchfield-cancel-button;
-//   }
+@media (min-width: 1101px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+}
 
-//   -webkit-appearance: none;
-// }
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 160px 160px;
+  content: '';
+  mask-image: radial-gradient(circle at center, black 22%, transparent 90%);
+  opacity: 0.28;
+  pointer-events: none;
+}
 
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
 }
 
-.swal2-styled.swal2-confirm {
-  background-color: #e07dd1 !important;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.swal2-icon.swal2-success .swal2-success-ring {
-  border: 0.25em solid #e07dd1 !important;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-.swal2-icon.swal2-success [class^='swal2-success-line'] {
-  background-color: #e07dd1 !important;
+::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: var(--scrollbar-thumb);
+  background-clip: padding-box;
 }
 
-.progress {
-  border-radius: 5px;
-  border-width: 1px;
-  border-style: solid;
-  background-color: transparent;
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.progress-bar {
-  background-color: #474f7e;
-  border-right: 1px solid white;
+:focus-visible {
+  outline: 2px solid rgba(132, 214, 255, 0.85);
+  outline-offset: 3px;
 }
 
-.dark-backdrop {
-  background-color: #0b0b0b;
-  opacity: 0.8 !important;
+.surface-card {
+  position: relative;
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-lg);
+  background: var(--surface-background);
+  backdrop-filter: blur(22px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035),
+    var(--shadow-md);
 }
 
-.p-0 {
-  padding: 0 !important;
+.glow-ring {
+  position: relative;
 }
 
+.glow-ring::after {
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(140, 109, 255, 0.45), rgba(84, 210, 255, 0.18));
+  filter: blur(18px);
+  content: '';
+  opacity: 0.65;
+}
 
-@media (min-width: 768px) {
-  #left-wrapper {
-    position: relative;
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--eyebrow-border);
+  border-radius: 999px;
+  background: var(--eyebrow-background);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 42px;
+  padding: 0.75rem 1.05rem;
+  border: 1px solid var(--button-border);
+  border-radius: 999px;
+  background: var(--button-background);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  border-color: var(--surface-border-strong);
+  background: var(--button-hover-background);
+}
+
+.button--primary {
+  background: linear-gradient(135deg, rgba(140, 109, 255, 0.95), rgba(184, 108, 255, 0.88));
+  box-shadow: 0 16px 30px rgba(140, 109, 255, 0.24);
+}
+
+.button--ghost {
+  background: var(--button-ghost-background);
+}
+
+.button__icon,
+.icon-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 0.72rem;
+  background: var(--icon-pill-background);
+  color: var(--accent-cyan);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.button__icon app-icon,
+.icon-pill app-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.page-section {
+  display: grid;
+  align-content: start;
+  gap: var(--space-8);
+  min-height: 100%;
+  height: auto;
+  padding: var(--space-6);
+  overflow: visible;
+}
+
+.page-grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+app-home-page,
+app-projects-page,
+app-experience-page,
+app-skills-page,
+app-education-page,
+app-about-page,
+app-contact-page {
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --radius-xl: 24px;
+    --radius-lg: 20px;
+  }
+
+  .page-section {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    padding: var(--space-5);
   }
 }

@@ -1,0 +1,67 @@
+.topbar {
+  display: grid;
+  gap: 0.5rem;
+  align-items: start;
+  padding: 0.85rem 1rem 0.95rem;
+  min-height: 104px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 85%),
+    var(--surface-background);
+}
+
+.topbar__content {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1rem, 1.05vw, 1.16rem);
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+  min-height: 0;
+}
+
+p {
+  max-width: 42ch;
+  color: var(--text-secondary);
+  line-height: 1.52;
+  font-size: 0.82rem;
+  min-height: 0;
+}
+
+@media (max-width: 1380px) {
+  .topbar {
+    min-height: auto;
+    padding: 0.85rem 0.95rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .topbar {
+    padding: 0.85rem 0.95rem;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    min-height: auto;
+  }
+
+  .topbar__content p {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .topbar {
+    gap: 0.7rem;
+    padding: 0.8rem;
+  }
+
+  .topbar__content .eyebrow {
+    width: fit-content;
+  }
+}

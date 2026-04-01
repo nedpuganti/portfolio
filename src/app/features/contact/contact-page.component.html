@@ -1,0 +1,49 @@
+<section class="contact-page page-section">
+  <app-section-title
+    eyebrow="Contact"
+    title="If the fit looks strong, reach out"
+    description="The quickest way to connect is email. You can also review projects and experience first, then circle back when you have the right context."
+  />
+
+  <div class="contact-page__grid">
+    <app-avatar-badge [profile]="portfolioData.profile()" />
+
+    <article class="contact-page__card surface-card">
+      <h3>Direct contact</h3>
+
+      <div class="contact-page__list">
+        <a [href]="'mailto:' + portfolioData.profile().email">
+          <span class="icon-pill"><app-icon name="EM" /></span>
+          {{ portfolioData.profile().email }}
+        </a>
+        <a [href]="portfolioData.profile().website" target="_blank" rel="noreferrer">
+          <span class="icon-pill"><app-icon name="WB" /></span>
+          {{ portfolioData.profile().website }}
+        </a>
+        <p>
+          <span class="icon-pill"><app-icon name="PH" /></span>
+          {{ portfolioData.profile().phone }}
+        </p>
+        <p>
+          <span class="icon-pill"><app-icon name="LO" /></span>
+          {{ portfolioData.profile().location }}
+        </p>
+      </div>
+
+      <div class="contact-page__actions">
+        <a class="button button--primary" [href]="'mailto:' + portfolioData.profile().email">
+          <span class="button__icon"><app-icon name="EM" /></span>
+          Email Naren
+        </a>
+        <a class="button button--ghost" routerLink="/projects">
+          <span class="button__icon"><app-icon name="PR" /></span>
+          View All Projects
+        </a>
+        <a class="button button--ghost" [href]="portfolioData.profile().resumeHref" download>
+          <span class="button__icon"><app-icon name="CV" /></span>
+          Download Resume
+        </a>
+      </div>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+.widget {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.012)),
+    linear-gradient(135deg, rgba(140, 109, 255, 0.05), transparent 42%);
+}
+
+.widget__header {
+  display: grid;
+  gap: 0.45rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  letter-spacing: -0.03em;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.56;
+}

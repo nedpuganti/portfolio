@@ -1,0 +1,96 @@
+.context-panel {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 1rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.context-panel__header,
+.context-panel__actions {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.15rem 1.2rem;
+}
+
+.context-panel__header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: -0.05em;
+  line-height: 1.06;
+}
+
+.context-panel__header p {
+  color: var(--text-secondary);
+  line-height: 1.58;
+  font-size: 0.9rem;
+  max-width: 28ch;
+}
+
+.context-panel__widgets {
+  display: grid;
+  gap: 0.95rem;
+  align-content: start;
+  min-height: 0;
+  overflow: auto;
+  padding-right: 0.05rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+.context-panel__widgets::-webkit-scrollbar {
+  width: 8px;
+}
+
+.context-panel__widgets::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.context-panel__actions {
+  grid-template-columns: 1fr;
+  padding: 0.85rem;
+  background: transparent;
+  box-shadow: none;
+}
+
+.context-panel__actions .button {
+  justify-content: flex-start;
+  min-height: 48px;
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--button-ghost-background) 90%, rgba(255, 255, 255, 0.025));
+}
+
+:host-context([data-theme='light']) .context-panel__header,
+:host-context([data-theme='light']) .context-panel__actions .button {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+:host-context([data-theme='light']) .context-panel__header p {
+  color: #45536f;
+}
+
+@media (max-width: 1380px) {
+  .context-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .context-panel__header,
+  .context-panel__actions,
+  .context-panel__widgets {
+    grid-column: 1 / -1;
+  }
+
+  .context-panel__widgets {
+    overflow: visible;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .context-panel {
+    grid-template-columns: 1fr;
+  }
+}

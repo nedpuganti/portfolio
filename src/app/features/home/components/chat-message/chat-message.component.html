@@ -1,0 +1,53 @@
+<article
+  class="chat-message"
+  [class.chat-message--user]="message().role === 'user'"
+  [class.chat-message--system]="message().role === 'system'"
+>
+  <div class="chat-message__avatar">
+    <app-icon [name]="roleIconMap[message().role]" />
+  </div>
+
+  <div class="chat-message__content">
+    <div class="chat-message__bubble" [class.chat-message__bubble--error]="message().status === 'error'">
+      <div class="chat-message__prose">
+        @for (block of messageBlocks(); track $index) {
+          @if (block.kind === 'paragraph') {
+            <p [innerHTML]="formatInline(block.text)"></p>
+          } @else {
+            <ul>
+              @for (item of block.items; track item) {
+                <li [innerHTML]="formatInline(item)"></li>
+              }
+            </ul>
+          }
+        }
+      </div>
+    </div>
+
+    @if (message().actions?.length) {
+      <div class="chat-message__actions">
+        @for (action of message().actions ?? []; track action.href) {
+          @if (isRouteAction(action)) {
+            <a class="button button--ghost" [routerLink]="action.href">
+              <span class="button__icon"><app-icon [name]="action.iconLabel" /></span>
+              {{ action.label }}
+            </a>
+          } @else {
+            <a
+              class="button button--ghost"
+              [href]="action.href"
+              [attr.download]="action.type === 'download' ? '' : null"
+              [attr.target]="action.type === 'external' ? '_blank' : null"
+              [attr.rel]="action.type === 'external' ? 'noreferrer' : null"
+            >
+              <span class="button__icon"><app-icon [name]="action.iconLabel" /></span>
+              {{ action.label }}
+            </a>
+          }
+        }
+      </div>
+    }
+
+    <time>{{ message().createdAt }}</time>
+  </div>
+</article>

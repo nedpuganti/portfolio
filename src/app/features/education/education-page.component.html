@@ -1,0 +1,13 @@
+<section class="education-page page-section">
+  <app-section-title
+    eyebrow="Education"
+    title="Formal foundations that support practical delivery"
+    description="A Master's in Computer Science and earlier academic work helped shape the analytical grounding behind years of product-focused engineering."
+  />
+
+  <div class="education-page__grid">
+    @for (item of portfolioData.education(); track item.id) {
+      <app-education-card [item]="item" />
+    }
+  </div>
+</section>

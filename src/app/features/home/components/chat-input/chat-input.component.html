@@ -1,0 +1,17 @@
+<div class="chat-input surface-card">
+  <label class="sr-only" for="chat-prompt">Ask about Naren's work</label>
+  <textarea
+    id="chat-prompt"
+    [value]="draft()"
+    [disabled]="disabled()"
+    rows="1"
+    placeholder="Ask me anything about my work, stack, or experience..."
+    (input)="updateDraft($event)"
+    (keydown)="handleKeydown($event)"
+  ></textarea>
+
+  <button class="button button--primary" type="button" (click)="submit()" [disabled]="disabled() || !draft().trim()">
+    <span class="button__icon"><app-icon name="GO" /></span>
+    Send
+  </button>
+</div>

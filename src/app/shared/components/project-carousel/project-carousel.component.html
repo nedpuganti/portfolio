@@ -1,0 +1,5 @@
+<div class="project-carousel" [class.project-carousel--compact]="compact()">
+  @for (project of projects(); track project.id) {
+    <app-project-card [project]="project" [compact]="compact()" />
+  }
+</div>

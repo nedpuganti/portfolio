@@ -1,0 +1,137 @@
+<section class="skills-page page-section">
+  <app-section-title
+    eyebrow="Skills"
+    title="Grouped technical depth plus the collaboration habits behind it"
+    description="The stack leans heavily Angular-first, but the real value is pairing UI craft with operational awareness and reliable team collaboration."
+  />
+
+  <div class="skills-page__groups">
+    @for (category of hardSkillCategories(); track category.id) {
+      <section class="skills-page__group surface-card">
+        <div class="skills-page__group-header">
+          <h3>{{ category.title }}</h3>
+          <span class="eyebrow">Hard skills</span>
+        </div>
+
+        <p>{{ category.description }}</p>
+
+        @if (categorySkillGroups(category).length > 0) {
+          <div class="skills-page__nested-groups">
+            @for (group of categorySkillGroups(category); track group.id) {
+              <section class="skills-page__nested-group" [style.--skill-group-depth]="group.depth">
+                @if (group.title) {
+                  <h4>{{ group.title }}</h4>
+                }
+
+                @if (group.description) {
+                  <p class="skills-page__nested-description">{{ group.description }}</p>
+                }
+
+                @if (skillSections(group.skills); as sections) {
+                  @if (sections.length > 0) {
+                    <div class="skills-page__skill-sections">
+                      @for (section of sections; track section.label) {
+                        <section class="skills-page__skill-section">
+                          <p class="skills-page__section-label">{{ section.label }}</p>
+                          <div class="skills-page__pills">
+                            @for (skill of section.skills; track skill.name) {
+                              <app-skill-pill [skill]="skill" [showProficiency]="false" />
+                            }
+                          </div>
+                        </section>
+                      }
+                    </div>
+                  }
+                }
+              </section>
+            }
+          </div>
+        } @else {
+          @if (skillSections(category.skills); as sections) {
+            <div class="skills-page__skill-sections">
+              @for (section of sections; track section.label) {
+                <section class="skills-page__skill-section">
+                  <p class="skills-page__section-label">{{ section.label }}</p>
+                  <div class="skills-page__pills">
+                    @for (skill of section.skills; track skill.name) {
+                      <app-skill-pill [skill]="skill" [showProficiency]="false" />
+                    }
+                  </div>
+                </section>
+              }
+            </div>
+          }
+        }
+      </section>
+    }
+  </div>
+
+  @if (softSkillCategories().length > 0) {
+    <div class="skills-page__soft-groups">
+      @for (category of softSkillCategories(); track category.id) {
+        <section class="skills-page__group skills-page__group--wide surface-card">
+          <div class="skills-page__group-header">
+            <h3>{{ category.title }}</h3>
+            <span class="eyebrow">Soft skills</span>
+          </div>
+
+          <p>{{ category.description }}</p>
+
+          @if (categorySkillGroups(category).length > 0) {
+            <div class="skills-page__nested-groups">
+              @for (group of categorySkillGroups(category); track group.id) {
+                <section class="skills-page__nested-group" [style.--skill-group-depth]="group.depth">
+                  @if (group.title) {
+                    <h4>{{ group.title }}</h4>
+                  }
+
+                  @if (group.description) {
+                    <p class="skills-page__nested-description">{{ group.description }}</p>
+                  }
+
+                  @if (skillSections(group.skills); as sections) {
+                    @if (sections.length > 0) {
+                      <div class="skills-page__skill-sections">
+                        @for (section of sections; track section.label) {
+                          <section class="skills-page__skill-section">
+                            <p class="skills-page__section-label">{{ section.label }}</p>
+                            <div class="skills-page__pills">
+                              @for (skill of section.skills; track skill.name) {
+                                <app-skill-pill [skill]="skill" [showProficiency]="false" />
+                              }
+                            </div>
+                          </section>
+                        }
+                      </div>
+                    }
+                  }
+                </section>
+              }
+            </div>
+          } @else {
+            @if (skillSections(category.skills); as sections) {
+              <div class="skills-page__skill-sections">
+                @for (section of sections; track section.label) {
+                  <section class="skills-page__skill-section">
+                    <p class="skills-page__section-label">{{ section.label }}</p>
+                    <div class="skills-page__pills">
+                      @for (skill of section.skills; track skill.name) {
+                        <app-skill-pill [skill]="skill" [showProficiency]="false" />
+                      }
+                    </div>
+                  </section>
+                }
+              </div>
+            }
+          }
+        </section>
+      }
+    </div>
+  }
+
+  <div class="skills-page__services">
+    @for (service of portfolioData.services(); track service.id) {
+      <app-service-card [service]="service" />
+    }
+  </div>
+</section>

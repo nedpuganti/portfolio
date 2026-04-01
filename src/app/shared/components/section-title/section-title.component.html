@@ -1,0 +1,13 @@
+<header class="section-title">
+  @if (eyebrow()) {
+    <span class="eyebrow">{{ eyebrow() }}</span>
+  }
+
+  <div class="section-title__content">
+    <h2>{{ title() }}</h2>
+
+    @if (description()) {
+      <p>{{ description() }}</p>
+    }
+  </div>
+</header>

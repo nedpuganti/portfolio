@@ -30,27 +30,21 @@
               "src/assets"
             ],
             "inlineStyleLanguage": "scss",
-            "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/css/fontawesome/css/all.min.css",
-              "src/assets/css/skins/skin1.css",
-              "src/assets/css/custom.css",
-              "src/styles.scss"
-            ],
-            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "styles": ["src/styles.scss"],
+            "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "850kb",
+                  "maximumError": "1.5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "12kb",
+                  "maximumError": "20kb"
                 }
               ],
               "outputHashing": "all"
@@ -58,7 +52,13 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -90,22 +90,7 @@
         "test": {
           "builder": "@angular/build:jest",
           "options": {
-            "tsConfig": "tsconfig.spec.json",
-            "polyfills": ["zone.js", "zone.js/testing"]
-          }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "baseHref": "https://narenedpuganti.com/",
-            "name": "nedpuganti",
-            "email": "narenedpuganti@gmail.com",
-            "noSilent": true,
-            "repo": "https://github.com/nedpuganti/portfolio",
-            "branch": "portfolio",
-            "cname": "narenedpuganti.com",
-            "build-target": "MyPortfolio:build:production",
-            "dir": "dist/MyPortfolio/browser"
+            "tsConfig": "tsconfig.spec.json"
           }
         }
       }

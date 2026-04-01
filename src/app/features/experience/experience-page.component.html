@@ -1,0 +1,19 @@
+<section class="experience-page page-section">
+  <app-section-title
+    eyebrow="Experience"
+    title="Platform-aware frontend engineering with product delivery depth"
+    description="The throughline is owning UI quality while staying close to the operational systems, APIs, and delivery practices that make those interfaces dependable."
+  />
+
+  <div class="experience-page__stats">
+    @for (stat of portfolioData.getQuickStats(); track stat.label) {
+      <app-stat-card [stat]="stat" />
+    }
+  </div>
+
+  <div class="experience-page__timeline">
+    @for (item of portfolioData.experience(); track item.id) {
+      <app-timeline-item [item]="item" />
+    }
+  </div>
+</section>
