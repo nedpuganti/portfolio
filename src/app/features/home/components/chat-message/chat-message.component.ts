@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { CallToAction, ChatMessage } from '../../../../core/models';
@@ -8,8 +8,7 @@ import { AppIconComponent } from '../../../../shared/components/app-icon/app-ico
   selector: 'app-chat-message',
   imports: [RouterLink, AppIconComponent],
   templateUrl: './chat-message.component.html',
-  styleUrl: './chat-message.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './chat-message.component.scss'
 })
 export class ChatMessageComponent {
   readonly message = input.required<ChatMessage>();
@@ -116,16 +115,9 @@ function cleanInlineMarkdown(text: string): string {
 function formatInlineMarkdown(text: string): string {
   const escaped = escapeHtml(text);
 
-  return escaped
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/`([^`]+)`/g, '<code>$1</code>');
+  return escaped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/`([^`]+)`/g, '<code>$1</code>');
 }
 
 function escapeHtml(text: string): string {
-  return text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
+  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }

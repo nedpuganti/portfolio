@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 import { ChatStateService } from '../../core/services/chat-state.service';
@@ -16,8 +16,7 @@ interface SidebarNavItem {
   selector: 'app-sidebar',
   imports: [RouterLink, RouterLinkActive, AppIconComponent],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
   readonly chatState = inject(ChatStateService);

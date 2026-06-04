@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 
 import { ChatStateService } from '../../core/services/chat-state.service';
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
@@ -10,8 +10,7 @@ import { SectionTitleComponent } from '../../shared/components/section-title/sec
   selector: 'app-projects-page',
   imports: [ProjectCardComponent, SectionTitleComponent],
   templateUrl: './projects-page.component.html',
-  styleUrl: './projects-page.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './projects-page.component.scss'
 })
 export class ProjectsPageComponent {
   readonly portfolioData = inject(PortfolioDataService);

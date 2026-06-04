@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
@@ -8,8 +8,7 @@ import { AppIconComponent } from '../../shared/components/app-icon/app-icon.comp
   selector: 'app-api-unavailable-page',
   imports: [RouterLink, AppIconComponent],
   templateUrl: './api-unavailable-page.component.html',
-  styleUrl: './api-unavailable-page.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './api-unavailable-page.component.scss'
 })
 export class ApiUnavailablePageComponent {
   readonly portfolioData = inject(PortfolioDataService);

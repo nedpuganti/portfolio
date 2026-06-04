@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 import { Project } from '../../../core/models';
 import { ProjectCardComponent } from '../project-card/project-card.component';
@@ -7,8 +7,7 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
   selector: 'app-project-carousel',
   imports: [ProjectCardComponent],
   templateUrl: './project-carousel.component.html',
-  styleUrl: './project-carousel.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './project-carousel.component.scss'
 })
 export class ProjectCarouselComponent {
   readonly projects = input.required<Project[]>();

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map, startWith } from 'rxjs';
@@ -12,8 +12,7 @@ interface RouteMeta {
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
-  styleUrl: './topbar.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './topbar.component.scss'
 })
 export class TopbarComponent {
   private readonly defaultRouteMeta: RouteMeta = {

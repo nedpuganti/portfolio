@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 
 import { ChatStateService } from '../../core/services/chat-state.service';
 import { AppIconComponent } from '../../shared/components/app-icon/app-icon.component';
@@ -11,8 +11,7 @@ import { PromptChipListComponent } from './components/prompt-chip-list/prompt-ch
   selector: 'app-home-page',
   imports: [AppIconComponent, ChatInputComponent, ChatWindowComponent, EmptyStateComponent, PromptChipListComponent],
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
   readonly chatState = inject(ChatStateService);

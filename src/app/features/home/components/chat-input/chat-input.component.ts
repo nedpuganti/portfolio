@@ -1,12 +1,11 @@
-import { ChangeDetectionStrategy, Component, input, output, signal } from '@angular/core';
+import { Component, input, output, signal } from '@angular/core';
 import { AppIconComponent } from '../../../../shared/components/app-icon/app-icon.component';
 
 @Component({
   selector: 'app-chat-input',
   imports: [AppIconComponent],
   templateUrl: './chat-input.component.html',
-  styleUrl: './chat-input.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './chat-input.component.scss'
 })
 export class ChatInputComponent {
   readonly submitted = output<string>();
