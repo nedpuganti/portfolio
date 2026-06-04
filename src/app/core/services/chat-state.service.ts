@@ -1,15 +1,13 @@
-import { Injectable, inject, signal } from '@angular/core';
+import { Service, inject, signal } from '@angular/core';
 import { EMPTY, catchError, finalize, take } from 'rxjs';
 
 import { ChatMessage, ContextPanelState, PromptIntent, RecentConversation } from '../models';
-import { buildMessageId, extractChatAnswer, formatChatTimestamp } from '../utils/portfolio-map.util';
 import { normalizeQuery } from '../utils/portfolio-filter.util';
+import { buildMessageId, extractChatAnswer, formatChatTimestamp } from '../utils/portfolio-map.util';
 import { ChatApiService } from './chat-api.service';
 import { PortfolioDataService } from './portfolio-data.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Service()
 export class ChatStateService {
   private readonly portfolioData = inject(PortfolioDataService);
   private readonly chatApi = inject(ChatApiService);
@@ -222,12 +220,7 @@ export class ChatStateService {
       return 'platform-engineering';
     }
 
-    if (
-      query.includes('mobile') ||
-      query.includes('ionic') ||
-      query.includes('flutter') ||
-      query.includes('react native')
-    ) {
+    if (query.includes('mobile') || query.includes('ionic') || query.includes('flutter') || query.includes('react native')) {
       return 'mobile-projects';
     }
 

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 import { Project } from '../../../core/models';
 import { AppIconComponent } from '../app-icon/app-icon.component';
@@ -7,8 +7,7 @@ import { AppIconComponent } from '../app-icon/app-icon.component';
   selector: 'app-project-card',
   imports: [AppIconComponent],
   templateUrl: './project-card.component.html',
-  styleUrl: './project-card.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './project-card.component.scss'
 })
 export class ProjectCardComponent {
   readonly project = input.required<Project>();

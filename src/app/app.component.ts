@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { AppIconComponent } from './shared/components/app-icon/app-icon.component';
@@ -9,8 +9,7 @@ import { ThemeService } from './core/services/theme.service';
   selector: 'app-root',
   imports: [RouterOutlet, AppIconComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   readonly themeService = inject(ThemeService);

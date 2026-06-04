@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ElementRef, effect, input, viewChild } from '@angular/core';
+import { Component, ElementRef, effect, input, viewChild } from '@angular/core';
 
 import { ChatMessage } from '../../../../core/models';
 import { ChatMessageComponent } from '../chat-message/chat-message.component';
@@ -8,8 +8,7 @@ import { TypingIndicatorComponent } from '../typing-indicator/typing-indicator.c
   selector: 'app-chat-window',
   imports: [ChatMessageComponent, TypingIndicatorComponent],
   templateUrl: './chat-window.component.html',
-  styleUrl: './chat-window.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './chat-window.component.scss'
 })
 export class ChatWindowComponent {
   readonly messages = input.required<ChatMessage[]>();

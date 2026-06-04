@@ -16,9 +16,9 @@
           <span class="icon-pill"><app-icon name="EM" /></span>
           {{ portfolioData.profile().email }}
         </a>
-        <a [href]="portfolioData.profile().website" target="_blank" rel="noreferrer">
-          <span class="icon-pill"><app-icon name="WB" /></span>
-          {{ portfolioData.profile().website }}
+        <a [href]="githubHref()" target="_blank" rel="noreferrer">
+          <span class="icon-pill"><app-icon name="GH" /></span>
+          {{ githubHref() }}
         </a>
         <p>
           <span class="icon-pill"><app-icon name="PH" /></span>
