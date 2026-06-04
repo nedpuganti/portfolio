@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { ChatStateService } from '../../core/services/chat-state.service';
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
@@ -10,8 +10,7 @@ import { TimelineItemComponent } from '../../shared/components/timeline-item/tim
   selector: 'app-experience-page',
   imports: [SectionTitleComponent, StatCardComponent, TimelineItemComponent],
   templateUrl: './experience-page.component.html',
-  styleUrl: './experience-page.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './experience-page.component.scss'
 })
 export class ExperiencePageComponent {
   readonly portfolioData = inject(PortfolioDataService);

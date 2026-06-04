@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 
 import { SkillCategory, SkillGroup, SkillItem } from '../../core/models';
 import { ChatStateService } from '../../core/services/chat-state.service';
@@ -11,8 +11,7 @@ import { SkillPillComponent } from '../../shared/components/skill-pill/skill-pil
   selector: 'app-skills-page',
   imports: [SectionTitleComponent, ServiceCardComponent, SkillPillComponent],
   templateUrl: './skills-page.component.html',
-  styleUrl: './skills-page.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './skills-page.component.scss'
 })
 export class SkillsPageComponent {
   readonly portfolioData = inject(PortfolioDataService);

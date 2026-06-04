@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 import { PromptSuggestion } from '../../../../core/models';
 import { AppIconComponent } from '../../../../shared/components/app-icon/app-icon.component';
@@ -7,8 +7,7 @@ import { AppIconComponent } from '../../../../shared/components/app-icon/app-ico
   selector: 'app-prompt-chip-list',
   imports: [AppIconComponent],
   templateUrl: './prompt-chip-list.component.html',
-  styleUrl: './prompt-chip-list.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './prompt-chip-list.component.scss'
 })
 export class PromptChipListComponent {
   readonly suggestions = input.required<PromptSuggestion[]>();

@@ -1,10 +1,9 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-section-title',
   templateUrl: './section-title.component.html',
-  styleUrl: './section-title.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './section-title.component.scss'
 })
 export class SectionTitleComponent {
   readonly eyebrow = input('');

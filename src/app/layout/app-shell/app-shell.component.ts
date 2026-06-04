@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, ElementRef, effect, inject, viewChild } from '@angular/core';
+import { Component, DestroyRef, ElementRef, effect, inject, viewChild } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -12,8 +12,7 @@ import { TopbarComponent } from '../topbar/topbar.component';
   selector: 'app-app-shell',
   imports: [RouterOutlet, SidebarComponent, TopbarComponent, ContextPanelComponent],
   templateUrl: './app-shell.component.html',
-  styleUrl: './app-shell.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './app-shell.component.scss'
 })
 export class AppShellComponent {
   private readonly router = inject(Router);
@@ -23,7 +22,12 @@ export class AppShellComponent {
 
   constructor() {
     effect(() => {
-      if (this.portfolioData.error() && !this.portfolioData.loading() && !this.portfolioData.loaded() && this.router.url !== '/unavailable') {
+      if (
+        this.portfolioData.error() &&
+        !this.portfolioData.loading() &&
+        !this.portfolioData.loaded() &&
+        this.router.url !== '/unavailable'
+      ) {
         void this.router.navigateByUrl('/unavailable', { replaceUrl: true });
       }
     });

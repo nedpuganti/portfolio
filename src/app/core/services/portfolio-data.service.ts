@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, computed, inject, signal } from '@angular/core';
+import { Service, computed, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { firstValueFrom, map } from 'rxjs';
 
+import { environment } from '../../../environments/environment';
+import { DEFAULT_PROMPT_SUGGESTIONS, DEFAULT_RECENT_CONVERSATIONS } from '../data/chat-seed.data';
 import {
   CallToAction,
   ContextPanelState,
@@ -19,13 +21,9 @@ import {
   SkillCategory,
   StatItem
 } from '../models';
-import { DEFAULT_PROMPT_SUGGESTIONS, DEFAULT_RECENT_CONVERSATIONS } from '../data/chat-seed.data';
 import { filterProjectsByTag } from '../utils/portfolio-filter.util';
-import { environment } from '../../../environments/environment';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Service()
 export class PortfolioDataService {
   private readonly http = inject(HttpClient);
   private readonly router = inject(Router);
@@ -346,13 +344,9 @@ export class PortfolioDataService {
     const website = normalizeUrl(mergedProfile.website || EMPTY_PROFILE.website);
     const email = mergedProfile.email || EMPTY_PROFILE.email;
     const fullName =
-      firstNonEmptyString(
-        mergedProfile.fullName,
-        mergedProfile.name,
-        joinNameParts(mergedProfile.firstName, mergedProfile.lastName)
-      ) || EMPTY_PROFILE.fullName;
-    const location =
-      firstNonEmptyString(mergedProfile.location, mergedProfile.address, EMPTY_PROFILE.location) || EMPTY_PROFILE.location;
+      firstNonEmptyString(mergedProfile.fullName, mergedProfile.name, joinNameParts(mergedProfile.firstName, mergedProfile.lastName)) ||
+      EMPTY_PROFILE.fullName;
+    const location = firstNonEmptyString(mergedProfile.location, mergedProfile.address, EMPTY_PROFILE.location) || EMPTY_PROFILE.location;
     const socialLinks = mergeProfileSocialLinks(mergedProfile.socialLinks ?? [], website, email);
 
     return {
@@ -797,7 +791,8 @@ function normalizeProjects(value: unknown): Project[] {
 function normalizeProject(value: Record<string, unknown>, index: number): Project {
   const title = asString(value['title'] ?? value['name']) || `Project ${index + 1}`;
   const category = normalizeProjectCategory(value['category']);
-  const shortDescription = asString(value['shortDescription'] ?? value['summary'] ?? value['description']) || 'Product and engineering delivery.';
+  const shortDescription =
+    asString(value['shortDescription'] ?? value['summary'] ?? value['description']) || 'Product and engineering delivery.';
   const linkUrl = normalizeUrl(asString(value['url'] ?? value['link']));
   const industries = normalizeStringList(value['industries']);
   const techStack = normalizeStringList(firstArray(value['techStack'], value['technologies'], value['technology'], value['stack']) ?? []);

@@ -1,13 +1,13 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { ChatStateService } from '../../core/services/chat-state.service';
 import { AboutWidgetComponent } from '../../context/about-widget/about-widget.component';
 import { EducationWidgetComponent } from '../../context/education-widget/education-widget.component';
 import { FeaturedProjectsWidgetComponent } from '../../context/featured-projects-widget/featured-projects-widget.component';
 import { QuickStatsWidgetComponent } from '../../context/quick-stats-widget/quick-stats-widget.component';
 import { SkillsWidgetComponent } from '../../context/skills-widget/skills-widget.component';
 import { CallToAction } from '../../core/models';
+import { ChatStateService } from '../../core/services/chat-state.service';
 import { AppIconComponent } from '../../shared/components/app-icon/app-icon.component';
 
 @Component({
@@ -22,8 +22,7 @@ import { AppIconComponent } from '../../shared/components/app-icon/app-icon.comp
     SkillsWidgetComponent
   ],
   templateUrl: './context-panel.component.html',
-  styleUrl: './context-panel.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './context-panel.component.scss'
 })
 export class ContextPanelComponent {
   readonly chatState = inject(ChatStateService);

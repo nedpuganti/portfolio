@@ -1,14 +1,12 @@
-import { DestroyRef, Injectable, computed, effect, inject, signal } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { DestroyRef, Service, computed, effect, inject, signal } from '@angular/core';
 
 export type ThemeMode = 'auto' | 'dark' | 'light';
 type ResolvedTheme = 'dark' | 'light';
 
 const THEME_STORAGE_KEY = 'naren-portfolio-theme-mode';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Service()
 export class ThemeService {
   private readonly document = inject(DOCUMENT);
   private readonly destroyRef = inject(DestroyRef);

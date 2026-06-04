@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { ChatStateService } from '../../core/services/chat-state.service';
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
@@ -11,8 +11,7 @@ import { StatCardComponent } from '../../shared/components/stat-card/stat-card.c
   selector: 'app-about-page',
   imports: [AvatarBadgeComponent, SectionTitleComponent, ServiceCardComponent, StatCardComponent],
   templateUrl: './about-page.component.html',
-  styleUrl: './about-page.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './about-page.component.scss'
 })
 export class AboutPageComponent {
   readonly portfolioData = inject(PortfolioDataService);
